@@ -1,0 +1,21 @@
+.element {
+  margin: 0;
+  font-family: "Poppins";
+
+  &.hasColor {
+    &-white {
+      color: #ffffff;
+    }
+
+    &-orange {
+      color: #ff4815;
+    }
+
+    &-black {
+      color: rgba(20, 33, 43, 1);
+    }
+  }
+  &.additionalText {
+    color: #ff4815;
+  }
+}

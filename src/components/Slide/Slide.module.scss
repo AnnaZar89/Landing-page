@@ -1,0 +1,37 @@
+.element {
+  div {
+    position: absolute;
+  }
+  div:nth-child(1) {
+    left: 25px;
+    bottom: 225px;
+  }
+  div:nth-child(2) {
+    left: 66px;
+    bottom: 148px;
+  }
+  div:nth-child(3) {
+    left: 113px;
+    bottom: 85px;
+  }
+  div:nth-child(4) {
+    left: 187px;
+    bottom: 46px;
+  }
+  div:nth-child(5) {
+    left: 273px;
+    bottom: 19px;
+  }
+
+  div:nth-child(6) {
+    right: 107px;
+    bottom: 31px;
+  }
+  div:nth-child(7) {
+    right: 31px;
+    bottom: 31px;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

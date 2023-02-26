@@ -1,0 +1,58 @@
+.element {
+  width: 270px;
+  height: 178px;
+  background: linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+
+  .ellipseGroup {
+    position: relative;
+  }
+
+  .ellipse1,
+  .ellipse2,
+  .ellipse3 {
+    position: absolute;
+    background: #ff4815;
+    opacity: 0.1;
+    border-radius: 50%;
+  }
+  .ellipse1 {
+    width: 61px;
+    height: 61px;
+  }
+
+  .ellipse2 {
+    top: 83px;
+    width: 27px;
+    height: 27px;
+    left: 105px;
+  }
+
+  .ellipse3 {
+    top: 116px;
+    left: 188px;
+    width: 49px;
+    height: 49px;
+  }
+
+  .featureContent {
+    height: 178px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-family: "Poppins";
+      font-size: 18px;
+      line-height: 27px;
+      color: #14212b;
+      opacity: 0.7;
+      margin: 0;
+    }
+  }
+}

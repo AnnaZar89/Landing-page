@@ -1,0 +1,18 @@
+.element {
+  margin: 120px 135px;
+  display: flex;
+  width: 100%;
+
+  img:nth-child(1) {
+    width: 370px;
+    height: 312px;
+  }
+
+  img:nth-child(2) {
+    width: 370px;
+    height: 312px;
+    background-color: #e2866d;
+    border-radius: 10px;
+    transform: translate(-50%, 50%);
+  }
+}

@@ -1,0 +1,50 @@
+.element {
+  margin: 120px auto;
+  .textContainer {
+    width: 693px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: capitalize;
+    h1:nth-child(1) {
+      font-weight: 500;
+      // font-family: "Poppins";
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    h1:nth-child(2) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+  .oblong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 70px auto;
+  }
+  .oblong div {
+    box-sizing: border-box;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #14212b;
+    border-radius: 0px 0px 0px 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 18px;
+      line-height: 27px;
+      font-family: "Poppins";
+    }
+  }
+  .oblong div:nth-child(2) {
+    border-radius: 0px 0px 23px 0px;
+  }
+  .pricingPlanBoxContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

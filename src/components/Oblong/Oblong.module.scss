@@ -1,0 +1,11 @@
+.rectangle {
+  cursor: pointer;
+  &.on {
+    background-color: rgba(20, 33, 43, 1);
+    color: white;
+  }
+  &.off {
+    background-color: white;
+    color: #ff4815;
+  }
+}

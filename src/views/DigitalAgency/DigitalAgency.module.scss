@@ -1,0 +1,25 @@
+.element {
+  position: relative;
+  background: url("../../assets/images/background-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-size: cover;
+  height: 100%;
+
+  .container {
+    position: absolute;
+    height: 43px;
+    width: 100%;
+    top: 6.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container img {
+    margin-right: 23%;
+    width: 148px;
+    height: 28px;
+  }
+}

@@ -1,0 +1,17 @@
+.element {
+  transition: 0.5s;
+
+  &.hasColor {
+    &-orange {
+      background-color: rgba(255, 72, 21, 1);
+    }
+    &-grey {
+      background-color: rgba(196, 196, 196, 1);
+    }
+  }
+}
+
+.element:hover {
+  background-color: #ff4815;
+  cursor: pointer;
+}

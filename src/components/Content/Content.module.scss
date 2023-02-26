@@ -1,0 +1,29 @@
+.element {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 571px;
+
+  h1 {
+    text-align: center;
+    font-size: 58px;
+    line-height: 75.57px;
+    font-weight: 700;
+    display: inline;
+  }
+
+  p {
+    margin: 20px 0 44px 0;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .buttonStyles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 295px;
+    margin: 0 auto;
+  }
+}

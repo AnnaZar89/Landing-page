@@ -1,0 +1,47 @@
+.element {
+  width: 570px;
+  transform: translate(-25%);
+
+  h1 {
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  h1:nth-child(2),
+  h1:nth-child(3) {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 50px;
+    display: inline;
+  }
+  p {
+    line-height: 156.9%;
+    text-align: left;
+  }
+
+  ul {
+    margin: 29px 0;
+    font-size: 15px;
+    line-height: 22px;
+    li {
+      margin-bottom: 18px;
+      svg {
+        margin-right: 10px;
+        background-color: #ff4815;
+        border-radius: 50%;
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  button {
+    color: #ff4815;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

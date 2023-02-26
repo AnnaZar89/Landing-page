@@ -1,0 +1,82 @@
+.element {
+  position: relative;
+  background-image: url(../../assets/images/background-for-divs.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-top: 120px;
+  box-sizing: border-box;
+  padding: 105px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .elementDiv {
+    width: 468px;
+    margin-right: 33px;
+    h1 {
+      font-family: "Roboto";
+    }
+    h1:nth-child(1) {
+      font-size: 20px;
+      line-height: 23.44px;
+      font-weight: 500;
+    }
+
+    h1:nth-child(2) {
+      font-size: 55px;
+      line-height: 64.45px;
+      font-weight: 700;
+    }
+    p {
+      color: #1a2c42;
+      opacity: 0.81;
+      text-align: left;
+    }
+  }
+
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    width: 669px;
+
+    svg {
+      border: 1px solid #ff4815;
+      width: 203px;
+      height: 130px;
+      padding: 3%;
+      box-sizing: border-box;
+      margin-bottom: 37px;
+    }
+    svg:nth-child(5) {
+      background-color: #ff4815;
+    }
+
+    .arrow {
+      position: absolute;
+      width: 644px;
+      top: 40px;
+      left: 636px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .arrow svg {
+      box-sizing: border-box;
+      padding: 4px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #14212b;
+      border-radius: 50%;
+      path {
+        fill: #14212b;
+      }
+    }
+
+    .arrow svg:nth-child(2) {
+      transform: rotate(180deg);
+    }
+  }
+}

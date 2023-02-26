@@ -1,0 +1,50 @@
+.element {
+  margin-top: 120px;
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1:nth-child(1) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    h1:nth-child(2) {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 46px;
+    }
+    p {
+      width: 693px;
+      line-height: 156.9%;
+    }
+  }
+
+  .containerOfDivs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+    div {
+      width: 370px;
+      height: 300px;
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      p {
+        color: white;
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+  }
+}
