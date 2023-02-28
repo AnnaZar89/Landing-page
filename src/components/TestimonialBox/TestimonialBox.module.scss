@@ -1,0 +1,55 @@
+.element {
+  background: url(../../assets/images/testimonial-box-background.jpg);
+  margin-left: 35px;
+  width: 368px;
+  height: 229px;
+  position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+
+  svg:nth-child(1) {
+    position: absolute;
+    top: 34px;
+    left: 22px;
+  }
+  .text {
+    width: 58px;
+    height: 58px;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 50%;
+    margin: 25px auto 0 auto;
+  }
+  // p {
+  p:nth-child(3) {
+    font-size: 14px;
+    line-height: 130.9%;
+    color: #ffffff;
+    width: 305px;
+    margin: 7px auto;
+    font-weight: 400;
+  }
+  p:nth-child(4) {
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #ff4815;
+    margin: 0 auto;
+  }
+  p:nth-child(5) {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 2px auto;
+  }
+
+  svg:nth-child(6) {
+    position: absolute;
+    top: 180px;
+    left: 310px;
+    transform: rotate(180deg);
+  }
+}

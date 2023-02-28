@@ -10,8 +10,8 @@ interface IDivElement {
   textInHeader?: string;
   textInParagraph?: string;
   color: string;
-  width: string;
-  height: string;
+  // width?: string;
+  // height?: string;
   className?: string;
 }
 
@@ -31,15 +31,17 @@ const DivElement: FC<IDivElement> = ({
     setIsHovering(false);
   };
   return (
-    <div
-      className={cn(styles.element, className, styles[`hasColor-${color}`])}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-    >
-      {textInHeader && <Heading text={textInHeader} color="white" />}
-      {textInParagraph && <Paragraph text={textInParagraph} />}
-      {isHovering && <Socials />}
-    </div>
+    <>
+      <div
+        className={cn(styles.element, className, styles[`hasColor-${color}`])}
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
+        {textInHeader && <Heading text={textInHeader} color="white" />}
+        {textInParagraph && <Paragraph text={textInParagraph} />}
+        {isHovering && <Socials />}
+      </div>
+    </>
   );
 };
 

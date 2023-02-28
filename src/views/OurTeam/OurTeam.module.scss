@@ -68,16 +68,15 @@
     }
   }
 
-  .circles {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  .circles div {
-    margin: 20px;
-    width: 15px;
+  .oblongContainer + div {
+    width: 1440px;
     height: 15px;
-    border-radius: 50%;
-    background: #ff4815;
+    justify-content: center;
+    div {
+      width: 15px;
+      height: 15px;
+      background-color: #ff4815;
+      margin-left: 15px;
+    }
   }
 }

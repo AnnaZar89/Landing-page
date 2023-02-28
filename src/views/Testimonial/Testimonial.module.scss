@@ -1,0 +1,54 @@
+.element {
+  position: relative;
+  width: 1440px;
+  height: 500px;
+  background: url("../../assets/images/background-testimonial.jpg");
+  display: flex;
+  align-items: center;
+  .divContainer {
+    width: 387px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start;
+    justify-content: center;
+    margin-left: 135px;
+
+    h1:nth-child(1) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      text-transform: capitalize;
+    }
+
+    h1:nth-child(2) {
+      //   font-weight: 700;
+      font-size: 36px;
+      line-height: 131.2%;
+    }
+    p {
+      //   font-weight: 500;
+      font-size: 16px;
+      line-height: 156.4%;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+  .logoContainer {
+    display: flex;
+  }
+  .logoContainer + div {
+    position: absolute;
+    top: 415px;
+    left: 875px;
+    width: 73px;
+    height: 17px;
+    justify-content: space-around;
+    div:nth-child(-n + 3) {
+      width: 11px;
+      height: 11px;
+    }
+  }
+}
