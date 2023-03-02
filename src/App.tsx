@@ -8,6 +8,8 @@ import OurClient from "./views/OurClient/OurClient";
 import OurTeam from "./views/OurTeam/OurTeam";
 import PricingPlan from "./views/PricingPlan/PricingPlan";
 import Testimonial from "./views/Testimonial/Testimonial";
+import Blog from "./views/Blog/Blog";
+import Footer from "./views/Footer/Footer";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <OurTeam />
         <PricingPlan />
         <Testimonial />
+        <Blog />
+        <Footer />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import styles from "../OurPortfolio/OurPortfolio.module.scss";
 import DigitalsBar from "../../components/DigitalsBar/DigitalsBar";
 import Heading from "../../typography/Heading/Heading";
 import Paragraph from "../../typography/Paragraph/Paragraph";
-import DivElement from "../../components/DivElement/DivElement";
+import DivElement from "../../components/SquareElement/SquareElement";
 
 const OurPortfolio = () => {
   return (

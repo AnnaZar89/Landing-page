@@ -1,0 +1,21 @@
+.element {
+  margin: 0 auto;
+  text-align: center;
+  h1:nth-child(1) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  h1:nth-child(2) {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .blogArticleContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 80px;
+    margin-top: 47px;
+    margin-bottom: 47px;
+  }
+}

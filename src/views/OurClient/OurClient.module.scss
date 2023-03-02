@@ -50,9 +50,17 @@
       padding: 3%;
       box-sizing: border-box;
       margin-bottom: 37px;
-    }
-    svg:nth-child(5) {
-      background-color: #ff4815;
+      &:nth-child(5) {
+        path {
+          fill: #ff4815;
+        }
+      }
+      &:hover {
+        background-color: #ff4815;
+        path {
+          fill: white;
+        }
+      }
     }
 
     .arrow {

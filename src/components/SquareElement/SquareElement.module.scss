@@ -1,0 +1,21 @@
+.element {
+  transition: 0.5s;
+  background-color: rgba(196, 196, 196, 1);
+
+  // &.hasColor {
+  //   &-orange {
+  //     background-color: rgba(255, 72, 21, 1);
+  //   }
+  //   &-grey {
+  //     background-color: rgba(196, 196, 196, 1);
+  //   }
+  //   &-navyBlue {
+  //     background-color: rgba(20, 33, 43, 1);
+  //   }
+  // }
+}
+
+.element:hover {
+  background-color: #ff4815;
+  cursor: pointer;
+}

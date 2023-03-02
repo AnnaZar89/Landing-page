@@ -15,7 +15,6 @@ const Testimonial = () => {
 About Us"
         />
         <Paragraph text="Aidmycareer is the heart of career questions. Aidmycareer platform that provides" />
-        {/* <TestimonialBox /> */}
       </div>
 
       <div className={styles.logoContainer}>

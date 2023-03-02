@@ -1,8 +1,8 @@
 import styles from "./OurTeam.module.scss";
 import Heading from "../../typography/Heading/Heading";
 import Paragraph from "../../typography/Paragraph/Paragraph";
-import DivElement from "../../components/DivElement/DivElement";
-import Oblong from "../../components/Oblong/Oblong";
+import DivElement from "../../components/SquareElement/SquareElement";
+import Oblong from "../../components/BottomBox/BottomBox";
 import CircleRow from "../../components/CircleRow/CircleRow";
 
 const OurTeam = () => {
@@ -36,17 +36,7 @@ alteration in some form, by injected humour, or randomised words which don't"
           );
         })}
       </div>
-      {/* <div className={styles.circles}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div> */}
-      {/* <div className={styles.circles}> */}
       <CircleRow />
-      {/* <div></div>
-        <div></div>
-        <div></div> */}
-      {/* </div> */}
     </div>
   );
 };
