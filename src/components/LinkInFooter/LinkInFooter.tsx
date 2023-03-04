@@ -1,14 +1,18 @@
 import { FC } from "react";
 import Heading from "../../typography/Heading/Heading";
-import styles from "./QuickLink.module.scss";
+import styles from "./LinkInFooter.module.scss";
 
-interface IQuickLink {
+interface ILinkInFooter {
   textInTitle: string;
   data: any;
   additionalData?: any;
 }
 
-const QuickLink: FC<IQuickLink> = ({ textInTitle, data, additionalData }) => {
+const LinkInFooter: FC<ILinkInFooter> = ({
+  textInTitle,
+  data,
+  additionalData,
+}) => {
   return (
     <div className={styles.element}>
       <Heading text={textInTitle} color="orange" />
@@ -18,14 +22,16 @@ const QuickLink: FC<IQuickLink> = ({ textInTitle, data, additionalData }) => {
             <Heading text={`-${element}`} color="white" />
           ))}
         </div>
-        <div>
-          {additionalData.map((element: string) => (
-            <Heading text={`- ${element}`} color="white" />
-          ))}
-        </div>
+        {additionalData && (
+          <div>
+            {additionalData.map((element: string) => (
+              <Heading text={`- ${element}`} color="white" />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default QuickLink;
+export default LinkInFooter;

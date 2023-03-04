@@ -1,7 +1,7 @@
 import styles from "./Footer.module.scss";
 
 import ExpertifyFooter from "../../components/ExpertifyFooter/ExpertifyFooter";
-import QuickLink from "../../components/QuickLink/QuickLink";
+import LinkInFooter from "../../components/LinkInFooter/LinkInFooter";
 
 const Footer = () => {
   const data = [
@@ -12,11 +12,30 @@ const Footer = () => {
     "Services",
     "Blog",
   ];
-  const data2 = ["Testimonial", "FAQ", "404 Error", "How We Work", "Feature"];
+  const dataInAddition = [
+    "Testimonial",
+    "FAQ",
+    "404 Error",
+    "How We Work",
+    "Feature",
+  ];
+  const services = [
+    "Web Design",
+    "Developing",
+    "Ui/Ux",
+    "Graphic Design",
+    "SEO",
+  ];
   return (
     <div className={styles.element}>
       <ExpertifyFooter />
-      <QuickLink textInTitle="Quick Link" data={data} additionalData={data2} />
+      <LinkInFooter
+        textInTitle="Quick Link"
+        data={data}
+        additionalData={dataInAddition}
+      />
+
+      <LinkInFooter textInTitle="Our Service" data={services} />
     </div>
   );
 };

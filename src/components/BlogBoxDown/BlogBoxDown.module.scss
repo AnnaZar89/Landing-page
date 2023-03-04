@@ -1,0 +1,48 @@
+.element {
+  width: 370px;
+  height: 153px;
+
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
+  border-radius: 0px 0px 10px 10px;
+
+  .containerBox {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 370px;
+    height: 35px;
+    justify-content: space-between;
+
+    div {
+      h1 {
+        padding-top: 0;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+
+    div:nth-child(2) {
+      border-radius: 0px 0px 0px 20px;
+    }
+  }
+
+  h1 {
+    padding-top: 50px;
+    margin: 0 12px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: capitalize;
+    text-align: left;
+  }
+  p {
+    text-align: left;
+    margin-left: 12px;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 161.1%;
+    color: #ff4815;
+  }
+}
