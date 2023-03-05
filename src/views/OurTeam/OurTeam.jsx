@@ -1,8 +1,8 @@
 import styles from "./OurTeam.module.scss";
 import Heading from "../../typography/Heading/Heading";
 import Paragraph from "../../typography/Paragraph/Paragraph";
-import DivElement from "../../components/SquareElement/SquareElement";
-import Oblong from "../../components/BottomBox/BottomBox";
+import SquareElement from "../../components/SquareElement/SquareElement";
+import BottomBox from "../../components/BottomBox/BottomBox";
 import CircleRow from "../../components/CircleRow/CircleRow";
 
 const OurTeam = () => {
@@ -22,13 +22,14 @@ const OurTeam = () => {
 alteration in some form, by injected humour, or randomised words which don't"
         />
       </div>
-      <div className={styles.oblongContainer}>
+      <div className={styles.boxContainer}>
         {data.map((element) => {
           return (
-            <div className={styles.oblongAndDiv}>
+            // <div className={styles.oblongAndDiv}>
+            <div className={styles.box}>
               {" "}
-              <DivElement color="grey" />
-              <Oblong
+              <SquareElement color="grey" />
+              <BottomBox
                 personalData={element.personalData}
                 profession={element.profession}
               />

@@ -1,5 +1,7 @@
+import { useState } from "react";
 import styles from "../DigitalsBar/DigitalsBar.module.scss";
 import Heading from "../../typography/Heading/Heading";
+import OurPortfolioSquareElement from "../../components/OurPortfolioSquareElement/OurPortfolioSquareElement";
 
 const digitals = [
   "All",
@@ -10,16 +12,55 @@ const digitals = [
 ];
 
 const DigitalsBar = () => {
+  const [value, setValue] = useState("");
   return (
     <div className={styles.element}>
-      {digitals.map((digit) => (
-        <Heading text={digit} color="black" />
-      ))}
-      {/* <div className={styles.all}>All</div>
-      <div className={styles.digit}>Graphiic Design</div>
-      <div className={styles.digit}>Mobile App</div>
-      <div className={styles.digit}>Web Development</div>
-      <div className={styles.digit}>Web Design</div> */}
+      <div className={styles.digitBar}>
+        {digitals.map((digit) => (
+          <div onClick={() => setValue(digit)}>
+            <Heading text={digit} color="black" />
+          </div>
+        ))}
+      </div>
+      {digitals.map((digit) => {
+        if (digit === "All") {
+          return "";
+        } else if (value === "All") {
+          return (
+            <div className={styles.square}>
+              <OurPortfolioSquareElement
+                textInHeader={digit}
+                textInParagraph={digit}
+              />
+              <OurPortfolioSquareElement
+                textInHeader={digit}
+                textInParagraph={digit}
+              />
+              <OurPortfolioSquareElement
+                textInHeader={digit}
+                textInParagraph={digit}
+              />
+            </div>
+          );
+        } else if (value === digit) {
+          return (
+            <div className={styles.square}>
+              <OurPortfolioSquareElement
+                textInHeader={digit}
+                textInParagraph={digit}
+              />
+              <OurPortfolioSquareElement
+                textInHeader={digit}
+                textInParagraph={digit}
+              />
+              <OurPortfolioSquareElement
+                textInHeader={digit}
+                textInParagraph={digit}
+              />
+            </div>
+          );
+        }
+      })}
     </div>
   );
 };

@@ -1,10 +1,16 @@
-import styles from "../OurPortfolio/OurPortfolio.module.scss";
 import DigitalsBar from "../../components/DigitalsBar/DigitalsBar";
 import Heading from "../../typography/Heading/Heading";
 import Paragraph from "../../typography/Paragraph/Paragraph";
-import DivElement from "../../components/SquareElement/SquareElement";
+import styles from "../OurPortfolio/OurPortfolio.module.scss";
 
 const OurPortfolio = () => {
+  // const data = [
+  //   "Graphic Design",
+  //   "Mobile App",
+  //   "Web Development",
+  //   "Web Design",
+  // ];
+
   return (
     <div className={styles.element}>
       <div className={styles.textContainer}>
@@ -18,24 +24,24 @@ const OurPortfolio = () => {
       </div>
 
       <DigitalsBar />
-      <div className={styles.containerOfDivs}>
-        <DivElement
-          textInHeader="Web Development"
-          textInParagraph="Web Design"
-          color="grey"
-        />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-        <DivElement color="grey" />
-      </div>
+      {/* <div className={styles.containerOfDivs}>
+        {data.map((element) => (
+          <>
+            <OurPortfolioSquareElement
+              textInHeader={element}
+              textInParagraph={element}
+            />
+            <OurPortfolioSquareElement
+              textInHeader={element}
+              textInParagraph={element}
+            />
+            <OurPortfolioSquareElement
+              textInHeader={element}
+              textInParagraph={element}
+            />
+          </>
+        ))}
+      </div> */}
     </div>
   );
 };
