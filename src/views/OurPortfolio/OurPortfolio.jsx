@@ -4,13 +4,6 @@ import Paragraph from "../../typography/Paragraph/Paragraph";
 import styles from "../OurPortfolio/OurPortfolio.module.scss";
 
 const OurPortfolio = () => {
-  // const data = [
-  //   "Graphic Design",
-  //   "Mobile App",
-  //   "Web Development",
-  //   "Web Design",
-  // ];
-
   return (
     <div className={styles.element}>
       <div className={styles.textContainer}>
@@ -22,26 +15,7 @@ const OurPortfolio = () => {
           humour, or randomised words which don't"
         />
       </div>
-
       <DigitalsBar />
-      {/* <div className={styles.containerOfDivs}>
-        {data.map((element) => (
-          <>
-            <OurPortfolioSquareElement
-              textInHeader={element}
-              textInParagraph={element}
-            />
-            <OurPortfolioSquareElement
-              textInHeader={element}
-              textInParagraph={element}
-            />
-            <OurPortfolioSquareElement
-              textInHeader={element}
-              textInParagraph={element}
-            />
-          </>
-        ))}
-      </div> */}
     </div>
   );
 };

@@ -33,27 +33,34 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10%;
-    div {
-      height: 320px;
-    }
   }
 
   .box {
-    position: relative;
-
     margin: 30px;
-    div:nth-child(2) {
+    position: relative;
+    .icons {
+      width: 100%;
+      position: absolute;
+      bottom: 100px;
+      display: flex;
+      justify-content: center;
+    }
+    div:nth-child(3) {
       box-sizing: border-box;
-      width: 270px;
-      height: 82px;
       background: #ffffff;
+
       box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.14);
       border-radius: 0px 0px 70px 0px;
       padding: 15px 20px;
+      width: 270px;
+      height: 82px;
 
       h1 {
         font-size: 20px;
         line-height: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
       p {
         font-family: "Rosario";
@@ -64,6 +71,9 @@
         opacity: 0.8;
         margin: 1px 0 0 0;
         text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
   }

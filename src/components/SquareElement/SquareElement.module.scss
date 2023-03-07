@@ -1,6 +1,9 @@
 .element {
   transition: 0.5s;
   background-color: rgba(196, 196, 196, 1);
+  width: 270px;
+  height: 320px;
+  position: relative;
 
   // &.hasColor {
   //   &-orange {

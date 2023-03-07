@@ -21,37 +21,4 @@
       line-height: 156.9%;
     }
   }
-
-  .containerOfDivs {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-
-    div {
-      width: 370px;
-      height: 300px;
-      margin: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: 0.5s;
-      h1 {
-        font-size: 24px;
-        line-height: 36px;
-        color: white;
-      }
-      p {
-        color: white;
-        font-size: 18px;
-        line-height: 27px;
-      }
-
-      &:hover {
-        background-color: rgba(255, 72, 21, 1);
-        cursor: pointer;
-      }
-    }
-  }
 }

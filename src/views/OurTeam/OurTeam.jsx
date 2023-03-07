@@ -4,12 +4,16 @@ import Paragraph from "../../typography/Paragraph/Paragraph";
 import SquareElement from "../../components/SquareElement/SquareElement";
 import BottomBox from "../../components/BottomBox/BottomBox";
 import CircleRow from "../../components/CircleRow/CircleRow";
+import { ReactComponent as Instagram } from "../../assets/icons/insta-our-team.svg";
+import { ReactComponent as Facebook } from "../../assets/icons/facebook-our-team.svg";
+import { ReactComponent as Twitter } from "../../assets/icons/twitter-our-team.svg";
+import { ReactComponent as Whatsapp } from "../../assets/icons/whatsapp-our-team.svg";
 
 const OurTeam = () => {
   const data = [
     { personalData: "Warner Din", profession: "Graphic Designer" },
     { personalData: "Alen Mask", profession: "Backend Developer" },
-    { personalData: "Dina Jems", profession: "Forntend Developer" },
+    { personalData: "Dina Jems", profession: "Frontend Developer" },
     { personalData: "Steven Kok", profession: "UI/UX Engineer" },
   ];
   return (
@@ -22,13 +26,19 @@ const OurTeam = () => {
 alteration in some form, by injected humour, or randomised words which don't"
         />
       </div>
+
       <div className={styles.boxContainer}>
         {data.map((element) => {
           return (
-            // <div className={styles.oblongAndDiv}>
             <div className={styles.box}>
-              {" "}
-              <SquareElement color="grey" />
+              {/* <SquareElement color="grey" /> */}
+              <SquareElement />
+              <div className={styles.icons}>
+                <Instagram />
+                <Facebook />
+                <Twitter />
+                <Whatsapp />
+              </div>
               <BottomBox
                 personalData={element.personalData}
                 profession={element.profession}
