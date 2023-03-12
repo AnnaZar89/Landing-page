@@ -21,4 +21,13 @@
       margin-right: 37px;
     }
   }
+
+  .contactBoxContainer {
+    .contactBox {
+      display: flex;
+      img {
+        margin-left: -10px;
+      }
+    }
+  }
 }

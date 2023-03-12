@@ -1,7 +1,9 @@
-import styles from "./Footer.module.scss";
-
 import ExpertifyFooter from "../../components/ExpertifyFooter/ExpertifyFooter";
 import LinkInFooter from "../../components/LinkInFooter/LinkInFooter";
+import phoneIcon from "../../assets/icons/phone-icon-footer.svg";
+import emailIcon from "../../assets/icons/email-icon-footer.svg";
+import locationIcon from "../../assets/icons/location-icon-footer.svg";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   const data = [
@@ -26,6 +28,13 @@ const Footer = () => {
     "Graphic Design",
     "SEO",
   ];
+
+  const contact = [
+    [phoneIcon, ["+1 763-227-5032", "+1 763-227-5032"]],
+    [emailIcon, ["info@domainname.com", "construction@gmail.com"]],
+    [locationIcon, ["2752 Willison Street", "Eagan, United State"]],
+  ];
+
   return (
     <div className={styles.element}>
       <ExpertifyFooter />
@@ -36,6 +45,7 @@ const Footer = () => {
       />
 
       <LinkInFooter textInTitle="Our Service" data={services} />
+      <LinkInFooter textInTitle="Contact Us" contactBox={contact} />
     </div>
   );
 };
