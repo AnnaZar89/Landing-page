@@ -43,7 +43,6 @@ const Footer = () => {
         data={data}
         additionalData={dataInAddition}
       />
-
       <LinkInFooter textInTitle="Our Service" data={services} />
       <LinkInFooter textInTitle="Contact Us" contactBox={contact} />
     </div>

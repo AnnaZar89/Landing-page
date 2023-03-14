@@ -13,8 +13,8 @@ const Blog = () => {
       <Heading text="Latest blog" color="orange" />
       <Heading text="See Our Latest & New Blog" color="black" />
       <div className={styles.blogArticleContainer}>
-        {headerText.map((element) => (
-          <BlogArticle headerTxt={element} />
+        {headerText.map((element, idx) => (
+          <BlogArticle headerTxt={element} key={idx} />
         ))}
       </div>
     </div>

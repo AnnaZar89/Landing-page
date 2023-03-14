@@ -1,5 +1,39 @@
 .element {
+  ul {
+    list-style-type: none;
+    font-family: "Poppins";
+    margin: 0;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    li {
+      margin-bottom: 12px;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      cursor: pointer;
+      color: #ff4815;
+    }
+  }
+
+  ul.linkServicesContainer > li:before {
+    content: "- ";
+    color: #ff4815;
+    transition: 0.3s;
+  }
+
+  ul.linkServicesContainer > li:hover::before {
+    content: "+ ";
+    color: #ff4815;
+  }
+
   margin-top: 187px;
+
   h1:nth-child(1) {
     font-weight: 600;
     font-size: 20px;
@@ -9,24 +43,17 @@
   }
   .divContainer {
     display: flex;
-    h1 {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 21px;
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-    }
-
-    div {
-      margin-right: 37px;
-    }
   }
 
   .contactBoxContainer {
     .contactBox {
       display: flex;
+      margin-bottom: 15px;
       img {
         margin-left: -10px;
+      }
+      .contactListContainer li {
+        margin-bottom: 4px;
       }
     }
   }

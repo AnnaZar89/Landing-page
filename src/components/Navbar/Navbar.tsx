@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <div className={styles.element}>
       {navbarData.map(({ name, link, icon }) => (
-        <NavbarBox text={name} link={link} icon={icon} />
+        <NavbarBox text={name} link={link} icon={icon} key={name} />
       ))}
     </div>
   );

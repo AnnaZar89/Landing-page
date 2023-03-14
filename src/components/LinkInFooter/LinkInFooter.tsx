@@ -2,13 +2,19 @@ import { FC } from "react";
 import Heading from "../../typography/Heading/Heading";
 import styles from "./LinkInFooter.module.scss";
 
+// type IContact = {
+//   phoneIcon?: string;
+//   emailIcon?: string;
+//   locationIcon?: string;
+// };
+
 interface ILinkInFooter {
   textInTitle: string;
   data?: string[];
   additionalData?: string[];
 
-  contactBox?: any;
-  // contactBox?: (string | string[])[];
+  contactBox?: (string | string[])[][];
+  // contactBox?: (IContact | string[])[][];
 }
 
 const LinkInFooter: FC<ILinkInFooter> = ({
@@ -20,37 +26,36 @@ const LinkInFooter: FC<ILinkInFooter> = ({
   return (
     <div className={styles.element}>
       <Heading text={textInTitle} color="orange" />
-
       <div className={styles.divContainer}>
         {data && (
-          <div>
-            {data.map((element: string) => (
-              <Heading text={`-${element}`} color="white" />
+          <ul className={styles.linkServicesContainer}>
+            {data.map((element: string, idx) => (
+              <li key={idx}>{element}</li>
             ))}
-          </div>
+          </ul>
         )}
 
         {additionalData && (
-          <div>
-            {additionalData.map((element: string) => (
-              <Heading text={`- ${element}`} color="white" />
+          <ul className={styles.linkServicesContainer}>
+            {additionalData.map((element: string, idx) => (
+              <li key={idx}>{element}</li>
             ))}
-          </div>
+          </ul>
         )}
 
         {contactBox && (
           <div className={styles.contactBoxContainer}>
-            {contactBox.map((element: any) => (
-              <div className={styles.contactBox}>
-                {element.map((elem: any, idx: any) =>
-                  idx === 0 ? (
-                    <img src={elem} />
+            {contactBox.map((element: (string | string[])[], idx) => (
+              <div className={styles.contactBox} key={idx}>
+                {element.map((elem: any, index: number) =>
+                  index === 0 ? (
+                    <img src={elem} alt="Way of the contact" key={index} />
                   ) : (
-                    <div>
-                      {elem.map((item: any) => (
-                        <Heading text={item} color="white" />
+                    <ul className={styles.contactListContainer} key={index}>
+                      {elem.map((item: string) => (
+                        <li key={item}>{item}</li>
                       ))}
-                    </div>
+                    </ul>
                   )
                 )}
               </div>

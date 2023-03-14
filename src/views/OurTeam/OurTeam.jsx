@@ -28,9 +28,9 @@ alteration in some form, by injected humour, or randomised words which don't"
       </div>
 
       <div className={styles.boxContainer}>
-        {data.map((element) => {
+        {data.map((element, idx) => {
           return (
-            <div className={styles.box}>
+            <div className={styles.box} key={idx}>
               {/* <SquareElement color="grey" /> */}
               <SquareElement />
               <div className={styles.icons}>

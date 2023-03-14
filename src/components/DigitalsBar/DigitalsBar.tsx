@@ -16,18 +16,18 @@ const DigitalsBar = () => {
   return (
     <div className={styles.element}>
       <div className={styles.digitBar}>
-        {digitals.map((digit) => (
-          <div onClick={() => setValue(digit)}>
+        {digitals.map((digit, idx) => (
+          <div onClick={() => setValue(digit)} key={idx}>
             <Heading text={digit} color="black" />
           </div>
         ))}
       </div>
-      {digitals.map((digit) => {
+      {digitals.map((digit, idx) => {
         if (digit === "All") {
           return "";
         } else if (value === "All") {
           return (
-            <div className={styles.square}>
+            <div className={styles.square} key={idx}>
               <OurPortfolioSquareElement
                 textInHeader={digit}
                 textInParagraph={digit}
@@ -44,7 +44,7 @@ const DigitalsBar = () => {
           );
         } else if (value === digit) {
           return (
-            <div className={styles.square}>
+            <div className={styles.square} key={idx}>
               <OurPortfolioSquareElement
                 textInHeader={digit}
                 textInParagraph={digit}
