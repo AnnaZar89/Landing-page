@@ -1,8 +1,12 @@
 @import "mixing";
 
-:root {
-  --background-color: #dccae1;
-}
+// :root {
+// --background-color: #dccae1;
+// --background-color: magenta;
+// &[dark-mode="true"] {
+//   --background-color: pink;
+// }
+// }
 
 * {
   box-sizing: border-box;
@@ -21,4 +25,12 @@ body {
   height: 100%;
   font-weight: 500;
   background-color: var(--background-color);
+}
+
+.dark-mode {
+  background-color: yellow;
+}
+
+.dark {
+  background-color: black;
 }

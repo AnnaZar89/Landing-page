@@ -35,6 +35,14 @@ const Footer = () => {
     [locationIcon, ["2752 Willison Street", "Eagan, United State"]],
   ];
 
+  const contactData = [
+    {
+      name: "+1 763-227-5032",
+      description: "+1 763-227-5032",
+      icon: phoneIcon,
+    },
+  ];
+
   return (
     <div className={styles.element}>
       <ExpertifyFooter />

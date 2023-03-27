@@ -1,0 +1,51 @@
+.element {
+  position: relative;
+  display: inline-block;
+  transition: 0.4s;
+  width: 70px;
+  min-width: 70px;
+  height: 36px;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    border: 0;
+    white-space: nowrap;
+  }
+  .toggle.isChecked:before {
+    transform: translate(7px, -50%);
+  }
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid red;
+  transition: 0.4s;
+  border-radius: 240px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    left: 0.4px;
+    bottom: 40px;
+    transition: 0.4s;
+    border-radius: 50%;
+    transform: translate(35px, -50%);
+    background-color: red;
+  }
+}
+
+.dark {
+  background-color: black;
+}
