@@ -1,6 +1,6 @@
 .element {
   background: url(../../assets/images/testimonial-box-background.jpg);
-  margin-left: 35px;
+  // margin-left: 35px;
   width: 368px;
   height: 229px;
   position: relative;
@@ -19,12 +19,10 @@
   }
   // p {
   p:nth-child(3) {
-    font-size: 14px;
-    line-height: 130.9%;
     color: #ffffff;
     width: 305px;
     margin: 7px auto;
-    font-weight: 400;
+    // font-weight: 400;
   }
   p:nth-child(4) {
     font-family: "Source Sans Pro";

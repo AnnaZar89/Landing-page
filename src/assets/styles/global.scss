@@ -1,12 +1,16 @@
 @import "mixing";
 
-// :root {
-// --background-color: #dccae1;
-// --background-color: magenta;
-// &[dark-mode="true"] {
-//   --background-color: pink;
-// }
-// }
+:root {
+  --background-color: white;
+  --background-color-font: black;
+  --toggle-background-color: green;
+
+  &[dark-mode="true"] {
+    --background-color: pink;
+    --background-color-font: white;
+    --toggle-background-color: red;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -25,12 +29,13 @@ body {
   height: 100%;
   font-weight: 500;
   background-color: var(--background-color);
+  color: var(--background-color-font);
 }
 
-.dark-mode {
-  background-color: yellow;
-}
+// .dark-mode {
+//   background-color: yellow;
+// }
 
-.dark {
-  background-color: black;
-}
+// .dark {
+//   background-color: black;
+// }

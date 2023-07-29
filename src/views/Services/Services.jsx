@@ -9,11 +9,18 @@ import Paragraph from "../../typography/Paragraph/Paragraph";
 import Heading from "../../typography/Heading/Heading";
 
 import ServiceComponent from "../../components/ServiceComponent/ServiceComponent";
+import Container from "../../components/Container/Container";
 
 const Services = () => {
   return (
-    <div className={styles.elementInServices}>
-      <Heading text="Services" className color="orange" fontSize="20px" />
+    <Container>
+    <div className={styles.element}>
+      {/* <Heading text="Services" className color="orange" fontSize="20px" /> */}
+      <Paragraph
+        text="Services"
+        size="large"
+        variant="semiBold"
+      />
       <Heading
         text="We Provide Best Creative Services."
         className
@@ -22,6 +29,7 @@ const Services = () => {
       <Paragraph
         text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
 alteration in some form, by injected humour, or randomised words which don't"
+        size="medium"
       />
       <div className={styles.containerOfDiv}>
         <ServiceComponent
@@ -82,6 +90,7 @@ available, but the majority have"
         />
       </div>
     </div>
+    </Container>
   );
 };
 

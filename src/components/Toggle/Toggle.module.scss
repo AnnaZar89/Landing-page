@@ -1,5 +1,7 @@
 .element {
-  position: relative;
+  position: absolute;
+  // top: -8%;
+  right: 5%;
   display: inline-block;
   transition: 0.4s;
   width: 70px;
@@ -27,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border: 1px solid red;
+  border: 1px solid var(--toggle-background-color);
   transition: 0.4s;
   border-radius: 240px;
 
@@ -42,7 +44,7 @@
     transition: 0.4s;
     border-radius: 50%;
     transform: translate(35px, -50%);
-    background-color: red;
+    background-color: var(--toggle-background-color);
   }
 }
 

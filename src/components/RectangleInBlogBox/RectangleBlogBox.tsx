@@ -1,13 +1,13 @@
 import { FC, ReactNode } from "react";
 import Heading from "../../typography/Heading/Heading";
-import styles from "./RectangleBlogBoxDown.module.scss";
+import styles from "./RectangleBlogBox.module.scss";
 
-interface IRectangleBlogBoxDown {
+interface IRectangleBlogBox {
   icon: ReactNode;
   text: string;
 }
 
-const RectangleBlogBoxDown: FC<IRectangleBlogBoxDown> = ({ icon, text }) => {
+const RectangleBlogBox: FC<IRectangleBlogBox> = ({ icon, text }) => {
   return (
     <div className={styles.element}>
       {icon}
@@ -16,4 +16,4 @@ const RectangleBlogBoxDown: FC<IRectangleBlogBoxDown> = ({ icon, text }) => {
   );
 };
 
-export default RectangleBlogBoxDown;
+export default RectangleBlogBox;

@@ -1,20 +1,35 @@
-.element {
-  margin: 120px auto;
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
+
+.container {
+  margin: 50px auto;
   .textContainer {
-    width: 693px;
+    // width: 693px;
+    margin: 0 20%;
     text-align: center;
-    margin: 0 auto;
-    text-transform: capitalize;
-    h1:nth-child(1) {
-      font-weight: 500;
-      // font-family: "Poppins";
-      font-size: 20px;
-      line-height: 30px;
-    }
+    margin: 30px auto;
+    // text-transform: capitalize;
+    // h1:nth-child(1) {
+    //   font-weight: 500;
+      
+    //   font-size: 20px;
+    //   line-height: 30px;
+    // }
 
     h1:nth-child(2) {
       font-size: 32px;
       line-height: 48px;
+    }
+    p:nth-child(1) {
+      // margin: 0 20%;
+      font-family: Poppins;
+      color: #ff4815;
+      
+    }
+    h1 + p {
+      width: 693px;
+      // text-align: center;
+      margin: 0 auto;
     }
   }
   .oblong {
@@ -44,7 +59,17 @@
   }
   .pricingPlanBoxContainer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    // justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    height: 1900px;
+
+    @include media("xl") {
+      flex-direction: row;
+      // height: initial;
+      height: auto;
+      // justify-content: space-between;
+    }
   }
 }

@@ -4,9 +4,12 @@ import { ReactComponent as Analytics } from "../../assets/icons/analytics-featur
 import { ReactComponent as Satisfied } from "../../assets/icons/satisfied-features.svg";
 import { ReactComponent as Award } from "../../assets/icons/award-features.svg";
 import { ReactComponent as Support } from "../../assets/icons/support-features.svg";
+import Container from "../../components/Container/Container";
 
 const Feature = () => {
   return (
+    <div className={styles.wrapper}>
+    <Container>
     <div className={styles.element}>
       <FeatureBox
         imageFeature={<Analytics />}
@@ -25,6 +28,8 @@ const Feature = () => {
         text="Support Available"
       />
     </div>
+    </Container>
+  </div>
   );
 };
 

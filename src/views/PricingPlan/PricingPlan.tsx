@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 import Heading from "../../typography/Heading/Heading";
-import Paragraph from "../../typography/Paragraph/Paragraph";
+import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import PayingPeriodBox from "../../components/PayingPeriodBox/PayingPeriodBox";
 import PricingPlanBox from "../../components/PricingPlanBox/PricingPlanBox";
 import styles from "./PricingPlan.module.scss";
+import Container from "../../components/Container/Container";
 
 const PricingPlan = () => {
   const [toggle, setToggle] = useState(false);
@@ -12,11 +13,18 @@ const PricingPlan = () => {
     setToggle(!toggle);
   };
   return (
-    <div className={styles.element}>
+    <Container className={styles.container}>
       <div className={styles.textContainer}>
-        <Heading text="pricing plan" color="orange" />
+        {/* <Heading text="pricing plan" color="orange" /> */}
+        <Paragraph
+        text="Pricing Plan" size={SizeType.LARGE}
+        variant="semiBold"
+      />
         <Heading text="Purches Our Pricing Plan" color="black" />
-        <Paragraph text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't" />
+        <Paragraph
+          text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't"
+          size={SizeType.MEDIUM}
+        />
       </div>
       <div className={styles.oblong} onClick={handleToggle}>
         <PayingPeriodBox
@@ -39,7 +47,7 @@ const PricingPlan = () => {
         />
         <PricingPlanBox sortOfPlan="Premium Plan" sum="99" />
       </div>
-    </div>
+    </Container>
   );
 };
 

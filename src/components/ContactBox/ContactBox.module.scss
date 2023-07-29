@@ -1,0 +1,31 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
+.element {
+  h1:nth-child(1) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 19px;
+  }
+
+  li {
+    list-style-type: none;
+    font-family: "Poppins";
+    margin: 0;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+  }
+  .contactBox {
+    display: flex;
+    margin-bottom: 15px;
+    img {
+      margin-left: -10px;
+    }
+  }
+}

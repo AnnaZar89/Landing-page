@@ -1,6 +1,15 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles/mixins/media.scss";
 .element {
-  width: 570px;
-  transform: translate(-25%);
+
+ 
+    // margin: 0 20%;
+    text-align: center;
+    margin-top: 60px;
+  
+  // width: 570px;
+  // transform: translate(-25%);
+  // margin: 10% 10%;
 
   h1 {
     font-weight: 500;
@@ -15,9 +24,16 @@
     line-height: 50px;
     display: inline;
   }
+  p:nth-child(1) {
+    color: #ff4815;
+    font-family: Poppins;
+  }
   p {
-    line-height: 156.9%;
+    // line-height: 156.9%;
+    text-align: center;
+    @include media("xl") {
     text-align: left;
+    }
   }
 
   ul {
@@ -43,5 +59,11 @@
     &:hover {
       color: white;
     }
+  }
+  @include media("xl") {
+    // margin: 5%;
+    // margin: 0;
+    text-align: left;
+    margin-top:0;
   }
 }

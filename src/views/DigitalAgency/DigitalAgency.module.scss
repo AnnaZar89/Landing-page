@@ -1,3 +1,6 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
+
 .element {
   position: relative;
   background: url("../../assets/images/background-header.jpg");
@@ -8,18 +11,32 @@
   height: 100%;
 
   .container {
+    // padding: 10% 0;
     position: absolute;
-    height: 43px;
+    // height: 43px;
     width: 100%;
-    top: 6.5%;
+    // top: 6.5%;
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    @include media("xl") {
+      flex-direction: row;
+      padding-top: 45px;
+
+    }
   }
 
   .container img {
-    margin-right: 23%;
+    margin-right: 0;
     width: 148px;
     height: 28px;
+    @include media("xl") {
+      margin-right: 322px;
+    }
   }
+  // @include media("xl") {
+  //   margin-right: 322px;
+  // }
 }

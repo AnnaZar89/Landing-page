@@ -1,9 +1,10 @@
 import styles from "./PricingPlanBox.module.scss";
-import List from "../List/List";
 import Button from "../Button/Button";
 import Heading from "../../typography/Heading/Heading";
 import { FC } from "react";
 import cn from "classnames";
+import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
+import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
 
 interface IPricingPlanBox {
   sortOfPlan: string;
@@ -20,7 +21,7 @@ const PricingPlanBox: FC<IPricingPlanBox> = ({ sortOfPlan, sum, classAdd }) => {
           <Heading text="$" color="black" additionalText={sum} />
         </div>
       </div>
-      <List
+      <ListBoxContainer
         classAdd={classAdd}
         listData={[
           "Customer Management",
@@ -30,6 +31,7 @@ const PricingPlanBox: FC<IPricingPlanBox> = ({ sortOfPlan, sum, classAdd }) => {
           "24/7 Support",
           "Business Analysis",
         ]}
+        Icon={Check}
       />
       <Button text="Buy Now" classAdd={classAdd} />
     </div>

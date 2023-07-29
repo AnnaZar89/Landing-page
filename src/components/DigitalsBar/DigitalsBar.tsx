@@ -12,12 +12,12 @@ enum DigitalValueType {
   WEB_DESIGN = "Web Design",
 }
 
-type digitalType = {
+type DigitalType = {
   name: string;
   value: DigitalValueType;
 };
 
-const digitalsTitle: digitalType[] = [
+const digitalsTitle: DigitalType[] = [
   { name: "All", value: DigitalValueType.ALL },
   { name: "Graphic Design", value: DigitalValueType.GRAPHIC_DESIGN },
   { name: "Mobile App", value: DigitalValueType.MOBILE_APP },

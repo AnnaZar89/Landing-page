@@ -1,29 +1,50 @@
-.elementInServices {
-  text-align: center;
-  h1:nth-child(1) {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-  }
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
 
-  p:nth-child(3) {
+.element {
+  text-align: center;
+  // padding: 0 5%;
+  // h1:nth-child(1) {
+  //   font-weight: 500;
+  //   font-size: 20px;
+  //   line-height: 30px;
+  // }
+
+  p:nth-child(1) {
+    font-family: Poppins;
+    color: rgba(255, 72, 21, 1);
+  }
+  h1 + p {
     width: 693px;
+    margin: 0 auto;
+
+  }
+  p:nth-child(4) {
+    // width: 693px;
     margin: 0 auto;
     font-size: 15px;
     color: #717171;
+    margin: 0 20%;
   }
 
   .containerOfDiv {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
     // align-items: center;
     margin: 50px auto;
-    width: 1170px;
+    justify-items: center;
+    // width: 1170px;
     // margin: 50px 135px 140px 135px;
     p {
       margin: 0;
       width: 223px;
+    }
+    @include media("lg") {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include media("xl") {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }

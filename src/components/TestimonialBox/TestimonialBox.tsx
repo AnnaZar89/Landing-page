@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Paragraph from "../../typography/Paragraph/Paragraph";
+import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import { ReactComponent as Quote } from "../../assets/icons/quote-testimonial.svg";
 import styles from "./TestimonialBox.module.scss";
 
@@ -13,7 +13,7 @@ const TestimonialBox: FC<ITestimonialBox> = ({ text, name, role }) => {
     <div className={styles.element}>
       <Quote />
       <div className={styles.text}></div>
-      <Paragraph text={text} />
+      <Paragraph text={text} size={SizeType.SMALL} />
       <Paragraph text={name} />
       <Paragraph text={role} />
       <Quote />

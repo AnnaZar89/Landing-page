@@ -8,6 +8,7 @@ import { ReactComponent as Instagram } from "../../assets/icons/insta-our-team.s
 import { ReactComponent as Facebook } from "../../assets/icons/facebook-our-team.svg";
 import { ReactComponent as Twitter } from "../../assets/icons/twitter-our-team.svg";
 import { ReactComponent as Whatsapp } from "../../assets/icons/whatsapp-our-team.svg";
+import Container from "../../components/Container/Container";
 
 const OurTeam = () => {
   const data = [
@@ -17,13 +18,20 @@ const OurTeam = () => {
     { personalData: "Steven Kok", profession: "UI/UX Engineer" },
   ];
   return (
+    <Container>
     <div className={styles.element}>
       <div className={styles.textContainer}>
-        <Heading text="Our Team" color="orange" />
+        {/* <Heading text="Our Team" color="orange" /> */}
+        <Paragraph
+        text="Our Team"
+        size="large"
+        variant="semiBold"
+      />
         <Heading text="Meet Our Best Creative Team" color="black" />
         <Paragraph
           text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
 alteration in some form, by injected humour, or randomised words which don't"
+          size="medium"
         />
       </div>
 
@@ -49,6 +57,7 @@ alteration in some form, by injected humour, or randomised words which don't"
       </div>
       <CircleRow />
     </div>
+    </Container>
   );
 };
 

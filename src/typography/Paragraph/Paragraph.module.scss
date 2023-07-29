@@ -1,7 +1,50 @@
 .element {
   color: rgba(113, 113, 113, 1);
   font-family: "Noto Sans";
-  font-size: 15px;
-  line-height: 23.54px;
   text-align: center;
+  &.hasSize {
+    &-small {
+      font-size: 14px;
+      line-height: 18px;
+      // font-weight: 400;
+    }
+    &-medium {
+      font-size: 15px;
+      line-height: 23.5px;
+      // font-weight: 500;
+    }
+    &-standard {
+      font-size: 16px;
+      line-height: 24px;
+      // font-weight: 700;
+    }
+    &-large {
+      font-size: 18px;
+      line-height: 27px;
+      // font-weight: 500;
+    }
+
+    &-large {
+      font-size: 20px;
+      line-height: 30px;
+      // color: rgba(255, 72, 21, 1);
+    }
+
+    &-extraExtraLarge {
+      font-size: 22px;
+      line-height: 33px;
+      // font-weight: 700;
+    }
+  }
+  &.hasVariant {
+    &-regular {
+      font-weight: 400;
+    }
+    &-semiBold {
+      font-weight: 500;
+    }
+    &-bold {
+      font-weight: 500;
+    }
+  }
 }

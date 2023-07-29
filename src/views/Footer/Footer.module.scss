@@ -1,15 +1,49 @@
-.element {
-  box-sizing: border-box;
-  background: url(../../assets/images/background-footer.jpg);
-  height: 518px;
-  width: 100%;
-  margin-top: 120px;
-  padding-left: 135px;
-  padding-right: 135px;
-  display: flex;
-  justify-content: space-between;
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
 
-  div:nth-child(4) {
-    margin-right: 0;
+.wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #475258;
+  padding: 20px;
+  border-radius: 8px;
+
+  @include media("lg") {
+    height: 900px;
+    background: url("../../assets/images/background-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    border-radius: 0;
+  }
+  @include media("xl") {
+    height: 518px;
+  }
+
+  .container {
+    padding: 40px 0;
+    @include media("lg") {
+      transform: translateY(60px);
+    }
+    .element {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr;
+      justify-content: center;
+
+      @include media("md") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include media("xl") {
+        grid-template-columns: 1.3fr 1fr 0.6fr 1fr;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+      }
+    }
   }
 }

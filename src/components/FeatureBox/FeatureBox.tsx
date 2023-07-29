@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Heading from "../../typography/Heading/Heading";
-import Paragraph from "../../typography/Paragraph/Paragraph";
+import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import styles from "../FeatureBox/FeatureBox.module.scss";
 
 interface IFutureBox {
@@ -21,7 +21,7 @@ const FeatureBox: FC<IFutureBox> = ({ imageFeature, content, text }) => {
         {imageFeature}
         {/* <img src={imageFeature} alt="image" className={styles.imgFeature} /> */}
         <Heading text={content} color="black" />
-        <Paragraph text={text} />
+        <Paragraph text={text} size={SizeType.LARGE} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Heading from "../../typography/Heading/Heading";
-import Paragraph from "../../typography/Paragraph/Paragraph";
+import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import styles from "./OurPortfolioSquareElement.module.scss";
 
 interface IOurPortfolioSquareElement {
@@ -15,7 +15,7 @@ const OurPortfolioSquareElement: FC<IOurPortfolioSquareElement> = ({
   return (
     <div className={styles.element}>
       <Heading text={textInHeader} color="white" />
-      <Paragraph text={textInParagraph} />
+      <Paragraph text={textInParagraph} size={SizeType.LARGE} />
     </div>
   );
 };

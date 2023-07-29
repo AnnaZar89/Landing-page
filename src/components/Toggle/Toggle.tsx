@@ -16,7 +16,7 @@ const Toggle: FC<IToggle> = ({ onChange, checked }) => {
         checked={checked}
         onChange={onChange}
       />
-      {/* <span className={cn(styles.toggle, checked && styles.isChecked)} /> */}
+
       <span className={cn(styles.toggle, checked && styles.isChecked)} />
     </label>
   );

@@ -1,24 +1,21 @@
 .element {
-  margin-top: 120px;
+  margin-top: 60px;
 
   .textContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1:nth-child(1) {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 30px;
+    margin: 0 20%;
+    p:nth-child(1) {
+      font-family: Poppins;
+      color: rgba(255, 72, 21, 1);
     }
 
     h1:nth-child(2) {
       font-weight: 700;
       font-size: 32px;
       line-height: 46px;
-    }
-    p {
-      width: 693px;
-      line-height: 156.9%;
+      text-align: center;
     }
   }
 }

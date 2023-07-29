@@ -1,51 +1,104 @@
-.element {
-  position: relative;
-  width: 1440px;
-  height: 500px;
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
+
+.wrapper {
+  height: 900px;
   background: url("../../assets/images/background-testimonial.jpg");
   display: flex;
   align-items: center;
-  .divContainer {
+
+  @include media("lg") {
+    height: 700px;
+  }
+  @include media("xl") {
+    height: 500px;
+  }
+  .testimonialContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+   
+
+    @include media("lg") {
+      justify-content: space-around; 
+      height: 500px;
+    }
+    @include media("xl") {
+      flex-direction: row;
+      height: 500px;
+      justify-content: center;
+      position: relative;
+    }
+  .element {
     width: 387px;
     height: 188px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 135px;
-
-    h1:nth-child(1) {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: capitalize;
+    justify-content: space-around;
+   
+    @include media("xl") {
+      text-align: left;
+      margin-right: 13px;
     }
 
     h1:nth-child(2) {
       font-size: 36px;
       line-height: 131.2%;
     }
-    p {
+
+    p:nth-child(1) {
+      font-family: Poppins;
+      text-align: left;
+      color: rgba(255, 72, 21, 1);
+      text-align: center;
+      @include media("xl") {
+        text-align: left;
+      }
+    }
+    h1 + p {
       font-size: 16px;
       line-height: 156.4%;
-    }
+      text-align: center;
 
-    p {
-      text-align: left;
+      @include media("xl") {
+        text-align: left;
+      }
     }
+    
   }
   .logoContainer {
     display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: space-around;
+    text-align: center;
+
+    @include media("lg") {
+      flex-direction: row;
+      width: 800px;
+    }
+    @include media("lg") {
+      height: initial;
+      justify-content: space-between;
+    }
   }
   .logoContainer + div {
-    position: absolute;
-    top: 415px;
-    left: 875px;
+    // position: absolute;
+    // top: 415px;
+    // left: 875px;
     width: 73px;
     height: 17px;
     justify-content: space-around;
+    @include media("xl") {
+      position: absolute;
+      top: 415px;
+      left: 875px;
+    }
     div:nth-child(-n + 3) {
       width: 11px;
       height: 11px;
     }
   }
+}
 }

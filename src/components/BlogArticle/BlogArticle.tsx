@@ -1,6 +1,6 @@
 import { FC } from "react";
-import BlogBoxUp from "../BlogBoxUp/BlogBoxUp";
-import BlogBoxDown from "../BlogBoxDown/BlogBoxDown";
+import BlogImage from "../BlogImage/BlogImage";
+import BlogBox from "../BlogBox/BlogBox";
 
 interface IBlogArticle {
   headerTxt: string;
@@ -8,12 +8,10 @@ interface IBlogArticle {
 
 const BlogArticle: FC<IBlogArticle> = ({ headerTxt }) => {
   return (
-    <>
       <div>
-        <BlogBoxUp />
-        <BlogBoxDown headerTxt={headerTxt} />
+        <BlogImage />
+        <BlogBox headerTxt={headerTxt} />
       </div>
-    </>
   );
 };
 

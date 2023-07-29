@@ -1,6 +1,6 @@
 import styles from "../Content/Content.module.scss";
 import Heading from "../../typography/Heading/Heading";
-import Paragraph from "../../typography/Paragraph/Paragraph";
+import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import Button from "../Button/Button";
 
 const Content = () => {
@@ -15,6 +15,7 @@ const Content = () => {
         text="There are many variations of passages of Lorem Ipsum available, but the
         suffered alteration in some form, by injected humour suffered alteration
         in by injected humour majority"
+        size={SizeType.MEDIUM}
       />
 
       <div className={styles.buttonStyles}>

@@ -1,7 +1,7 @@
 import styles from "../ServiceComponent/ServiceComponent.module.scss";
 import { FC } from "react";
 import Heading from "../../typography/Heading/Heading";
-import Paragraph from "../../typography/Paragraph/Paragraph";
+import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 
 interface IServiceComponent {
   number: string;
@@ -29,7 +29,7 @@ const ServiceComponent: FC<IServiceComponent> = ({
 
         <div className={styles.txt}>
           <Heading text={title} color="black" />
-          <Paragraph text={text} />
+          <Paragraph text={text} size={SizeType.MEDIUM} />
           <Paragraph text={phrase} />
         </div>
       </div>

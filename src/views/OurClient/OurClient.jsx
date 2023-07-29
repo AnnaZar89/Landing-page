@@ -8,17 +8,26 @@ import { ReactComponent as Compass } from "../../assets/icons/compass-our-client
 import { ReactComponent as Mountain } from "../../assets/icons/mountain-our-clients.svg";
 import { ReactComponent as Shoes } from "../../assets/icons/shoes-our-clients.svg";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow-left.svg";
+import Container from "../../components/Container/Container";
 
 const OurClient = () => {
   return (
-    <div className={styles.element}>
+    <div className={styles.wrapper}>
+      <Container>
+      <div className={styles.element}>
       <div className={styles.elementDiv}>
-        <Heading text="Clients" color="orange" />
+      <Paragraph
+        text="Clients"
+        size="large"
+        variant="semiBold"
+      />
+        {/* <Heading text="Clients" color="orange" /> */}
         <Heading text="Our Clients" color="black" />
         <Paragraph
           text="There are many variations of passages of Lorem Ipsum available, suffered
         alteration in some form, by injected humour suffered by injected humour
         majority"
+          size="medium"
         />
       </div>
 
@@ -34,6 +43,8 @@ const OurClient = () => {
         <Camping />
         <CampingArea />
       </div>
+      </div>
+      </Container>
     </div>
   );
 };

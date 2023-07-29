@@ -1,14 +1,42 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
+
+
+.wrapper {
+  background: #14212b;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
 .element {
   box-sizing: border-box;
-  // width: 100%;
+  width: 100%;
   // left: 0px;
   // top: 2188px;
   // padding: 60px;
   background: #14212b;
   opacity: 0.85;
-  display: flex;
-  justify-content: space-around;
+  // display: flex;
+  display: grid;
+
+  // justify-content: space-around;
+  justify-items: center;
   align-items: center;
-  height: 370px;
+  height: 1000px;
+
+  // height: 370px;
   // margin-top: 8%;
+  @include media("xs") {
+    grid-template-columns: 1fr;
+  }
+  @include media("md") {
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+    padding: 0 10%;
+  }
+  @include media("xl") {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 370px;
+    padding: 0;
+  }
 }

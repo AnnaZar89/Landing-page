@@ -1,70 +1,45 @@
 import { FC } from "react";
 import Heading from "../../typography/Heading/Heading";
 import styles from "./LinkInFooter.module.scss";
-
-// type IContact = {
-//   phoneIcon?: string;
-//   emailIcon?: string;
-//   locationIcon?: string;
-// };
+import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
+import { ContactBoxT } from "../../views/Footer/mockData";
+import cn from "classnames";
 
 interface ILinkInFooter {
-  textInTitle: string;
-  data?: string[];
+  title: string;
+  data: string[] | ContactBoxT[];
   additionalData?: string[];
-
-  contactBox?: (string | string[])[][];
-  // contactBox?: (IContact | string[])[][];
+  className?: string;
 }
 
 const LinkInFooter: FC<ILinkInFooter> = ({
-  textInTitle,
+  title,
   data,
   additionalData,
-  contactBox,
+  className,
+  // contactData,
 }) => {
   return (
-    <div className={styles.element}>
-      <Heading text={textInTitle} color="orange" />
-      <div className={styles.divContainer}>
-        {data && (
-          <ul className={styles.linkServicesContainer}>
-            {data.map((element: string, idx) => (
-              <li key={idx}>{element}</li>
-            ))}
-          </ul>
-        )}
-
-        {additionalData && (
-          <ul className={styles.linkServicesContainer}>
-            {additionalData.map((element: string, idx) => (
-              <li key={idx}>{element}</li>
-            ))}
-          </ul>
-        )}
-
-        {contactBox && (
-          <div className={styles.contactBoxContainer}>
-            {contactBox.map((element: (string | string[])[], idx) => (
-              <div className={styles.contactBox} key={idx}>
-                {element.map((elem: any, index: number) =>
-                  index === 0 ? (
-                    <img src={elem} alt="Way of the contact" key={index} />
-                  ) : (
-                    <ul className={styles.contactListContainer} key={index}>
-                      {elem.map((item: string) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  )
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+    <div className={cn(styles.element, className)}>
+      <Heading text={title} color="orange" />
+      <div className={styles.container}>
+        <ListBoxContainer listData={data} />
+        {additionalData && <ListBoxContainer listData={additionalData} />}
       </div>
     </div>
   );
 };
 
 export default LinkInFooter;
+
+//zakomentowane: 4/05
+// interface IListBox {
+//   data: string[];
+// }
+// const ListBox: FC<IListBox> = ({ data }) => {
+//   return (
+//     <ul>
+//       <li>{data}</li>
+//     </ul>
+//   );
+// };

@@ -7,28 +7,30 @@ import Content from "../../components/Content/Content";
 import Slide from "../../components/Slide/Slide";
 import logoForHeader from "../../assets/images/logo-header.png";
 import { useState, useEffect } from "react";
+import { setLocalDarkMode } from "../../helpers/darkMode";
+import { useAppDispatch, useAppSelector } from "../../store";
+import { setTheme } from "../../store/themeReducer";
 
-const setMode = () => {
-  const savedMode = localStorage.getItem("mode");
-  return savedMode ? savedMode : "light";
-};
+// const setMode = () => {
+//   const savedMode = localStorage.getItem("mode");
+//   return savedMode ? savedMode : "light";
+// };
 const DigitalAgency = () => {
-  const [toggleChecked, setToggleChecked] = useState(setMode());
+  // const [isDarkMode, setIsDarkMode] = useState(false);
+  const darkMode = useAppSelector((state) => state.theme.darkMode);
+  const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    toggleChecked === "dark"
-      ? document.body.classList.add("dark")
-      : document.body.classList.remove("dark");
-    localStorage.setItem("mode", toggleChecked);
-  }, [toggleChecked]);
+  const handleDarkModeChange = () => {
+    // sdarkMode);etIsDarkMode(!isDarkMode);
+    setLocalDarkMode(!darkMode);
+    dispatch(setTheme(!darkMode));
+  };
 
   // useEffect(() => {
-  //   if (toggleChecked) {
-  //     document.documentElement.style.setProperty("--background-color", "white");
-  //   } else {
-  //     document.documentElement.style.setProperty("--background-color", "black");
-  //   }
-  //   localStorage.setItem("mode", JSON.stringify(toggleChecked));
+  //   toggleChecked === "dark"
+  //     ? document.body.classList.add("dark")
+  //     : document.body.classList.remove("dark");
+  //   localStorage.setItem("mode", toggleChecked);
   // }, [toggleChecked]);
 
   return (
@@ -38,11 +40,12 @@ const DigitalAgency = () => {
           <Logo logoImg={logoForHeader} />
           <Navbar />
           <Toggle
-            // onChange={() => setToggleChecked(!toggleChecked)}
-            onChange={() => {
-              setToggleChecked(toggleChecked === "dark" ? "light" : "dark");
-            }}
-            checked={toggleChecked === "light"}
+            onChange={handleDarkModeChange}
+            // onChange={() => {
+            //   setToggleChecked(toggleChecked === "dark" ? "light" : "dark");
+            // }}
+            // checked={isDarkMode}
+            checked={darkMode}
           />
         </div>
         <Content />

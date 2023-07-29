@@ -1,7 +1,15 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
+
 .element {
-  margin-right: 100px;
+  margin-right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 436px;
+  flex-direction: column;
+  @include media("xl") {
+    flex-direction: row;
+    margin-right: 100px;
+  }
 }

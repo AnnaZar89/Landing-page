@@ -1,44 +1,85 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
 .element {
-  width: 300px;
-  height: 217px;
-  padding-top: 187px;
+  // min-width: 380px;
+  // width: 100%;
+
+  p {
+    color: rgba(255, 255, 255, 1);
+    text-align: left;
+    // text-align: center;
+    letter-spacing: 0.05em;
+    @include media("md") {
+      // text-align: left;
+    }
+  }
   img {
     width: 148px;
     height: 28px;
   }
-  h1:nth-child(1) {
-    margin-left: 37px;
-  }
-  h1:nth-child(2) {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: 0.05em;
-    margin-top: 15px;
-    margin-bottom: 25px;
-  }
 
-  h1:nth-child(3) {
+  p:nth-child(2) {
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 21px;
+    // letter-spacing: 0.05em;
+    margin: 15px 0 25px 0;
+    text-align: left;
+    @include media("md") {
+      margin: 0;
+      padding: 5% 0;
+      // padding: 5% 0% 5% 15%;
+    }
+    @include media("lg") {
+      padding: 5% 0%;
+      // padding: 5% 0% 5% 15%;
+    }
+    @include media("xl") {
+      margin: 0;
+      padding: 5% 0% 5% 0%;
+      // padding: 5% 0% 5% 15%;
+    }
+  }
+  p:nth-child(3) {
     font-weight: 700;
-    font-size: 22px;
-    line-height: 33px;
-    letter-spacing: 0.05em;
+    // font-size: 22px;
+    // line-height: 33px;
     margin-bottom: 24px;
   }
 
-  h1:nth-child(4) {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.05em;
+  p:nth-child(4) {
+    //   font-weight: 700;
+    //   font-size: 16px;
+    //   line-height: 24px;
+    //   letter-spacing: 0.05em;
+    margin-bottom: 14px;
   }
-  h1:nth-child(5),
-  h1:nth-child(6) {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    margin-top: 14px;
+  p:nth-child(5),
+  p:nth-child(6) {
+    // font-weight: 700;
+    // font-size: 16px;
+    // line-height: 24px;
+    // letter-spacing: 0.05em;
+    // margin-top: 14px;
     display: inline;
+  }
+  p:nth-child(6) {
+    color: #ff4815;
+  }
+  @include media("xs") {
+    min-width: 380px;
+    // align-items: center;
+  }
+  @include media("md") {
+    align-items: flex-start;
+  }
+  @include media("xl") {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .element p {
+    // text-align: center;
   }
 }

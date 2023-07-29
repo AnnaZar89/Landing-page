@@ -1,5 +1,8 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
 .element {
-  ul {
+  ul,
+  div {
     list-style-type: none;
     font-family: "Poppins";
     margin: 0;
@@ -13,26 +16,25 @@
     li {
       margin-bottom: 12px;
       transition: 0.3s;
+      &::before {
+        content: "-";
+        color: #ff4815;
+        min-width: 15px;
+        display: inline-flex;
+      }
+      &:hover {
+        cursor: pointer;
+        color: #ff4815;
+
+        &::before {
+          content: "+";
+          color: #ff4815;
+        }
+      }
     }
-
-    li:hover {
-      cursor: pointer;
-      color: #ff4815;
-    }
   }
 
-  ul.linkServicesContainer > li:before {
-    content: "- ";
-    color: #ff4815;
-    transition: 0.3s;
-  }
-
-  ul.linkServicesContainer > li:hover::before {
-    content: "+ ";
-    color: #ff4815;
-  }
-
-  margin-top: 187px;
+  // margin-top: 187px;
 
   h1:nth-child(1) {
     font-weight: 600;
@@ -40,9 +42,20 @@
     line-height: 30px;
     letter-spacing: 0.05em;
     margin-bottom: 19px;
+    // margin-top: 20px;
   }
-  .divContainer {
+  .container {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    @include media("xs") {
+      // justify-content: space-evenly;
+      justify-content: flex-start;
+    }
+    @include media("lg") {
+      justify-content: start;
+    }
   }
 
   .contactBoxContainer {
@@ -52,9 +65,9 @@
       img {
         margin-left: -10px;
       }
-      .contactListContainer li {
-        margin-bottom: 4px;
-      }
+      // .contactListContainer li {
+      //   margin-bottom: 4px;
+      // }
     }
   }
 }

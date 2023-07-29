@@ -1,18 +1,65 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles/mixins/media.scss";
 .element {
-  margin: 120px 135px;
-  display: flex;
-  width: 100%;
+  // padding: 5%;
+  margin: 120px 200px;
+  // display: flex;
+  // width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  // text-align: center;
+//  height: 1000px;
+  // align-items: center;
+  // margin: 15% 20%;
+  .logoContainer {
+    // display: flex;
+    // height: 550px;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+   
+    margin-right: 0;
+    height: 470px;
+    transform: translateX(92.5px);
 
-  img:nth-child(1) {
-    width: 370px;
-    height: 312px;
+    img:nth-child(1) {
+      width: 370px;
+      height: 312px;
+      transform: translateX(-50%);
+      // transform: translate(-10%, -20%);
+      // position: absolute;
+      // top: 50%;
+      // right: 50%;
+    }
+
+    img:nth-child(2) {
+      width: 370px;
+      height: 312px;
+      background-color: #e2866d;
+      border-radius: 10px;
+      transform: translateY(-50%);
+      // transform: translate(-50%, 50%);
+      // position: absolute;
+      // top: 50%;
+      // right: 50%;
+      // transform: translate(50%, -50%);
+    }
+    @include media("xl") {
+      margin-right: 30px;
+      align-items: end;
+      transform: translateX(0);
+    }
+  }
+  @include media("xl") {
+    grid-template-columns: 1fr 1fr;
+    margin: 120px 0;
+    // text-align:left;
+    // height: 474px;
+  
   }
 
-  img:nth-child(2) {
-    width: 370px;
-    height: 312px;
-    background-color: #e2866d;
-    border-radius: 10px;
-    transform: translate(-50%, 50%);
-  }
 }
+
+
