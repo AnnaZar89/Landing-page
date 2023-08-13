@@ -6,7 +6,7 @@ import { ReactComponent as UiUxDesign } from "../../assets/icons/ui-ux-design-se
 import { ReactComponent as WebDesign } from "../../assets/icons/web-design-service.svg";
 import { ReactComponent as WebDev } from "../../assets/icons/web-dev-service.svg";
 import Paragraph from "../../typography/Paragraph/Paragraph";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 
 import ServiceComponent from "../../components/ServiceComponent/ServiceComponent";
 import Container from "../../components/Container/Container";

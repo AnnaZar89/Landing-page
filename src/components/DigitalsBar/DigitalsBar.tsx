@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import styles from "../DigitalsBar/DigitalsBar.module.scss";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import OurPortfolioSquareElement from "../../components/OurPortfolioSquareElement/OurPortfolioSquareElement";
 // import Paragraph from "../../typography/Paragraph/Paragraph";
 

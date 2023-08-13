@@ -20,12 +20,12 @@ const Slide = () => {
       <CircleBox>
         <p>05</p>
       </CircleBox>
-      <CircleBox>
+      {/* <CircleBox>
         <ArrowLeft />
       </CircleBox>
       <CircleBox>
         <ArrowLeft />
-      </CircleBox>
+      </CircleBox> */}
     </div>
   );
 };

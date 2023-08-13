@@ -12,7 +12,8 @@
     }
 
     &-black {
-      color: rgba(20, 33, 43, 1);
+      // color: rgba(20, 33, 43, 1);
+      color: var(--background-color-font);
     }
   }
   &.additionalText {

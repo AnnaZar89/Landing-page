@@ -17,7 +17,7 @@ const PayingPeriodBox: FC<IPayingPeriodBox> = ({
       onClick={handleToggle}
       className={cn(styles.element, styles[`${toggle ? "on" : "off"}`])}
     >
-      {yearlyOrMonthly && <h1>{yearlyOrMonthly}</h1>}
+      {yearlyOrMonthly && <h2>{yearlyOrMonthly}</h2>}
     </div>
   );
 };

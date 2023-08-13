@@ -19,24 +19,57 @@
       color: #ff4815;
     }
 
-    h1:nth-child(2) {
+    h2:nth-child(2) {
       line-height: 46.69px;
+      font-size: 32px;
+      font-weight: 700;
     }
-
-
   }
 
   .boxContainer {
-    display: grid;
+    // display: grid;
     justify-content: center;
     margin-top: 81px;
-    margin-bottom: 68px;
-    grid-template-columns: 1fr;
+    // margin-bottom: 68px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
-   
+    width: 100%;
+
+    // .element {
+    //   width: 270px;
+    // }
+
+    :global(.react-multi-carousel-dot-list) {
+      margin-top: 65px;
+    }
+
+    :global(.react-multi-carousel-dot button) {
+      width: 15px;
+      height: 15px;
+      background-color: pink;
+      border: none;
+      // border-color: #ff4815;
+    }
+
+    :global(.react-multi-carousel-dot--active button) {
+      background-color: #ff4815;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ff4815;
+        border-radius: 50%;
+        left: 37%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
     // flex-direction: column;
     @include media("md") {
-      grid-template-columns: 1fr 1fr;
+      // grid-template-columns: 1fr 1fr;
     }
     @include media("xl") {
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -47,6 +80,7 @@
   .box {
     // margin: 30px;
     position: relative;
+    width: 270px;
     .icons {
       width: 100%;
       position: absolute;
@@ -57,19 +91,15 @@
     div:nth-child(3) {
       box-sizing: border-box;
       background: #ffffff;
-
       box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.14);
       border-radius: 0px 0px 70px 0px;
       padding: 15px 20px;
-      // width: 270px;
       height: 82px;
 
-      h1 {
+      h2 {
         font-size: 20px;
         line-height: 30px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        font-weight: 700;
       }
       p {
         font-family: "Rosario";
@@ -87,15 +117,19 @@
     }
   }
 
-  .boxContainer + div {
-    width: 1440px;
-    height: 15px;
-    justify-content: center;
-    div {
-      width: 15px;
-      height: 15px;
-      background-color: #ff4815;
-      margin-left: 15px;
-    }
-  }
+  // .boxContainer + div {
+  //   width: 1440px;
+  //   height: 15px;
+  //   justify-content: center;
+  //   div {
+  //     width: 15px;
+  //     height: 15px;
+  //     background-color: #ff4815;
+  //     margin-left: 15px;
+  //   }
+  // }
 }
+
+// .sliderStyle li {
+//   width: 270px;
+// }

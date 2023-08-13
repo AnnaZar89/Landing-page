@@ -1,4 +1,4 @@
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import BlogArticle from "../../components/BlogArticle/BlogArticle";
 import styles from "./Blog.module.scss";
@@ -12,7 +12,7 @@ const headerText: string[] = [
 
 const Blog = () => {
   return (
-    <Container>
+    <Container className={styles.container}>
       <div className={styles.element}>
         {/* <Heading text="Latest blog" color="orange" /> */}
         <Paragraph

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import PayingPeriodBox from "../../components/PayingPeriodBox/PayingPeriodBox";
 import PricingPlanBox from "../../components/PricingPlanBox/PricingPlanBox";

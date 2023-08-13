@@ -4,11 +4,28 @@
   --background-color: white;
   --background-color-font: black;
   --toggle-background-color: green;
+  --background-color-wrapper: #14212b;
 
   &[dark-mode="true"] {
-    --background-color: pink;
+    --background-color: black;
     --background-color-font: white;
     --toggle-background-color: red;
+    --background-color-digital: black;
+    --font-color-li: white;
+    --font-color-p: #b6b6b4;
+    --border-services: 2px solid #ff4815;
+    --background-color-wrapper: black;
+    --color-portfolio: #ff4815;
+  }
+  &[dark-mode="false"] {
+    // background: var(--background-color);
+    // --background-color-digital: url("../../assets/images/background-header.jpg");
+    --background-color-font: rgba(20, 33, 43, 1);
+    --font-color-li: #1a2c42;
+    --font-color-p: rgba(113, 113, 113, 1);
+    --border-services: none;
+    --background-color-wrapper: #14212b;
+    --color-portfolio: rgba(20, 33, 43, 1);
   }
 }
 

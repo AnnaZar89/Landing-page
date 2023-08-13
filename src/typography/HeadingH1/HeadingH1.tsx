@@ -1,8 +1,8 @@
 import { FC } from "react";
-import styles from "./Heading.module.scss";
+import styles from "../HeadingH2/HeadingH2.module.scss";
 import cn from "classnames";
 
-interface IHeading {
+interface IHeadingH1 {
   text: string;
   color: "white" | "orange" | "black";
   className?: string;
@@ -10,7 +10,7 @@ interface IHeading {
   onClick?: any;
 }
 
-const Heading: FC<IHeading> = ({
+const HeadingH1: FC<IHeadingH1> = ({
   text,
   className,
   color = "white",
@@ -33,4 +33,4 @@ const Heading: FC<IHeading> = ({
   );
 };
 
-export default Heading;
+export default HeadingH1;

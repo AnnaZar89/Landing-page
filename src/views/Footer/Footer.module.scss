@@ -21,9 +21,13 @@
   }
 
   .container {
-    padding: 40px 0;
+    margin: 40px 0;
     @include media("lg") {
       transform: translateY(60px);
+    }
+
+    @include media("xl") {
+      margin: auto;
     }
     .element {
       display: grid;

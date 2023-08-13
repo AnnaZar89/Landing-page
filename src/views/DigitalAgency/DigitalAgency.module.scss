@@ -21,10 +21,10 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    z-index: 111;
     @include media("xl") {
       flex-direction: row;
       padding-top: 45px;
-
     }
   }
 

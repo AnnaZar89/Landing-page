@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { ContactBoxT } from "../../views/Footer/mockData";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import ListBox from "../ListBox/ListBox";
 import List from "../List/List";
 import styles from "./ContactBox.module.scss";

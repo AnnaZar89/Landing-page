@@ -1,0 +1,25 @@
+.element {
+  display: flex;
+  //   flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: end;
+  padding-bottom: 16.53px;
+  gap: 16.38px;
+
+  svg {
+    background-color: white;
+    width: 19.01px;
+    height: 18.56px;
+    padding: 5.5px;
+    box-sizing: content-box;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+  }
+
+  &:hover,
+  &:hover svg {
+    display: flex;
+  }
+}

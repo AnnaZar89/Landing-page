@@ -1,5 +1,6 @@
 .element {
-  color: rgba(113, 113, 113, 1);
+  // color: rgba(113, 113, 113, 1);
+  color: var(--font-color-p);
   font-family: "Noto Sans";
   text-align: center;
   &.hasSize {

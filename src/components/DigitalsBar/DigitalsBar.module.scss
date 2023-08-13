@@ -26,14 +26,16 @@
     margin-bottom: 54px;
     width: 60%;
 
-    h1 {
+    h2 {
       font-weight: 500;
       font-size: 18px;
       line-height: 27px;
       text-align: center;
       text-transform: capitalize;
       border-radius: 3px;
-      color: rgba(20, 33, 43, 1);
+      // color: rgba(20, 33, 43, 1);
+      // color: rgba(255, 72, 21, 1);
+      color: var(--color-portfolio);
     }
 
     div {
@@ -45,7 +47,7 @@
       cursor: pointer;
       // padding: 5px;
 
-      h1 {
+      h2 {
         color: white;
       }
     }
@@ -57,9 +59,9 @@
   .square {
     display: flex;
     flex-direction: column;
-   
+
     justify-content: space-between;
-   
+
     @include media("xl") {
       flex-direction: row;
       width: 100%;
@@ -83,8 +85,6 @@
 
   .active {
     background-color: rgba(255, 72, 21, 1);
-    h1 {
-      color: white;
-    }
+    color: white;
   }
 }

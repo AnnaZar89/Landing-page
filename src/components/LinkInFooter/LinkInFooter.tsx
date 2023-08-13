@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import styles from "./LinkInFooter.module.scss";
 import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
 import { ContactBoxT } from "../../views/Footer/mockData";

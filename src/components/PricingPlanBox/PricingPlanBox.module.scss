@@ -17,7 +17,7 @@
     &.hasClass {
       &-popularPlan {
         background-color: #ff4815;
-        h1 {
+        h2 {
           color: white;
           line-height: 52.5px;
         }
@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
 
-    h1 {
+    h2 {
       font-size: 30px;
       line-height: 45px;
       font-weight: 800;
@@ -44,7 +44,7 @@
     .price {
       &.hasClass {
         &-popularPlan {
-          h1:nth-child(2) {
+          h2:nth-child(2) {
             color: white;
             font-size: 55px;
             line-height: 82.5px;
@@ -54,11 +54,11 @@
       display: flex;
       align-items: baseline;
 
-      h1:nth-child(1) {
+      h2:nth-child(1) {
         font-size: 25px;
         line-height: 37.5px;
       }
-      h1:nth-child(2) {
+      h2:nth-child(2) {
         font-size: 45px;
         line-height: 67.5px;
         color: #1a2c42;

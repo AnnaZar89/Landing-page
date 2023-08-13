@@ -10,7 +10,6 @@ interface IListBoxData {
   Icon?: React.FunctionComponent;
 }
 
-//Pytanie: korzystam z ListBox w Footer, ale nie robie mapa; czy w Footer powinnam użyć listData?
 const ListBoxContainer: FC<IListBoxData> = ({ listData, classAdd, Icon }) => {
   return (
     <ListBox classAdd={classAdd}>

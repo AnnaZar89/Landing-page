@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import Paragraph from "../../typography/Paragraph/Paragraph";
 import RectangleBlogBox from "../RectangleInBlogBox/RectangleBlogBox";
 import styles from "./BlogBox.module.scss";

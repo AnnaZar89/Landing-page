@@ -1,6 +1,6 @@
 import styles from "../ServiceComponent/ServiceComponent.module.scss";
 import { FC } from "react";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 
 interface IServiceComponent {

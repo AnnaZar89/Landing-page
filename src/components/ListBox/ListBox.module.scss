@@ -6,7 +6,8 @@
       li {
         font-size: 18px;
         line-height: 27px;
-        color: rgba(26, 44, 66, 1);
+        // color: rgba(26, 44, 66, 1);
+        color: var(--font-color-li);
       }
     }
   }
@@ -15,5 +16,6 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  color: #1a2c42;
+  // color: #1a2c42;
+  color: var(--font-color-li);
 }

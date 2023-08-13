@@ -2,7 +2,7 @@ import ExpertifyFooter from "../../components/ExpertifyFooter/ExpertifyFooter";
 import LinkInFooter from "../../components/LinkInFooter/LinkInFooter";
 import ListBox from "../../components/ListBox/ListBox";
 import List from "../../components/List/List";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import styles from "./Footer.module.scss";
 
 import {

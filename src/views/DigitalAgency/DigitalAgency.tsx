@@ -45,7 +45,7 @@ const DigitalAgency = () => {
             //   setToggleChecked(toggleChecked === "dark" ? "light" : "dark");
             // }}
             // checked={isDarkMode}
-            checked={darkMode}
+            checked={!darkMode}
           />
         </div>
         <Content />

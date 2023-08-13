@@ -1,6 +1,6 @@
 import styles from "./ContentInAboutUs.module.scss";
 import Paragraph from "../../typography/Paragraph/Paragraph";
-import Heading from "../../typography/Heading/Heading";
+import Heading from "../../typography/HeadingH2/HeadingH2";
 import Button from "../Button/Button";
 import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
 import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
