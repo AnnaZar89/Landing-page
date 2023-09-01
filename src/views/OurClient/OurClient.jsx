@@ -50,7 +50,12 @@ const OurClient = () => {
             />
           </div>
 
-          <Slider className={styles.sliderStyle} responsive={responsive} arrows>
+          <Slider
+            className={styles.sliderStyle}
+            responsive={responsive}
+            arrows
+            infinite
+          >
             <div className={styles.icons}>
               <Mountain />
               <Climbing />

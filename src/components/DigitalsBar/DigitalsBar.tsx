@@ -123,6 +123,7 @@ const DigitalsBar = () => {
             key={index}
             className={digitalValue === value ? styles.active : ""}
           >
+            {/* <Heading text={name} color="black" /> */}
             <Heading text={name} color="black" />
           </div>
         ))}

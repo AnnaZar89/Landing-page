@@ -12,7 +12,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 693px;
+    text-align: center;
+    margin: 0 60px;
+
+    @include media("md") {
+      margin: 0 100px;
+    }
+
+    @include media("xl") {
+      margin: 0 238px;
+    }
+    // width: 693px;
 
     p:nth-child(1) {
       font-family: Poppins;
@@ -40,30 +50,38 @@
     // }
 
     :global(.react-multi-carousel-dot-list) {
-      margin-top: 65px;
+      // margin-top: 65px;
+      // margin-bottom: 65px;
+      top: 467px;
+    }
+    :global(.react-multi-carousel-track) {
+      align-items: center;
+      margin-bottom: 85px;
     }
 
     :global(.react-multi-carousel-dot button) {
       width: 15px;
       height: 15px;
-      background-color: pink;
+      background-color: #ff4815;
       border: none;
+      position: relative;
       // border-color: #ff4815;
     }
 
     :global(.react-multi-carousel-dot--active button) {
       background-color: #ff4815;
-      position: relative;
+
       &::before {
-        position: absolute;
+        position: relative;
         content: "";
         width: 20px;
         height: 20px;
         border: 1px solid #ff4815;
         border-radius: 50%;
-        left: 37%;
-        top: 65%;
-        transform: translate(-50%, -50%);
+        left: -3px;
+        top: -3px;
+        /* transform: translate(-50%, -50%); */
+        display: block;
       }
     }
 
@@ -81,6 +99,7 @@
     // margin: 30px;
     position: relative;
     width: 270px;
+    margin: 0 auto;
     .icons {
       width: 100%;
       position: absolute;

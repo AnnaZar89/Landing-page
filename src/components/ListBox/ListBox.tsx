@@ -4,27 +4,12 @@ import cn from "classnames";
 import styles from "./ListBox.module.scss";
 
 interface IListBox {
-  //   listData: string[];
-  //   classAdd?: "popularPlan";
   children: ReactNode;
-  classAdd?: "popularPlan";
+  className?: string;
 }
 
-const ListBox: FC<IListBox> = ({ children, classAdd }) => {
-  return (
-    // <ul className={cn(styles.element, styles[`hasClass-${classAdd}`])}>
-    <ul className={cn(styles.element, styles[`hasClass-${classAdd}`])}>
-      {children}
-    </ul>
-    // <ul className={cn(styles.element, styles[`hasClass-${classAdd}`])}>
-    //   {listData.map((data, idx) => (
-    //     <li key={idx}>
-    //       <Check />
-    //       {data}
-    //     </li>
-    //   ))}
-    // </ul>
-  );
+const ListBox: FC<IListBox> = ({ children, className }) => {
+  return <ul className={cn(styles.element)}>{children}</ul>;
 };
 
 export default ListBox;

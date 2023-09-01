@@ -8,6 +8,33 @@
   flex-direction: column;
   justify-content: space-between;
   transition: 0.5s;
+  // h2,
+  // p {
+  //   transition: 0.5;
+  // }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ff4815;
+    h2 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+    .ellipse {
+      background-color: #ffffff;
+    }
+    .number {
+      color: #ff4815;
+    }
+    .txt p:nth-child(3) {
+      color: white;
+    }
+    .rectangleAndTxt div:nth-child(1) {
+      background-color: #ffffff;
+    }
+  }
 
   .ellipse {
     position: absolute;
@@ -19,6 +46,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
+    // &:hover {
+    //   background: #ffffff;
+    // }
+
+    // .number {
+
+    //   color: white;
+    //   &:hover {
+    //     color: #ff4815;
+    //   }
+    // }
   }
 
   .number {
@@ -27,6 +66,7 @@
     font-weight: 700;
     line-height: 37.5px;
     color: #ffffff;
+    transition: 0.5s;
   }
 
   .rectangleAndTxt {
@@ -36,6 +76,7 @@
     border: 2px solid #ff4815;
     border: var(--border-services);
     border-radius: 10px;
+    // transition: 2s;
     div:nth-child(1) {
       margin-left: 24px;
       width: 75px;
@@ -45,6 +86,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.5s;
     }
   }
 
@@ -53,6 +95,7 @@
     flex-direction: column;
     justify-content: flex-end;
     margin-left: 24px;
+    // transition: 2s;
 
     h2 {
       font-weight: 600;
@@ -60,6 +103,7 @@
       margin-bottom: 15px;
       font-size: 20px;
       line-height: 30px;
+      // transition: 2s;
     }
     p {
       line-height: 22.63px;
@@ -69,29 +113,30 @@
       font-weight: 600;
       color: #ff4815;
       margin-top: 25px;
+      transition: 0.5s;
     }
   }
 }
 
-.element:hover {
-  cursor: pointer;
-  background-color: #ff4815;
-  h2 {
-    color: white;
-  }
-  p {
-    color: white;
-  }
-  .ellipse {
-    background-color: #ffffff;
-  }
-  .number {
-    color: #ff4815;
-  }
-  p:nth-child(3) {
-    color: white;
-  }
-  .rectangleAndTxt div:nth-child(1) {
-    background-color: #ffffff;
-  }
-}
+// .element:hover {
+//   cursor: pointer;
+//   background-color: #ff4815;
+//   h2 {
+//     color: white;
+//   }
+//   p {
+//     color: white;
+//   }
+//   .ellipse {
+//     background-color: #ffffff;
+//   }
+//   .number {
+//     color: #ff4815;
+//   }
+//   p:nth-child(3) {
+//     color: white;
+//   }
+//   .rectangleAndTxt div:nth-child(1) {
+//     background-color: #ffffff;
+//   }
+// }

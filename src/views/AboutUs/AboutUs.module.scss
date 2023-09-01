@@ -1,14 +1,13 @@
 @import "../../assets/styles/mixing.scss";
 @import "../../assets/styles/mixins/media.scss";
 .element {
-  // padding: 5%;
-  margin: 120px 200px;
-  // display: flex;
-  // width: 100%;
+  // margin: 120px 200px;
+  margin: 120px 0;
   display: grid;
   grid-template-columns: 1fr;
+  display: block;
   // text-align: center;
-//  height: 1000px;
+  //  height: 1000px;
   // align-items: center;
   // margin: 15% 20%;
   .logoContainer {
@@ -17,9 +16,9 @@
     // position: relative;
     display: flex;
     flex-direction: column;
-   
+
     align-items: center;
-   
+
     margin-right: 0;
     height: 470px;
     transform: translateX(92.5px);
@@ -52,14 +51,13 @@
       transform: translateX(0);
     }
   }
+
+  @include media("md") {
+    margin: 120px 100px;
+  }
   @include media("xl") {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 120px 0;
-    // text-align:left;
-    // height: 474px;
-  
   }
-
 }
-
-

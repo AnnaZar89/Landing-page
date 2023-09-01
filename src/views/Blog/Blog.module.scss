@@ -2,7 +2,7 @@
 @import "../../assets/styles//mixins/media.scss";
 
 .container {
-  margin-top: 191px;
+  margin-top: 120px;
 }
 .element {
   text-align: center;
@@ -20,12 +20,13 @@
   }
 
   .blogArticleContainer {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    // grid-template-columns: 1fr;
     // justify-content: space-around;
     flex-direction: column;
     margin-top: 7px;
     margin-bottom: 120px;
+    justify-content: center;
     @include media("xs") {
       align-items: center;
     }
@@ -53,11 +54,17 @@
 
       @include media("sm") {
         flex: 2;
+        flex-grow: 0;
       }
 
       @include media("xl") {
         width: initial;
       }
+    }
+
+    > div:nth-last-child(1) {
+      // margin: 0 auto;
+      justify-self: center;
     }
   }
 }

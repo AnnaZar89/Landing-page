@@ -8,10 +8,49 @@
   align-items: center;
 
   .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+
     @include media("xl") {
-      flex-direction: row;
+      // flex-direction: row;
+      grid-template-columns: 0.5fr 1fr;
+    }
+
+    :global(.react-multi-carousel-track) {
+      // margin-top: 65px;
+      margin-top: 125px;
+      margin-bottom: 146px;
+    }
+
+    :global(.react-multi-carousel-dot-list) {
+      // margin-top: 65px;
+      // margin-bottom: 65px;
+      top: 412px;
+    }
+
+    :global(.react-multi-carousel-dot button) {
+      width: 15px;
+      height: 15px;
+      background-color: #ff4815;
+      border: none;
+      position: relative;
+      // border-color: #ff4815;
+    }
+    :global(.react-multi-carousel-dot--active button) {
+      background-color: #ff4815;
+
+      &::before {
+        position: relative;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ff4815;
+        border-radius: 50%;
+        left: -3px;
+        top: -3px;
+        /* transform: translate(-50%, -50%); */
+        display: block;
+      }
     }
 
     .testimonialContent {
@@ -23,11 +62,9 @@
 
       @include media("lg") {
         justify-content: space-around;
-        // height: 500px;
       }
       @include media("xl") {
         flex-direction: row;
-        // height: 500px;
         justify-content: center;
         position: relative;
       }

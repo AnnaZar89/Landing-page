@@ -78,27 +78,27 @@ Aidmycareer platform that provides is the heart of career questions. Aidmycareer
     />,
   ];
   return (
-    // <div className={styles.wrapper}>
-    <Container className={styles.container}>
-      <div className={styles.testimonialContent}>
-        <div className={styles.element}>
-          <Paragraph
-            text="Testimonial"
-            size={SizeType.LARGE}
-            variant="semiBold"
-          />
-          <Heading color="black" text="What Our Client Say About Us" />
-          <Paragraph text="Aidmycareer is the heart of career questions. Aidmycareer platform that provides" />
+    <div className={styles.wrapper}>
+      <Container className={styles.container}>
+        <div className={styles.testimonialContent}>
+          <div className={styles.element}>
+            <Paragraph
+              text="Testimonial"
+              size={SizeType.LARGE}
+              variant="semiBold"
+            />
+            <Heading color="black" text="What Our Client Say About Us" />
+            <Paragraph text="Aidmycareer is the heart of career questions. Aidmycareer platform that provides" />
+          </div>
         </div>
-      </div>
 
-      <Slider dots responsive={responsive} arrows={false}>
-        {Box.map((element, index) => (
-          <Fragment key={index}>{element}</Fragment>
-        ))}
-      </Slider>
-    </Container>
-    // </div>
+        <Slider dots responsive={responsive} arrows={false}>
+          {Box.map((element, index) => (
+            <Fragment key={index}>{element}</Fragment>
+          ))}
+        </Slider>
+      </Container>
+    </div>
   );
 };
 

@@ -1,29 +1,17 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
 import { ContactBoxT } from "../../views/Footer/mockData";
 
 interface IList {
-  // data?: string | ContactBoxT | undefined;
-  data?: any;
-  Icon?: React.FunctionComponent;
+  title?: string;
+  icon?: ReactNode;
 }
-const List: FC<IList> = ({ data, Icon }) => {
+const List: FC<IList> = ({ title, icon }) => {
   return (
     <li>
-      {Icon && <Check />}
-      {data}
+      {icon}
+      {title}
     </li>
-
-    // <>
-    //   {typeof data === "string" ? (
-    //     <li>{data}</li>
-    //   ) : (
-    //     <>
-    //       <li>{data.firstItem}</li>
-    //       <li>{data.secondItem}</li>
-    //     </>
-    //   )}
-    // </>
   );
 };
 

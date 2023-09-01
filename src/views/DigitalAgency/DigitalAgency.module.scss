@@ -18,22 +18,34 @@
     // top: 6.5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: space-around;
     display: flex;
     flex-direction: column;
     z-index: 111;
-    @include media("xl") {
+    padding-top: 45px;
+    @include media("xs") {
+      padding-top: 25px;
+    }
+    @include media("md") {
       flex-direction: row;
       padding-top: 45px;
+      justify-content: space-around;
     }
   }
 
   .container img {
-    margin-right: 0;
+    // margin-right: 0;
     width: 148px;
     height: 28px;
-    @include media("xl") {
-      margin-right: 322px;
+    order: inherit;
+    margin-top: 45px;
+    @include media("sm") {
+      order: 3;
+      margin-top: 130px;
+    }
+    @include media("md") {
+      order: inherit;
+      margin-top: inherit;
     }
   }
   // @include media("xl") {

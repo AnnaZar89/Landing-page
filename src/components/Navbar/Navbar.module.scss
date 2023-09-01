@@ -8,7 +8,7 @@
   align-items: center;
   width: 436px;
   flex-direction: column;
-  @include media("xl") {
+  @include media("sm") {
     flex-direction: row;
     margin-right: 100px;
   }

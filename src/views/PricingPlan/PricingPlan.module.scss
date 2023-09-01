@@ -2,19 +2,19 @@
 @import "../../assets/styles//mixins/media.scss";
 
 .container {
-  margin: 120px auto 245px auto;
+  margin: 120px auto 120px auto;
   .textContainer {
-    // width: 693px;
-    margin: 0 20%;
+    // margin: 0 20%;
     text-align: center;
-    margin: 30px auto;
-    // text-transform: capitalize;
-    // h1:nth-child(1) {
-    //   font-weight: 500;
-      
-    //   font-size: 20px;
-    //   line-height: 30px;
-    // }
+    // margin: 30px auto;
+    margin: 30px 60px;
+    @include media("md") {
+      margin: 0 100px;
+    }
+
+    @include media("xl") {
+      margin: 0 238px;
+    }
 
     h2:nth-child(2) {
       font-size: 32px;
@@ -22,14 +22,10 @@
       font-weight: 700;
     }
     p:nth-child(1) {
-      // margin: 0 20%;
       font-family: Poppins;
       color: #ff4815;
-      
     }
     h2 + p {
-      width: 693px;
-      // text-align: center;
       margin: 0 auto;
     }
   }
@@ -72,5 +68,13 @@
       height: auto;
       // justify-content: space-between;
     }
+  }
+}
+
+.popularPlan {
+  h2:nth-child(2) {
+    color: white;
+    font-size: 55px;
+    line-height: 82.5px;
   }
 }

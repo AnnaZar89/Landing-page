@@ -15,9 +15,21 @@
     color: rgba(255, 72, 21, 1);
   }
   h2 + p {
-    width: 693px;
-    margin: 0 auto;
+    // width: 693px;
+    // margin: 0 auto;
+    margin: 0 30px;
 
+    @include media("sm") {
+      margin: 0 60px;
+    }
+
+    @include media("md") {
+      margin: 0 100px;
+    }
+
+    @include media("xl") {
+      margin: 0 238px;
+    }
   }
   p:nth-child(4) {
     // width: 693px;
@@ -39,7 +51,14 @@
     p {
       margin: 0;
       width: 223px;
+      // @include media("xl") {
+      //   margin: 0 238px;
+      // }
     }
+
+    // > p {
+    //   margin: 0 238px;
+    // }
     @include media("lg") {
       grid-template-columns: 1fr 1fr;
     }

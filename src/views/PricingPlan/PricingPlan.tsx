@@ -2,11 +2,14 @@ import { useState } from "react";
 
 import Heading from "../../typography/HeadingH2/HeadingH2";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
-import PayingPeriodBox from "../../components/PayingPeriodBox/PayingPeriodBox";
+import PayingPeriodBox from "../../components/PeriodToggle/PeriodToggle";
 import PricingPlanBox from "../../components/PricingPlanBox/PricingPlanBox";
 import styles from "./PricingPlan.module.scss";
 import Container from "../../components/Container/Container";
+// import PeriodToggle from "../../components/Toggle/Toggle";
+import PeriodToggle from "../../components/PeriodToggle/PeriodToggle";
 
+const toggleButtons = ["Monthly", "Yearly"];
 const PricingPlan = () => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
@@ -15,11 +18,11 @@ const PricingPlan = () => {
   return (
     <Container className={styles.container}>
       <div className={styles.textContainer}>
-        {/* <Heading text="pricing plan" color="orange" /> */}
         <Paragraph
-        text="Pricing Plan" size={SizeType.LARGE}
-        variant="semiBold"
-      />
+          text="Pricing Plan"
+          size={SizeType.LARGE}
+          variant="semiBold"
+        />
         <Heading text="Purches Our Pricing Plan" color="black" />
         <Paragraph
           text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't"
@@ -27,25 +30,22 @@ const PricingPlan = () => {
         />
       </div>
       <div className={styles.oblong} onClick={handleToggle}>
-        <PayingPeriodBox
-          yearlyOrMonthly="Monthly"
-          toggle={toggle}
-          handleToggle={handleToggle}
-        />
-        <PayingPeriodBox
-          yearlyOrMonthly="Yearly"
-          toggle={!toggle}
-          handleToggle={handleToggle}
-        />
+        {toggleButtons.map((element) => (
+          <PeriodToggle
+            period={element}
+            toggle={toggle}
+            handleToggle={handleToggle}
+          />
+        ))}
       </div>
       <div className={styles.pricingPlanBoxContainer}>
-        <PricingPlanBox sortOfPlan="Basic Plan" sum="39" />
+        <PricingPlanBox title="Basic Plan" sum="39" />
         <PricingPlanBox
-          sortOfPlan="Popular Plan"
+          title="Popular Plan"
           sum="49"
-          classAdd="popularPlan"
+          className={styles.popularPlan}
         />
-        <PricingPlanBox sortOfPlan="Premium Plan" sum="99" />
+        <PricingPlanBox title="Premium Plan" sum="99" />
       </div>
     </Container>
   );

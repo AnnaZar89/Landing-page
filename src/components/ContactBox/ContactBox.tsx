@@ -20,8 +20,8 @@ const ContactBox: FC<IContactBox> = ({ data, text, className }) => {
         <div className={styles.contactBox}>
           {icon}
           <ListBox>
-            <List data={firstItem} />
-            <List data={secondItem} />
+            <List title={firstItem} />
+            <List title={secondItem} />
           </ListBox>
         </div>
       ))}

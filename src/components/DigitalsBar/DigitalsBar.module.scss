@@ -40,6 +40,9 @@
 
     div {
       padding: 5px;
+      &.active {
+        background-color: rgba(255, 72, 21, 1);
+      }
     }
 
     div:hover {
@@ -49,6 +52,9 @@
 
       h2 {
         color: white;
+        &:hover {
+          color: white;
+        }
       }
     }
     @include media("xl") {
@@ -83,8 +89,8 @@
     }
   }
 
-  .active {
-    background-color: rgba(255, 72, 21, 1);
-    color: white;
-  }
+  // .active {
+  //   background-color: rgba(255, 72, 21, 1);
+  //   color: white;
+  // }
 }

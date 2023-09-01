@@ -7,7 +7,7 @@ interface IHeadingH2 {
   color: "white" | "orange" | "black";
   className?: string;
   additionalText?: string;
-  onClick?: any;
+  // onClick?: any;
 }
 
 const HeadingH2: FC<IHeadingH2> = ({

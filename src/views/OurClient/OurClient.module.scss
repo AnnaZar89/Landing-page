@@ -9,23 +9,23 @@
 }
 .element {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 1fr;
   padding-top: 105px;
   padding-bottom: 105px;
   position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  // height: 1500px;
+
+  @include media("xl") {
+    grid-template-columns: 0.5fr 1fr;
+  }
 
   .elementDiv {
     // width: 468px;
     // margin-right: 33px;
-    margin: 5% 20%;
+    margin: 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     h2 {
       font-family: "Roboto";
       font-size: 55px;
@@ -37,26 +37,25 @@
       color: #ff4815;
     }
 
-    // h2:nth-child(2) {
-    //   font-size: 55px;
-    //   line-height: 64.45px;
-    //   font-weight: 700;
-    // }
     p {
-      // color: #1a2c42;
       color: var(--font-color-p);
       opacity: 0.81;
-      text-align: left;
+      text-align: center;
+      @include media("xl") {
+        text-align: left;
+      }
     }
-    @include media("lg") {
-      margin: 0% 20%;
+    @include media("md") {
+      margin: 0 100px;
     }
     @include media("xl") {
       margin: 0 33px 0 0;
+      // margin: 0 238px;
       // margin-left: 135px;
       width: 468px;
       // width: 39%;
       // padding: 1%;
+      text-align: left;
     }
   }
 
@@ -80,10 +79,16 @@
   :global(.react-multiple-carousel__arrow--right) {
     right: 0;
     top: 55px;
+    @include media("xl") {
+      right: 0;
+    }
   }
   :global(.react-multiple-carousel__arrow--left) {
-    left: 501px;
+    left: 0;
     top: 55px;
+    @include media("xl") {
+      left: 501px;
+    }
   }
 
   // @include media("sm") {
@@ -107,20 +112,14 @@
 .icons {
   position: relative;
   display: grid;
-  grid-gap: 30px;
-  row-gap: 37px;
-  // flex-direction: column;
-  grid-template-columns: 1fr 1fr 1fr;
-  // grid-template-rows: 1fr;
+  // grid-gap: 30px;
+  // row-gap: 37px;
+
   flex-wrap: wrap;
-  width: 80%;
-  // width: 100%;
-  // justify-content: space-around;
+
   justify-items: center;
   align-items: center;
   height: 900px;
-  // transform: translateY(30px);
-  // width: 669px;
 
   svg {
     border: 1px solid #ff4815;

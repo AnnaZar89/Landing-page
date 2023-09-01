@@ -7,7 +7,7 @@ import Slider from "../Slider/Slider";
 const Content = () => {
   const responsive = {
     xl: {
-      breakpoint: { max: 1440, min: 1200 },
+      breakpoint: { max: 20040, min: 1200 },
       items: 1,
     },
     lg: {
@@ -48,7 +48,7 @@ const Content = () => {
   // };
   return (
     <div className={styles.element}>
-      <Slider responsive={responsive} arrows>
+      <Slider responsive={responsive} arrows infinite>
         <div className={styles.txtStyle}>
           <HeadingH1
             text="We are Creative and"
