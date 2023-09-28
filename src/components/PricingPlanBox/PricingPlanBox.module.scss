@@ -1,8 +1,36 @@
 .element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   &.hasClass {
     &-popularPlan {
       width: 370px;
       height: 670px;
+      .ellipse {
+        background-color: #ff4815;
+        h2 {
+          color: white;
+          line-height: 52.5px;
+        }
+        .price h2:nth-child(2) {
+          color: white;
+          line-height: 52.5px;
+        }
+      }
+
+      ul li {
+        color: rgba(26, 44, 66, 1);
+      }
+      button {
+        margin-bottom: 43px;
+        background-color: #ff4815;
+        color: white;
+        &:hover {
+          background-color: "none";
+          // color: #ff4815;
+        }
+      }
     }
   }
 
@@ -14,16 +42,6 @@
   text-align: center;
 
   .ellipse {
-    &.hasClass {
-      &-popularPlan {
-        background-color: #ff4815;
-        h2 {
-          color: white;
-          line-height: 52.5px;
-        }
-      }
-    }
-
     width: 280px;
     height: 164px;
     background: #f8eaea;
@@ -42,15 +60,6 @@
     }
 
     .price {
-      // &.hasClass {
-      //   &-popularPlan {
-      //     h2:nth-child(2) {
-      //       color: white;
-      //       font-size: 55px;
-      //       line-height: 82.5px;
-      //     }
-      //   }
-      // }
       display: flex;
       align-items: baseline;
 
@@ -84,9 +93,10 @@
     font-size: 17px;
     line-height: 26px;
     letter-spacing: 0.05em;
-    margin-top: 34px;
+
+    margin-bottom: 35px;
     &:hover {
-      background-color: transparent;
+      background-color: "none";
     }
   }
 }

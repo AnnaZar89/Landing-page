@@ -29,13 +29,13 @@
       margin: 0 auto;
     }
   }
-  .oblong {
+  .toggleElement {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px auto 70px auto;
   }
-  .oblong div {
+  .toggleElement div {
     box-sizing: border-box;
     width: 140px;
     height: 40px;
@@ -51,22 +51,19 @@
       font-family: "Poppins";
     }
   }
-  .oblong div:nth-child(2) {
+  .toggleElement div:nth-child(2) {
     border-radius: 0px 0px 23px 0px;
   }
   .pricingPlanBoxContainer {
     display: flex;
     flex-direction: column;
-    // justify-content: space-around;
     justify-content: space-between;
     align-items: center;
     height: 1900px;
 
     @include media("xl") {
       flex-direction: row;
-      // height: initial;
       height: auto;
-      // justify-content: space-between;
     }
   }
 }

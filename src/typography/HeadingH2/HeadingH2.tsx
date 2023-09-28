@@ -1,12 +1,14 @@
 import { FC } from "react";
 import styles from "./HeadingH2.module.scss";
 import cn from "classnames";
+import { Typography } from "@mui/material";
 
 interface IHeadingH2 {
   text: string;
   color: "white" | "orange" | "black";
   className?: string;
-  additionalText?: string;
+  additionalText?: string | number;
+  variant?: any;
   // onClick?: any;
 }
 
@@ -15,6 +17,7 @@ const HeadingH2: FC<IHeadingH2> = ({
   className,
   color = "white",
   additionalText,
+  variant,
 }) => {
   return (
     <>
@@ -29,6 +32,21 @@ const HeadingH2: FC<IHeadingH2> = ({
           {additionalText}
         </h2>
       )}
+
+      {/* <Typography
+        className={cn(styles.element, className, styles[`hasColor-${color}`])}
+      >
+        {text}
+      </Typography>
+
+      {additionalText && (
+        <Typography
+          className={cn(styles.element, styles.additionalText)}
+          variant={variant}
+        >
+          {additionalText}
+        </Typography>
+      )} */}
     </>
   );
 };

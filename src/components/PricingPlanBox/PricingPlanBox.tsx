@@ -8,8 +8,9 @@ import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
 
 interface IPricingPlanBox {
   title: string;
-  sum: string;
+  sum: number;
   className?: string;
+  classAdd?: string;
 }
 
 const listData: string[] = [
@@ -21,9 +22,14 @@ const listData: string[] = [
   "Business Analysis",
 ];
 
-const PricingPlanBox: FC<IPricingPlanBox> = ({ title, sum, className }) => {
+const PricingPlanBox: FC<IPricingPlanBox> = ({
+  title,
+  sum,
+  className,
+  classAdd,
+}) => {
   return (
-    <div className={cn(styles.element, className)}>
+    <div className={cn(styles.element, styles[`hasClass-${classAdd}`])}>
       <div className={cn(styles.ellipse)}>
         <Heading text={title} color="black" />
         <div className={cn(styles.price)}>
@@ -31,7 +37,8 @@ const PricingPlanBox: FC<IPricingPlanBox> = ({ title, sum, className }) => {
         </div>
       </div>
       <ListBoxContainer listData={listData} icon={<Check />} />
-      <Button text="Buy Now" />
+      {/* <Button text="Buy Now" className={styles.pricingPlanButton} /> */}
+      <Button text="Buy Now" classAdd="pricingPlanButton" />
     </div>
   );
 };

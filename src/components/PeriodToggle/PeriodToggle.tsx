@@ -3,18 +3,28 @@ import cn from "classnames";
 import styles from "./PeriodToggle.module.scss";
 
 interface IPeriodToggle {
-  toggle?: boolean;
-  handleToggle?: React.MouseEventHandler<HTMLElement>;
-  period: string;
+  text: string;
+  handleToggle: () => void;
+  activeElement: boolean;
 }
-const PeriodToggle: FC<IPeriodToggle> = ({ toggle, handleToggle, period }) => {
+
+const PeriodToggle: FC<IPeriodToggle> = ({
+  text,
+  handleToggle,
+  activeElement,
+}) => {
   return (
-    <div
-      onClick={handleToggle}
-      className={cn(styles.element, styles[`${toggle ? "on" : "off"}`])}
-    >
-      {period && <h2>{period}</h2>}
-    </div>
+    <>
+      <div
+        onClick={handleToggle}
+        className={cn(
+          styles.element,
+          styles[`${activeElement ? "on" : "off"}`]
+        )}
+      >
+        {text}
+      </div>
+    </>
   );
 };
 

@@ -4,7 +4,11 @@ import cn from "classnames";
 
 interface IButton {
   text: string;
-  classAdd?: "btnInHeader" | "btnInContent" | "popularPlan";
+  classAdd?:
+    | "btnInHeader"
+    | "btnInContent"
+    | "popularPlan"
+    | "pricingPlanButton";
 }
 
 const Button: FC<IButton> = ({ classAdd, text }) => {

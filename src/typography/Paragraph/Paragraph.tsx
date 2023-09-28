@@ -9,7 +9,6 @@ export enum SizeType {
   LARGE = "large",
   EXTRA_LARGE = "extraLarge",
   EXTRA_Extra_LARGE = "extraExtraLarge",
-
 }
 
 interface IParagraph {

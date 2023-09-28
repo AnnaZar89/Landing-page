@@ -5,6 +5,7 @@ import ListBox from "../ListBox/ListBox";
 import List from "../List/List";
 import styles from "./ContactBox.module.scss";
 import cn from "classnames";
+import { Typography } from "@mui/material";
 
 interface IContactBox {
   data: ContactBoxT[];
@@ -16,6 +17,9 @@ const ContactBox: FC<IContactBox> = ({ data, text, className }) => {
   return (
     <div className={cn(styles.element, className)}>
       <Heading text={text} color="orange" />
+      {/* <Typography variant="h1" text={text} color="orange" /> */}
+      {/* AAAAAAAAAAAAAAAA */}
+      {/* </Typography> */}
       {data.map(({ firstItem, secondItem, icon }) => (
         <div className={styles.contactBox}>
           {icon}

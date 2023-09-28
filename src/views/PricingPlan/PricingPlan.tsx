@@ -1,20 +1,36 @@
 import { useState } from "react";
-
 import Heading from "../../typography/HeadingH2/HeadingH2";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
-import PayingPeriodBox from "../../components/PeriodToggle/PeriodToggle";
 import PricingPlanBox from "../../components/PricingPlanBox/PricingPlanBox";
 import styles from "./PricingPlan.module.scss";
 import Container from "../../components/Container/Container";
-// import PeriodToggle from "../../components/Toggle/Toggle";
 import PeriodToggle from "../../components/PeriodToggle/PeriodToggle";
 
-const toggleButtons = ["Monthly", "Yearly"];
+const pricingPlanData = [
+  { title: "Basic Plan", sumMonthly: 39, sumYearly: 400 },
+  {
+    title: "Popular Plan",
+    sumMonthly: 49,
+    sumYearly: 550,
+    classAdd: "popularPlan",
+  },
+  { title: "Premium Plan", sumMonthly: 99, sumYearly: 1000 },
+];
+
 const PricingPlan = () => {
-  const [toggle, setToggle] = useState(false);
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const [togglePrice, setTogglePrice] = useState("Monthly");
+  const toggleButtons = ["Monthly", "Yearly"];
+
+  const handleToggle = (period: string) => {
+    setTogglePrice(period);
+    console.log("period", period);
   };
+
+  const renderPrice: Record<string, number> = {
+    Monthly: 30,
+    Yearly: 100,
+  };
+
   return (
     <Container className={styles.container}>
       <div className={styles.textContainer}>
@@ -29,23 +45,24 @@ const PricingPlan = () => {
           size={SizeType.MEDIUM}
         />
       </div>
-      <div className={styles.oblong} onClick={handleToggle}>
+      <div className={styles.toggleElement}>
         {toggleButtons.map((element) => (
           <PeriodToggle
-            period={element}
-            toggle={toggle}
-            handleToggle={handleToggle}
+            text={element}
+            handleToggle={() => handleToggle(element)}
+            activeElement={element === togglePrice}
           />
         ))}
       </div>
       <div className={styles.pricingPlanBoxContainer}>
-        <PricingPlanBox title="Basic Plan" sum="39" />
-        <PricingPlanBox
-          title="Popular Plan"
-          sum="49"
-          className={styles.popularPlan}
-        />
-        <PricingPlanBox title="Premium Plan" sum="99" />
+        {pricingPlanData.map((element) => (
+          <PricingPlanBox
+            title={element.title}
+            // sum={togglePrice ? element.sumMonthly : element.sumYearly}
+            sum={renderPrice[element.title]}
+            classAdd={element.classAdd}
+          />
+        ))}
       </div>
     </Container>
   );
