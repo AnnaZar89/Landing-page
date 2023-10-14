@@ -18,7 +18,7 @@ const LinkInFooter: FC<ILinkInFooter> = ({
   className,
   // contactData,
 }) => {
-  console.log(data, "data");
+  // console.log(data, "data");
   return (
     <div className={cn(styles.element, className)}>
       <Heading text={title} color="orange" />

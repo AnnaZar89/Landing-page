@@ -6,30 +6,88 @@ import styles from "./PricingPlan.module.scss";
 import Container from "../../components/Container/Container";
 import PeriodToggle from "../../components/PeriodToggle/PeriodToggle";
 
-const pricingPlanData = [
-  { title: "Basic Plan", sumMonthly: 39, sumYearly: 400 },
+type PriceDate = {
+  title: string;
+  sumMonthly: number;
+  sumYearly: number;
+  sumDaily: number;
+  period: "Monthly" | "Yearly" | "Daily";
+};
+
+const pricingPlanData: PriceDate[] = [
+  {
+    title: "Basic Plan",
+    sumMonthly: 39,
+    sumYearly: 400,
+    sumDaily: 5,
+    period: "Monthly",
+  },
   {
     title: "Popular Plan",
     sumMonthly: 49,
     sumYearly: 550,
-    classAdd: "popularPlan",
+    sumDaily: 5,
+    period: "Monthly",
   },
-  { title: "Premium Plan", sumMonthly: 99, sumYearly: 1000 },
+  {
+    title: "Premium Plan",
+    sumMonthly: 99,
+    sumYearly: 1000,
+    sumDaily: 5,
+    period: "Yearly",
+  },
 ];
 
 const PricingPlan = () => {
   const [togglePrice, setTogglePrice] = useState("Monthly");
-  const toggleButtons = ["Monthly", "Yearly"];
+  const toggleButtons = ["Monthly", "Yearly", "Daily"];
 
   const handleToggle = (period: string) => {
     setTogglePrice(period);
     console.log("period", period);
   };
 
-  const renderPrice: Record<string, number> = {
-    Monthly: 30,
-    Yearly: 100,
+  // const renderPrice: Record<string, number> = {
+  //   Monthly: 30,
+  //   Yearly: 100,
+  // };
+
+  const renderPrice = (data: PriceDate) => {
+    const price: Record<string, number> = {
+      Monthly: data.sumMonthly,
+      Yearly: data.sumYearly,
+      Daily: data.sumDaily,
+    };
+    return price[togglePrice];
   };
+
+  // const renderPrice = (data: PriceDate) => {
+  //   switch (togglePrice) {
+  //     case "Monthly": {
+  //       return data.sumMonthly;
+  //     }
+  //     case "Yearly": {
+  //       return data.sumYearly;
+  //     }
+  //     case "Daily": {
+  //       return data.sumDaily;
+  //     }
+  //     default: {
+  //       return 0;
+  //     }
+  //   }
+  // };
+
+  // const test = (data: PriceDate): number => {
+  //   if (togglePrice === "Monthly") {
+  //     return data.sumMonthly;
+  //   } else if (togglePrice === "Yearly") {
+  //     return data.sumYearly;
+  //   } else if (togglePrice === "Daily") {
+  //     return data.sumDaily;
+  //   }
+  //   return 0;
+  // };
 
   return (
     <Container className={styles.container}>
@@ -51,17 +109,13 @@ const PricingPlan = () => {
             text={element}
             handleToggle={() => handleToggle(element)}
             activeElement={element === togglePrice}
+            // activeElement={togglePrice}
           />
         ))}
       </div>
       <div className={styles.pricingPlanBoxContainer}>
         {pricingPlanData.map((element) => (
-          <PricingPlanBox
-            title={element.title}
-            // sum={togglePrice ? element.sumMonthly : element.sumYearly}
-            sum={renderPrice[element.title]}
-            classAdd={element.classAdd}
-          />
+          <PricingPlanBox title={element.title} sum={renderPrice(element)} />
         ))}
       </div>
     </Container>

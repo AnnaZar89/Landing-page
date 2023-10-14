@@ -9,6 +9,7 @@ import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
 interface IPricingPlanBox {
   title: string;
   sum: number;
+  // sum: string;
   className?: string;
   classAdd?: string;
 }

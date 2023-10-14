@@ -4,7 +4,8 @@ import Heading from "../../typography/HeadingH2/HeadingH2";
 import Button from "../Button/Button";
 import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
 import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
-import Typogr from "../../typography/TypographyFeatures";
+import Typography from "../../typography/Typography";
+// import Typography from "../../typography/TypographyFeatures";
 // import theme from "../../typography/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -24,8 +25,10 @@ const ContentInAboutUs = () => {
     <div className={styles.element}>
       {/* <Heading text="about us" color="orange" /> */}
       {/* <Paragraph text="About us" size="large" variant="semiBold" /> */}
+
+      <Typography tag="span">test123</Typography>
       <ThemeProvider theme={theme}>
-        <Typogr
+        <Typography
           text="About us"
           size="large"
           variant="h2"
@@ -40,7 +43,7 @@ const ContentInAboutUs = () => {
           color="black"
           additionalText=" Your Business"
         /> */}
-        <Typogr
+        <Typography
           text="Aliquam id est ullamcorper dictu arcu sed"
           size="extraExtraExtraLarge"
           className
@@ -56,7 +59,7 @@ const ContentInAboutUs = () => {
       alteration in by injected humour majority"
           size="medium"
         /> */}
-        <Typogr
+        <Typography
           text="There are many variations of passages of Lorem Ipsum available, but the
       some suffered alteration in some form, by injected humour suffered
       alteration in by injected humour majority"

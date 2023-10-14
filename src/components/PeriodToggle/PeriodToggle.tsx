@@ -14,17 +14,12 @@ const PeriodToggle: FC<IPeriodToggle> = ({
   activeElement,
 }) => {
   return (
-    <>
-      <div
-        onClick={handleToggle}
-        className={cn(
-          styles.element,
-          styles[`${activeElement ? "on" : "off"}`]
-        )}
-      >
-        {text}
-      </div>
-    </>
+    <div
+      onClick={handleToggle}
+      className={cn(styles.element, styles[`${activeElement ? "on" : "off"}`])}
+    >
+      {text}
+    </div>
   );
 };
 

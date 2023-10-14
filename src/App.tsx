@@ -22,12 +22,12 @@ function App() {
     const localTheme = localStorage.getItem("darkMode");
 
     if ((darkMode && !localTheme) || (darkMode && localTheme)) {
-      console.log({ darkMode, localTheme }, "1");
+      // console.log({ darkMode, localTheme }, "1");
       setLocalDarkMode(darkMode);
     }
 
     if (!darkMode && localTheme) {
-      console.log({ darkMode, localTheme }, "2");
+      // console.log({ darkMode, localTheme }, "2");
       dispatch(setTheme(localTheme === "true"));
     }
   }, [dispatch, darkMode]);
