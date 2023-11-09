@@ -5,3 +5,8 @@
   position: absolute;
   z-index: 999;
 }
+.text {
+  &:hover {
+    color: red;
+  }
+}

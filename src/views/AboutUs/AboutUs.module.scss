@@ -1,24 +1,15 @@
 @import "../../assets/styles/mixing.scss";
 @import "../../assets/styles/mixins/media.scss";
 .element {
-  // margin: 120px 200px;
   margin: 120px 0;
   display: grid;
   grid-template-columns: 1fr;
   display: block;
-  // text-align: center;
-  //  height: 1000px;
-  // align-items: center;
-  // margin: 15% 20%;
+
   .logoContainer {
-    // display: flex;
-    // height: 550px;
-    // position: relative;
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     margin-right: 0;
     height: 470px;
     transform: translateX(92.5px);
@@ -27,10 +18,6 @@
       width: 370px;
       height: 312px;
       transform: translateX(-50%);
-      // transform: translate(-10%, -20%);
-      // position: absolute;
-      // top: 50%;
-      // right: 50%;
     }
 
     img:nth-child(2) {
@@ -39,11 +26,6 @@
       background-color: #e2866d;
       border-radius: 10px;
       transform: translateY(-50%);
-      // transform: translate(-50%, 50%);
-      // position: absolute;
-      // top: 50%;
-      // right: 50%;
-      // transform: translate(50%, -50%);
     }
     @include media("xl") {
       margin-right: 30px;
@@ -59,5 +41,46 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 120px 0;
+  }
+
+  .aboutUsData {
+    text-align: center;
+    margin-top: 60px;
+
+    ul {
+      margin: 29px 0;
+      font-size: 15px;
+      line-height: 22px;
+      li {
+        margin-bottom: 18px;
+        svg {
+          margin-right: 10px;
+          background-color: #ff4815;
+          border-radius: 50%;
+          path {
+            fill: white;
+            // stroke: black;s
+          }
+        }
+      }
+    }
+
+    button {
+      color: #ff4815;
+
+      &:hover {
+        color: white;
+      }
+    }
+    @include media("xl") {
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+
+  .about {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
   }
 }

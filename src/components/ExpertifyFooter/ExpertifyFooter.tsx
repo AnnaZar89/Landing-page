@@ -1,4 +1,4 @@
-import Logo from "../Logo/Logo";
+import Image from "../Image/Image";
 import expertifyLogo from "../../assets/images/logo-header.png";
 import styles from "./ExpertifyFooter.module.scss";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
@@ -30,7 +30,7 @@ const EXPERTIFY_DATA: ExpertifyDataT[] = [
 const ExpertifyFooter = () => {
   return (
     <div className={styles.element}>
-      <Logo logoImg={expertifyLogo} />
+      <Image src={expertifyLogo} />
       {EXPERTIFY_DATA.map(({ text, size }) => (
         <Paragraph text={text} size={size as SizeType} />
       ))}

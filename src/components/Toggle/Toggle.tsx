@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./Toggle.module.scss";
 import cn from "classnames";
+import Typography from "../../typography/Typography";
 
 interface IToggle {
   onChange: () => void;
@@ -16,8 +17,11 @@ const Toggle: FC<IToggle> = ({ onChange, checked }) => {
         checked={checked}
         onChange={onChange}
       />
-
-      <span className={cn(styles.toggle, checked && styles.isChecked)} />
+      <Typography
+        tag="span"
+        color="pink"
+        className={cn(styles.toggle, checked && styles.isChecked)}
+      />
     </label>
   );
 };

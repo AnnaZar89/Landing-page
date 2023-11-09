@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./DigitalAgency.module.scss";
-import Logo from "../../components/Logo/Logo";
+import Image from "../../components/Image/Image";
 // import Button from "../../components/Button/Button";
 import Toggle from "../../components/Toggle/Toggle";
 import Content from "../../components/Content/Content";
@@ -26,27 +26,13 @@ const DigitalAgency = () => {
     dispatch(setTheme(!darkMode));
   };
 
-  // useEffect(() => {
-  //   toggleChecked === "dark"
-  //     ? document.body.classList.add("dark")
-  //     : document.body.classList.remove("dark");
-  //   localStorage.setItem("mode", toggleChecked);
-  // }, [toggleChecked]);
-
   return (
     <>
       <div className={styles.element}>
         <div className={styles.container}>
-          <Logo logoImg={logoForHeader} />
+          <Image src={logoForHeader} />
           <Navbar />
-          <Toggle
-            onChange={handleDarkModeChange}
-            // onChange={() => {
-            //   setToggleChecked(toggleChecked === "dark" ? "light" : "dark");
-            // }}
-            // checked={isDarkMode}
-            checked={!darkMode}
-          />
+          <Toggle onChange={handleDarkModeChange} checked={!darkMode} />
         </div>
         <Content />
         <Slide />

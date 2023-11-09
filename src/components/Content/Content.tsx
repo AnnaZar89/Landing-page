@@ -3,6 +3,7 @@ import HeadingH1 from "../../typography/HeadingH1/HeadingH1";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import Button from "../Button/Button";
 import Slider from "../Slider/Slider";
+import Typography from "../../typography/Typography";
 
 const Content = () => {
   const responsive = {
@@ -50,15 +51,28 @@ const Content = () => {
     <div className={styles.element}>
       <Slider responsive={responsive} arrows infinite>
         <div className={styles.txtStyle}>
-          <HeadingH1
+          {/* <HeadingH1
             text="We are Creative and"
             color="white"
             additionalText=" Digital Agency"
-          />
+          /> */}
+          <Typography tag="h1" color="rgba(255, 255, 255, 1)">
+            We are Creative and
+          </Typography>
+          <Typography tag="h1" color="#ff4815">
+            {" "}
+            Digital Agency
+          </Typography>
           <Paragraph
             text="There are many variations of passages of Lorem Ipsum available, but the suffered alteration in some form, by injected humour suffered alteration in by injected humour majority"
             size={SizeType.MEDIUM}
           />
+
+          <Typography tag="p">
+            There are many variations of passages of Lorem Ipsum available, but
+            the suffered alteration in some form, by injected humour suffered
+            alteration in by injected humour majority
+          </Typography>
 
           <div className={styles.buttonStyles}>
             <Button text="Read More" classAdd="btnInContent" />

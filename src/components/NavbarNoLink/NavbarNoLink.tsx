@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useState } from "react";
 import MenuOpen from "../MenuOpen/MenuOpen";
 import styles from "./NavbarNoLink.module.scss";
+import Typography from "../../typography/Typography";
 
 interface INavbarNoLink {
   text: string;
@@ -13,12 +14,15 @@ const NavbarNoLink: FC<INavbarNoLink> = ({ text, icon }) => {
 
   return (
     <>
-      <p
+      <Typography
         onClick={() => setMenuOpen(!menuOpen)}
-        // className={menuOpen ? styles.element : ""}
+        tag="p"
+        color="rgba(255, 255, 255, 1)"
+        className={styles.text}
       >
         {text} {icon}
-      </p>
+      </Typography>
+
       {menuOpen && <MenuOpen />}
     </>
   );
