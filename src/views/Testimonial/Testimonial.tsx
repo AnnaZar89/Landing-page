@@ -1,33 +1,12 @@
 // import Paragraph from "../../typography/Paragraph/Paragraph";
 import { Fragment } from "react";
-import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
-import Heading from "../../typography/HeadingH2/HeadingH2";
 import TestimonialBox from "../../components/TestimonialBox/TestimonialBox";
 import styles from "./Testimonial.module.scss";
-import CircleRow from "../../components/CircleRow/CircleRow";
 import Container from "../../components/Container/Container";
 import Slider from "../../components/Slider/Slider";
+import Typography from "../../typography/Typography";
 
 const Testimonial = () => {
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     breakpoint: { max: 4000, min: 3000 },
-  //     items: 2,
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 2,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 1,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //   },
-  // };
-
   const responsive = {
     xl: {
       breakpoint: { max: 1440, min: 1200 },
@@ -82,16 +61,14 @@ Aidmycareer platform that provides is the heart of career questions. Aidmycareer
       <Container className={styles.container}>
         <div className={styles.testimonialContent}>
           <div className={styles.element}>
-            <Paragraph
-              text="Testimonial"
-              size={SizeType.LARGE}
-              variant="semiBold"
-            />
-            <Heading color="black" text="What Our Client Say About Us" />
-            <Paragraph text="Aidmycareer is the heart of career questions. Aidmycareer platform that provides" />
+            <Typography tag="h3">Testimonial</Typography>
+            <Typography tag="h2">What Our Client Say About Us</Typography>
+            <Typography tag="p">
+              Aidmycareer is the heart of career questions. Aidmycareer platform
+              that provides
+            </Typography>
           </div>
         </div>
-
         <Slider dots responsive={responsive} arrows={false}>
           {Box.map((element, index) => (
             <Fragment key={index}>{element}</Fragment>

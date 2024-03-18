@@ -1,5 +1,9 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
 .element {
-  width: 370px;
+  // width: 370px;
+  // width: 100%;
+  width: 310px;
   height: 222px;
   margin-bottom: 50px;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.15);
@@ -8,9 +12,10 @@
   flex-direction: column;
   justify-content: space-between;
   transition: 0.5s;
-  // h2,
-  // p {
-  //   transition: 0.5;
+  border: var(--border-services);
+  padding-right: 8px;
+  // @include media("xxs") {
+  //   width: 370px;
   // }
 
   &:hover {
@@ -47,21 +52,10 @@
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    // &:hover {
-    //   background: #ffffff;
-    // }
-
-    // .number {
-
-    //   color: white;
-    //   &:hover {
-    //     color: #ff4815;
-    //   }
-    // }
   }
 
   .number {
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 25px;
     font-weight: 700;
     line-height: 37.5px;
@@ -73,20 +67,23 @@
     display: flex;
     align-items: center;
     height: 100%;
-    border: 2px solid #ff4815;
-    border: var(--border-services);
     border-radius: 10px;
-    // transition: 2s;
     div:nth-child(1) {
       margin-left: 24px;
       width: 75px;
-      height: 76px;
+      // height: 76px;
       background: rgba(255, 72, 21, 0.3);
       border-radius: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: 0.5s;
+      @include media("lg") {
+        height: 75px;
+      }
+    }
+    svg {
+      width: 70px;
     }
   }
 
@@ -95,48 +92,22 @@
     flex-direction: column;
     justify-content: flex-end;
     margin-left: 24px;
-    // transition: 2s;
 
     h2 {
       font-weight: 600;
       text-align: left;
-      margin-bottom: 15px;
       font-size: 20px;
       line-height: 30px;
-      // transition: 2s;
     }
     p {
       line-height: 22.63px;
       text-align: left;
+      margin: 10px 0 7px 0;
     }
     p:nth-child(3) {
       font-weight: 600;
       color: #ff4815;
-      margin-top: 25px;
       transition: 0.5s;
     }
   }
 }
-
-// .element:hover {
-//   cursor: pointer;
-//   background-color: #ff4815;
-//   h2 {
-//     color: white;
-//   }
-//   p {
-//     color: white;
-//   }
-//   .ellipse {
-//     background-color: #ffffff;
-//   }
-//   .number {
-//     color: #ff4815;
-//   }
-//   p:nth-child(3) {
-//     color: white;
-//   }
-//   .rectangleAndTxt div:nth-child(1) {
-//     background-color: #ffffff;
-//   }
-// }

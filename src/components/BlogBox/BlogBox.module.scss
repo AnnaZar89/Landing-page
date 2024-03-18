@@ -6,6 +6,7 @@
   // height: 153px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
   border-radius: 0px 0px 10px 10px;
+  border: var(--border-services);
   @include media("sm") {
     // width: 370px;
   }
@@ -19,8 +20,14 @@
       h2 {
         padding-top: 0;
         font-weight: 600;
-        font-size: 13px;
+        font-size: 9px;
         line-height: 20px;
+        @include media("xs") {
+          font-size: 11px;
+        }
+        @include media("sm") {
+          font-size: 13px;
+        }
       }
     }
 

@@ -1,8 +1,25 @@
-// .element {
-//   margin: 0;
-//   font-family: "Poppins";
-// }
 p {
   font-family: "Noto Sans", sans-serif;
   font-size: 15px;
+  line-height: 23.54px;
+  color: rgba(113, 113, 113, 1);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  line-height: 47px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: rgba(255, 72, 21, 1);
 }

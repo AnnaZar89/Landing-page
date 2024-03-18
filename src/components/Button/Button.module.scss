@@ -33,15 +33,14 @@
       width: 170px;
       height: 50px;
       border: 2px solid #ff4815;
-      font-family: "Poppins";
+      font-family: "Poppins", sans-serif;
       font-weight: 700;
       font-size: 17px;
       line-height: 26px;
       letter-spacing: 0.05em;
-
       margin-bottom: 35px;
       &:hover {
-        background-color: "pink";
+        color: rgba(255, 255, 255, 1);
       }
     }
   }

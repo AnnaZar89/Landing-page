@@ -10,6 +10,7 @@ import { ReactComponent as Shoes } from "../../assets/icons/shoes-our-clients.sv
 import { ReactComponent as Arrow } from "../../assets/icons/arrow-left.svg";
 import Container from "../../components/Container/Container";
 import Slider from "../../components/Slider/Slider";
+import Typography from "../../typography/Typography";
 
 const OurClient = () => {
   const responsive = {
@@ -39,17 +40,14 @@ const OurClient = () => {
       <Container>
         <div className={styles.element}>
           <div className={styles.elementDiv}>
-            <Paragraph text="Clients" size="large" variant="semiBold" />
-
-            <Heading text="Our Clients" color="black" />
-            <Paragraph
-              text="There are many variations of passages of Lorem Ipsum available, suffered
-     alteration in some form, by injected humour suffered by injected humour
-     majority"
-              size="medium"
-            />
+            <Typography tag="h3">Clients</Typography>
+            <Typography tag="h2">Our Clients</Typography>
+            <Typography tag="p">
+              There are many variations of passages of Lorem Ipsum available,
+              suffered alteration in some form, by injected humour suffered by
+              injected humour majority
+            </Typography>
           </div>
-
           <Slider
             className={styles.sliderStyle}
             responsive={responsive}

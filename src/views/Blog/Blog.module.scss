@@ -7,24 +7,25 @@
 .element {
   text-align: center;
 
-  p + h2 {
-    font-size: 32px;
+  h3 + h2 {
     line-height: 48px;
+    margin-top: 10px;
   }
 
-  > p {
-    font-family: Poppins;
-    text-align: left;
-    color: rgba(255, 72, 21, 1);
-    text-align: center;
-  }
+  // > p {
+  //   font-family: Poppins;
+  //   text-align: left;
+  //   color: rgba(255, 72, 21, 1);
+  //   color: pink;
+  //   text-align: center;
+  // }
 
   .blogArticleContainer {
     display: flex;
     // grid-template-columns: 1fr;
     // justify-content: space-around;
     flex-direction: column;
-    margin-top: 7px;
+    // margin-top: 7px;
     margin-bottom: 120px;
     justify-content: center;
     @include media("xs") {

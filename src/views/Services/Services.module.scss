@@ -3,20 +3,16 @@
 
 .element {
   text-align: center;
-  // padding: 0 5%;
-  p + h2 {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 46.69px;
+
+  p {
+    color: var(--color-font-p);
   }
 
-  p:nth-child(1) {
-    font-family: Poppins;
-    color: rgba(255, 72, 21, 1);
+  h3 + h2 {
+    margin: 7px 0 5px 0;
   }
+
   h2 + p {
-    // width: 693px;
-    // margin: 0 auto;
     margin: 0 30px;
 
     @include media("sm") {
@@ -26,39 +22,19 @@
     @include media("md") {
       margin: 0 100px;
     }
-
-    @include media("xl") {
-      margin: 0 238px;
-    }
-  }
-  p:nth-child(4) {
-    // width: 693px;
-    margin: 0 auto;
-    font-size: 15px;
-    color: #717171;
-    margin: 0 20%;
   }
 
   .containerOfDiv {
     display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
-    // align-items: center;
     margin: 50px auto;
     justify-items: center;
-    // width: 1170px;
-    // margin: 50px 135px 140px 135px;
-    p {
-      margin: 0;
-      width: 223px;
-      // @include media("xl") {
-      //   margin: 0 238px;
-      // }
-    }
 
-    // > p {
-    //   margin: 0 238px;
+    // p {
+    //   width: 223px;
     // }
+
     @include media("lg") {
       grid-template-columns: 1fr 1fr;
     }

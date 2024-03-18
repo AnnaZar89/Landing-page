@@ -3,13 +3,44 @@
 
 .element {
   margin-right: 0;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 436px;
   flex-direction: column;
-  @include media("sm") {
+  font-family: "Poppins", sans-serif;
+  width: 90px;
+  div:nth-child(4) {
+    width: 67px;
+  }
+  @include media("md") {
+    width: 436px;
+  }
+
+  a {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    @include media("lg") {
+      font-size: 16px;
+    }
+  }
+  div {
+    height: 30px;
+    line-height: 20px;
+    font-size: 14px;
+    @include media("md") {
+      height: inherit;
+    }
+    @include media("lg") {
+      font-size: 16px;
+    }
+  }
+  @include media("md") {
     flex-direction: row;
     margin-right: 100px;
+    margin-top: inherit;
+  }
+  @include media("md") {
+    align-items: center;
   }
 }

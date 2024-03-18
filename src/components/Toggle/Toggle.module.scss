@@ -1,12 +1,27 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
 .element {
   position: absolute;
   // top: -8%;
   right: 5%;
   display: inline-block;
   transition: 0.4s;
-  width: 70px;
-  min-width: 70px;
-  height: 36px;
+  // width: 65px;
+  // min-width: 65px;
+  width: 55px;
+  min-width: 55px;
+  height: 26px;
+  // @include media("xs") {
+  //   width: 60px;
+  //   height: 30px;
+  //   min-width: 60px;
+  // }
+
+  @include media("lg") {
+    width: 70px;
+    min-width: 70px;
+    height: 36px;
+  }
   input {
     opacity: 0;
     width: 0;
@@ -18,7 +33,8 @@
     white-space: nowrap;
   }
   .toggle.isChecked:before {
-    transform: translate(7px, -50%);
+    // transform: translate(7px, -50%);
+    transform: translate(5px, -50%);
   }
 }
 
@@ -37,14 +53,23 @@
     content: "";
     position: absolute;
     top: 50%;
-    width: 24px;
-    height: 24px;
+    // width: 24px;
+    // height: 24px;
+    width: 20px;
+    height: 20px;
     left: 0.4px;
     bottom: 40px;
     transition: 0.4s;
     border-radius: 50%;
-    transform: translate(35px, -50%);
+    // transform: translate(35px, -50%);
+    transform: translate(28px, -50%);
     background-color: var(--toggle-background-color);
+    @include media("lg") {
+      transform: translate(40px, -50%);
+    }
+    //   width: 15px;
+    //   height: 15px;
+    // }
   }
 }
 

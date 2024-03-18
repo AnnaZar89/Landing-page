@@ -2,17 +2,14 @@
 @import "../../assets/styles//mixins/media.scss";
 
 .element {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
   height: 100%;
-  // transform: translateY(50%);
+  @include media("lg") {
+    padding-top: 30px;
+  }
 
   .txtStyle {
-    // width: 571px;
     margin: 0 25px;
 
     @include media("sm") {
@@ -21,24 +18,37 @@
     @include media("sm") {
       margin: 0 auto;
     }
+    @include media("lg") {
+      padding-bottom: 60px;
+    }
     h1 {
       text-align: center;
-      font-size: 28px;
+      font-size: 24px;
       line-height: 28px;
       font-weight: 700;
       display: inline;
+      color: rgba(255, 255, 255, 1);
+      @include media("xs") {
+        font-size: 30px;
+      }
 
-      @include media("sm") {
+      @include media("md") {
         font-size: 58px;
         line-height: 75.57px;
       }
     }
 
+    h1:nth-child(2) {
+      color: rgba(255, 72, 21, 1);
+    }
+
     p {
-      margin: 20px 0 44px 0;
+      margin: 20px 0;
       color: rgba(255, 255, 255, 1);
-      // font-size: 15px;
-      // font-family: "Noto Sans";
+      line-height: 23.54px;
+      @include media("md") {
+        margin: 20px 0 44px 0;
+      }
     }
 
     .buttonStyles {
@@ -48,15 +58,19 @@
       justify-content: space-between;
       margin: 0 auto;
       gap: 10px;
+      padding-bottom: 50px;
       @include media("xs") {
         flex-direction: row;
         width: 295px;
         gap: inherit;
       }
+      @include media("md") {
+        padding-bottom: 98px;
+      }
+      @include media("lg") {
+        padding-bottom: inherit;
+      }
     }
-  }
-  :global(.react-multi-carousel-list) {
-    height: 100%;
   }
   :global(.react-multiple-carousel__arrow) {
     background: transparent;
@@ -64,7 +78,13 @@
     border-radius: 50%;
     min-width: 28px;
     min-height: 28px;
-    bottom: 31px;
+    bottom: 10px;
+    @include media("md") {
+      bottom: 0px;
+    }
+    @include media("lg") {
+      bottom: 31px;
+    }
   }
 
   :global(.react-multiple-carousel__arrow)::before {
@@ -74,17 +94,14 @@
   }
 
   :global(.react-multiple-carousel__arrow--left) {
-    // left: 1280px;
-    // margin-left: 900px;
-    // transform: translateX(900px);
-    // position: fixed;
-    right: 107px;
-    left: inherit;
+    @include media("md") {
+      left: inherit;
+      right: 107px;
+    }
   }
 
   :global(.react-multiple-carousel__arrow--right) {
     right: 31px;
-    // position: fixed;
   }
 
   .carouselContainer button {

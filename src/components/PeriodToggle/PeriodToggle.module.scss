@@ -1,11 +1,23 @@
 .element {
   cursor: pointer;
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+  }
+
   &.on {
-    background-color: rgba(20, 33, 43, 1);
-    color: white;
+    // background-color: rgba(20, 33, 43, 1);
+    background-color: var(--background-color-toggle);
+    p {
+      color: white;
+    }
   }
   &.off {
     background-color: white;
-    color: #ff4815;
+    p {
+      color: #ff4815;
+    }
   }
 }

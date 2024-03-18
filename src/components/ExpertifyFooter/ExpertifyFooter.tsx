@@ -2,6 +2,7 @@ import Image from "../Image/Image";
 import expertifyLogo from "../../assets/images/logo-header.png";
 import styles from "./ExpertifyFooter.module.scss";
 import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
+import Typography from "../../typography/Typography";
 // import Heading from "../../typography/Heading/Heading";
 
 type ExpertifyDataT = {
@@ -31,14 +32,12 @@ const ExpertifyFooter = () => {
   return (
     <div className={styles.element}>
       <Image src={expertifyLogo} />
-      {EXPERTIFY_DATA.map(({ text, size }) => (
-        <Paragraph text={text} size={size as SizeType} />
+      {EXPERTIFY_DATA.map(({ text }, index) => (
+        // <Paragraph text={text} size={size as SizeType} />
+        <Typography tag="p" key={index}>
+          {text}
+        </Typography>
       ))}
-
-      {/* <Paragraph text="Open Hour" size="extraLarge" />
-      <Paragraph text="Sun-Thu Open 10AM to 9PM" size="standard" />
-      <Paragraph text="Fri-Sat " size="standard" />
-      <Paragraph text=" Closed" size="standard" /> */}
     </div>
   );
 };

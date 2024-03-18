@@ -11,6 +11,7 @@ import { ReactComponent as Whatsapp } from "../../assets/icons/whatsapp-our-team
 import Container from "../../components/Container/Container";
 import Slider from "../../components/Slider/Slider";
 import IconBox from "../../components/IconBox/IconBox";
+import Typography from "../../typography/Typography";
 
 const OurTeam = () => {
   const data = [
@@ -46,13 +47,14 @@ const OurTeam = () => {
     <Container className={styles.sliderStyle}>
       <div className={styles.element}>
         <div className={styles.textContainer}>
-          <Paragraph text="Our Team" size="large" variant="semiBold" />
-          <Heading text="Meet Our Best Creative Team" color="black" />
-          <Paragraph
-            text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
-alteration in some form, by injected humour, or randomised words which don't"
-            size="medium"
-          />
+          {/* <Paragraph text="Our Team" size="large" variant="semiBold" /> */}
+          <Typography tag="h3">Our Team</Typography>
+          <Typography tag="h2">Meet Our Best Creative Team</Typography>
+          <Typography tag="p">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't
+          </Typography>
         </div>
 
         <div className={styles.boxContainer}>

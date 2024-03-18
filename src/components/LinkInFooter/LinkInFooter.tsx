@@ -1,8 +1,8 @@
 import { FC } from "react";
-import Heading from "../../typography/HeadingH2/HeadingH2";
 import styles from "./LinkInFooter.module.scss";
 import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
 import cn from "classnames";
+import Typography from "../../typography/Typography";
 
 interface ILinkInFooter {
   title: string;
@@ -16,12 +16,10 @@ const LinkInFooter: FC<ILinkInFooter> = ({
   data,
   additionalData,
   className,
-  // contactData,
 }) => {
-  // console.log(data, "data");
   return (
     <div className={cn(styles.element, className)}>
-      <Heading text={title} color="orange" />
+      <Typography tag="h2">{title}</Typography>
       <div className={styles.container}>
         <ListBoxContainer listData={data} />
         {additionalData && <ListBoxContainer listData={additionalData} />}
@@ -31,15 +29,3 @@ const LinkInFooter: FC<ILinkInFooter> = ({
 };
 
 export default LinkInFooter;
-
-//zakomentowane: 4/05
-// interface IListBox {
-//   data: string[];
-// }
-// const ListBox: FC<IListBox> = ({ data }) => {
-//   return (
-//     <ul>
-//       <li>{data}</li>
-//     </ul>
-//   );
-// };

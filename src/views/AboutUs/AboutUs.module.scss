@@ -1,54 +1,86 @@
 @import "../../assets/styles/mixing.scss";
 @import "../../assets/styles/mixins/media.scss";
 .element {
-  margin: 120px 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  display: block;
+  margin: 60px 0;
+  display: flex;
+  // flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
 
-  .logoContainer {
+  // margin: 120px 100px;
+  // }
+  // @include media("xl") {
+  //   grid-template-columns: 1fr 1fr;
+  //   margin: 120px 0 0 0;
+  // }
+
+  @include media("lg") {
+    flex-direction: row;
+  }
+
+  .boxes {
+    // position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 0;
-    height: 470px;
-    transform: translateX(92.5px);
+    flex: 1;
+    // margin-right: 50px;
+    justify-content: center;
 
-    img:nth-child(1) {
-      width: 370px;
-      height: 312px;
-      transform: translateX(-50%);
+    @include media("lg") {
+      transform: translateY(-25%);
     }
 
-    img:nth-child(2) {
-      width: 370px;
-      height: 312px;
-      background-color: #e2866d;
+    .square {
+      width: 150px;
       border-radius: 10px;
-      transform: translateY(-50%);
-    }
-    @include media("xl") {
-      margin-right: 30px;
-      align-items: end;
-      transform: translateX(0);
-    }
-  }
+      aspect-ratio: 1;
 
-  @include media("md") {
-    margin: 120px 100px;
-  }
-  @include media("xl") {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 120px 0;
+      @include media("md") {
+        width: 220px;
+      }
+
+      @include media("xl") {
+        width: 310px;
+      }
+
+      &.right {
+        background-color: var(--background-color-square-grey);
+        transform: translateX(25%);
+      }
+      &.left {
+        background-color: var(--background-color-square-orange);
+        // transform: translate(-100px, 80px);
+        transform: translate(-25%, 50%);
+        opacity: 0.8;
+      }
+    }
   }
 
   .aboutUsData {
+    flex: 1;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 100px;
+
+    @include media("md") {
+      margin-top: 150px;
+    }
+
+    @include media("lg") {
+      margin-top: 0px;
+    }
+    h2 {
+      display: inline;
+    }
+    h2:nth-child(3) {
+      color: rgba(255, 72, 21, 1);
+    }
+
+    p {
+      color: var(--color-font-p);
+      margin-top: 20px;
+    }
 
     ul {
-      margin: 29px 0;
+      margin: 29px 0 49px 0;
       font-size: 15px;
       line-height: 22px;
       li {
@@ -59,7 +91,6 @@
           border-radius: 50%;
           path {
             fill: white;
-            // stroke: black;s
           }
         }
       }
@@ -72,15 +103,9 @@
         color: white;
       }
     }
-    @include media("xl") {
+    @include media("lg") {
       text-align: left;
       margin-top: 0;
     }
-  }
-
-  .about {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 500;
   }
 }

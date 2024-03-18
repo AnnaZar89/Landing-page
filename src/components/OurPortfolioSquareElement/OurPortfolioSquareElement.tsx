@@ -4,6 +4,7 @@ import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import styles from "./OurPortfolioSquareElement.module.scss";
 import { setLocalDarkMode } from "../../helpers/darkMode";
 import { useAppSelector } from "../../store";
+import Typography from "../../typography/Typography";
 
 interface IOurPortfolioSquareElement {
   textInHeader: string;
@@ -17,13 +18,10 @@ const OurPortfolioSquareElement: FC<IOurPortfolioSquareElement> = ({
   const darkMode = useAppSelector((state) => state.theme.darkMode);
   return (
     <div className={styles.element}>
-      <Heading
-        text={textInHeader}
-        // color="white"
-        // color={[`dark-mode`] ? "white" : "black"}
-        color={darkMode ? "black" : "white"}
-      />
-      <Paragraph text={textInParagraph} size={SizeType.LARGE} />
+      {/* <Typography tag="h2" className={darkMode ? styles.dark : styles.light}> */}
+      <Typography tag="h2">{textInHeader}</Typography>
+      <Typography tag="p">{textInParagraph}</Typography>
+      {/* <Paragraph text={textInParagraph} size={SizeType.LARGE} /> */}
     </div>
   );
 };

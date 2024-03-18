@@ -1,39 +1,17 @@
 import styles from "./Navbar.module.scss";
 import { Routes } from "../../routes";
-import NavbarBox from "../NavbarBox/NavbarBox";
-import { ReactComponent as ArrowDown } from "../../assets/icons/arrow-down.svg";
-
-const navbarData = [
-  {
-    name: "home",
-    link: Routes.HOME,
-  },
-  {
-    name: "about",
-    link: Routes.ABOUT,
-  },
-  {
-    name: "services",
-    link: null,
-    icon: <ArrowDown />,
-  },
-  {
-    name: "blog",
-    link: null,
-    icon: <ArrowDown />,
-  },
-  {
-    name: "contact",
-    link: Routes.CONTACT,
-  },
-];
+import Link from "../Link/Link";
+import SelectInput from "../Select/SelectInput";
+import { servicesOption, blogOption } from "./options";
 
 const Navbar = () => {
   return (
     <div className={styles.element}>
-      {navbarData.map(({ name, link, icon }) => (
-        <NavbarBox text={name} link={link} icon={icon} key={name} />
-      ))}
+      <Link href={Routes.HOME} text="HOME" />
+      <Link href={Routes.ABOUT} text="ABOUT" />
+      <SelectInput options={servicesOption} defaultValue={servicesOption[0]} />
+      <SelectInput options={blogOption} defaultValue={blogOption[0]} />
+      <Link href={Routes.CONTACT} text="CONTACT" />
     </div>
   );
 };

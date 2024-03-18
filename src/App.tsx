@@ -13,6 +13,7 @@ import PricingPlan from "./views/PricingPlan/PricingPlan";
 import Testimonial from "./views/Testimonial/Testimonial";
 import Blog from "./views/Blog/Blog";
 import Footer from "./views/Footer/Footer";
+
 import { setTheme } from "../src/store/themeReducer";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
   return (
     <>
       <div className="App" style={{ width: "100%" }}>
+        {/* <SelectInput /> */}
         <DigitalAgency />
         <AboutUs />
         <Services />

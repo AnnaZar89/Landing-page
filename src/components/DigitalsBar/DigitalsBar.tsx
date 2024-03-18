@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 import styles from "../DigitalsBar/DigitalsBar.module.scss";
 import Heading from "../../typography/HeadingH2/HeadingH2";
 import OurPortfolioSquareElement from "../../components/OurPortfolioSquareElement/OurPortfolioSquareElement";
+import Typography from "../../typography/Typography";
 // import Paragraph from "../../typography/Paragraph/Paragraph";
 
 enum DigitalValueType {
@@ -123,8 +124,7 @@ const DigitalsBar = () => {
             key={index}
             className={digitalValue === value ? styles.active : ""}
           >
-            {/* <Heading text={name} color="black" /> */}
-            <Heading text={name} color="black" />
+            <Typography tag="h2">{name}</Typography>
           </div>
         ))}
       </div>

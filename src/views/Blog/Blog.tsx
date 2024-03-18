@@ -3,6 +3,7 @@ import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import BlogArticle from "../../components/BlogArticle/BlogArticle";
 import styles from "./Blog.module.scss";
 import Container from "../../components/Container/Container";
+import Typography from "../../typography/Typography";
 
 const headerText: string[] = [
   "Things You Can Do to Refresh Marching towards a green future.",
@@ -14,12 +15,14 @@ const Blog = () => {
   return (
     <Container className={styles.container}>
       <div className={styles.element}>
-        {/* <Heading text="Latest blog" color="orange" /> */}
-        <Paragraph
-        text="Latest Blog" size={SizeType.LARGE}
-        variant="semiBold"
-      />
-        <Heading text="See Our Latest & New Blog" color="black" />
+        {/* <Paragraph
+          text="Latest Blog"
+          size={SizeType.LARGE}
+          variant="semiBold"
+        /> */}
+        <Typography tag="h3">Latest Blog</Typography>
+        <Typography tag="h2">See Our Latest & New Blog</Typography>
+        {/* <Heading text="See Our Latest & New Blog" color="black" /> */}
 
         <div className={styles.blogArticleContainer}>
           {headerText.map((element, index) => (

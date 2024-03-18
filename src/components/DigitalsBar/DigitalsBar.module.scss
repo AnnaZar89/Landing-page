@@ -3,8 +3,6 @@
 
 .element {
   box-sizing: border-box;
-  // width: 858px;
-  // height: 48px;
   display: flex;
   flex-direction: column;
   border-radius: 3px;
@@ -13,8 +11,8 @@
   margin: 0 auto;
   line-height: 27px;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 54px;
+  margin-top: 54px;
+  margin-bottom: 40px;
 
   .digitBar {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
@@ -22,9 +20,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    // height: 48px;
     margin-bottom: 54px;
     width: 60%;
+    cursor: pointer;
 
     h2 {
       font-weight: 500;
@@ -33,29 +31,22 @@
       text-align: center;
       text-transform: capitalize;
       border-radius: 3px;
-      // color: rgba(20, 33, 43, 1);
-      // color: rgba(255, 72, 21, 1);
-      color: var(--color-portfolio);
+      // color: var(--color-portfolio);
     }
 
     div {
       padding: 5px;
       &.active {
         background-color: rgba(255, 72, 21, 1);
+        color: rgba(255, 255, 255, 1);
+        padding: 0 5px;
       }
     }
 
     div:hover {
       background-color: rgba(255, 72, 21, 1);
-      cursor: pointer;
-      // padding: 5px;
-
-      h2 {
-        color: white;
-        &:hover {
-          color: white;
-        }
-      }
+      color: white;
+      padding: 0 5px;
     }
     @include media("xl") {
       flex-direction: row;
@@ -65,7 +56,6 @@
   .square {
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
 
     @include media("xl") {

@@ -17,7 +17,6 @@ const NavbarNoLink: FC<INavbarNoLink> = ({ text, icon }) => {
       <Typography
         onClick={() => setMenuOpen(!menuOpen)}
         tag="p"
-        color="rgba(255, 255, 255, 1)"
         className={styles.text}
       >
         {text} {icon}

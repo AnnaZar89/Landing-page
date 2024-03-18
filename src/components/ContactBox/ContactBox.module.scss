@@ -1,12 +1,13 @@
 @import "../../assets/styles/mixing.scss";
 @import "../../assets/styles//mixins/media.scss";
 .element {
-  h1:nth-child(1) {
+  h2 {
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.05em;
     margin-bottom: 19px;
+    color: rgba(255, 72, 21, 1);
   }
 
   li {

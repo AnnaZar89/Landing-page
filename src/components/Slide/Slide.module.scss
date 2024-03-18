@@ -1,6 +1,15 @@
 .element {
   div {
     position: absolute;
+    p {
+      // color: rgba(255, 255, 255, 1);
+      // font-family: "Poppins", sans-serif;
+      // line-height: 16.5px;
+      // transition: 0.5;
+      // &:hover {
+      //   color: rgba(255, 72, 21, 1);
+      // }
+    }
   }
   div:nth-child(1) {
     left: 25px;

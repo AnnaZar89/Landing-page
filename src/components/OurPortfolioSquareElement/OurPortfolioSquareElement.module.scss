@@ -3,18 +3,21 @@
   transition: 0.5s;
 
   h2 {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
+    color: white;
   }
 
   p {
-    // font-weight: 500;
-    // font-size: 18px;
-    // line-height: 27px;
     color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 4px;
   }
 
   &:hover {
@@ -24,4 +27,12 @@
     background-color: rgba(255, 72, 21, 1);
     cursor: pointer;
   }
+}
+
+.dark {
+  color: pink;
+}
+
+.light {
+  color: #ffffff;
 }

@@ -19,14 +19,14 @@ enum TypographyTags {
 type TypographyPropsType = PropsWithChildren &
   ComponentBaseType & {
     tag: keyof typeof TypographyTags;
-    color?: string;
+    // color?: string;
   };
 
 const Typography: FC<TypographyPropsType> = ({
   className,
   children,
   onClick,
-  color,
+  // color,
   tag,
 }): ReactElement => {
   const htmlTag = useMemo(
@@ -49,7 +49,6 @@ const Typography: FC<TypographyPropsType> = ({
     {
       className: componentClassName,
       onClick,
-      style: { color },
     },
     children
   );

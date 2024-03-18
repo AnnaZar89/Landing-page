@@ -18,20 +18,25 @@
     background-color: rgba(196, 196, 196, 1);
     border-radius: 50%;
     margin: 0 auto;
-    
+  }
+  p {
+    text-align: center;
   }
   // p {
   p:nth-child(3) {
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
     width: 305px;
     margin: 7px auto;
-    // font-weight: 400;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.33px;
   }
   p:nth-child(4) {
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 22.63px;
     color: #ff4815;
     margin: 0 auto;
   }
@@ -39,7 +44,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
     margin: 2px auto;
   }
 

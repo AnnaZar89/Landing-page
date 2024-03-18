@@ -6,11 +6,7 @@ interface ICircleBox {
 }
 
 const CircleBox: FC<ICircleBox> = ({ children }) => {
-  return (
-    <>
-      <div className={styles.element}>{children}</div>
-    </>
-  );
+  return <div className={styles.element}>{children}</div>;
 };
 
 export default CircleBox;

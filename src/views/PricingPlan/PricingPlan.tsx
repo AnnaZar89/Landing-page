@@ -1,17 +1,17 @@
 import { useState } from "react";
-import Heading from "../../typography/HeadingH2/HeadingH2";
-import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import PricingPlanBox from "../../components/PricingPlanBox/PricingPlanBox";
 import styles from "./PricingPlan.module.scss";
 import Container from "../../components/Container/Container";
 import PeriodToggle from "../../components/PeriodToggle/PeriodToggle";
+import Typography from "../../typography/Typography";
 
 type PriceDate = {
   title: string;
   sumMonthly: number;
   sumYearly: number;
   sumDaily: number;
-  period: "Monthly" | "Yearly" | "Daily";
+  period: "Monthly" | "Yearly";
+  classAdd?: string;
 };
 
 const pricingPlanData: PriceDate[] = [
@@ -28,6 +28,7 @@ const pricingPlanData: PriceDate[] = [
     sumYearly: 550,
     sumDaily: 5,
     period: "Monthly",
+    classAdd: "popularPlan",
   },
   {
     title: "Premium Plan",
@@ -40,17 +41,12 @@ const pricingPlanData: PriceDate[] = [
 
 const PricingPlan = () => {
   const [togglePrice, setTogglePrice] = useState("Monthly");
-  const toggleButtons = ["Monthly", "Yearly", "Daily"];
+  const toggleButtons = ["Monthly", "Yearly"];
 
   const handleToggle = (period: string) => {
     setTogglePrice(period);
     console.log("period", period);
   };
-
-  // const renderPrice: Record<string, number> = {
-  //   Monthly: 30,
-  //   Yearly: 100,
-  // };
 
   const renderPrice = (data: PriceDate) => {
     const price: Record<string, number> = {
@@ -92,30 +88,32 @@ const PricingPlan = () => {
   return (
     <Container className={styles.container}>
       <div className={styles.textContainer}>
-        <Paragraph
-          text="Pricing Plan"
-          size={SizeType.LARGE}
-          variant="semiBold"
-        />
-        <Heading text="Purches Our Pricing Plan" color="black" />
-        <Paragraph
-          text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't"
-          size={SizeType.MEDIUM}
-        />
+        <Typography tag="h3">Pricing Plan</Typography>
+        <Typography tag="h2">Purches Our Pricing Plan</Typography>
+        <Typography tag="p">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don't
+        </Typography>
       </div>
       <div className={styles.toggleElement}>
-        {toggleButtons.map((element) => (
+        {toggleButtons.map((element, index) => (
           <PeriodToggle
             text={element}
             handleToggle={() => handleToggle(element)}
             activeElement={element === togglePrice}
-            // activeElement={togglePrice}
+            key={index}
           />
         ))}
       </div>
       <div className={styles.pricingPlanBoxContainer}>
-        {pricingPlanData.map((element) => (
-          <PricingPlanBox title={element.title} sum={renderPrice(element)} />
+        {pricingPlanData.map((element, index) => (
+          <PricingPlanBox
+            title={element.title}
+            sum={renderPrice(element)}
+            classAdd={element.classAdd}
+            key={index}
+          />
         ))}
       </div>
     </Container>

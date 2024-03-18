@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import styles from "./Container.module.scss";
 import cn from "classnames";
 

@@ -1,11 +1,10 @@
 import { FC } from "react";
 import { ContactBoxT } from "../../views/Footer/mockData";
-import Heading from "../../typography/HeadingH2/HeadingH2";
 import ListBox from "../ListBox/ListBox";
 import List from "../List/List";
 import styles from "./ContactBox.module.scss";
 import cn from "classnames";
-import { Typography } from "@mui/material";
+import Typography from "../../typography/Typography";
 
 interface IContactBox {
   data: ContactBoxT[];
@@ -16,12 +15,9 @@ interface IContactBox {
 const ContactBox: FC<IContactBox> = ({ data, text, className }) => {
   return (
     <div className={cn(styles.element, className)}>
-      <Heading text={text} color="orange" />
-      {/* <Typography variant="h1" text={text} color="orange" /> */}
-      {/* AAAAAAAAAAAAAAAA */}
-      {/* </Typography> */}
-      {data.map(({ firstItem, secondItem, icon }) => (
-        <div className={styles.contactBox}>
+      <Typography tag="h2">{text}</Typography>
+      {data.map(({ firstItem, secondItem, icon }, index) => (
+        <div className={styles.contactBox} key={index}>
           {icon}
           <ListBox>
             <List title={firstItem} />

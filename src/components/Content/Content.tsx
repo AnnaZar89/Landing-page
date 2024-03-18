@@ -1,6 +1,4 @@
 import styles from "../Content/Content.module.scss";
-import HeadingH1 from "../../typography/HeadingH1/HeadingH1";
-import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import Button from "../Button/Button";
 import Slider from "../Slider/Slider";
 import Typography from "../../typography/Typography";
@@ -29,110 +27,48 @@ const Content = () => {
     },
   };
 
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     breakpoint: { max: 4000, min: 3000 },
-  //     items: 1,
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 1,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 1,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //   },
-  // };
   return (
     <div className={styles.element}>
       <Slider responsive={responsive} arrows infinite>
         <div className={styles.txtStyle}>
-          {/* <HeadingH1
-            text="We are Creative and"
-            color="white"
-            additionalText=" Digital Agency"
-          /> */}
-          <Typography tag="h1" color="rgba(255, 255, 255, 1)">
-            We are Creative and
-          </Typography>
-          <Typography tag="h1" color="#ff4815">
-            {" "}
-            Digital Agency
-          </Typography>
-          <Paragraph
-            text="There are many variations of passages of Lorem Ipsum available, but the suffered alteration in some form, by injected humour suffered alteration in by injected humour majority"
-            size={SizeType.MEDIUM}
-          />
-
+          <Typography tag="h1">We are Creative and</Typography>
+          <Typography tag="h1"> Digital Agency</Typography>
           <Typography tag="p">
             There are many variations of passages of Lorem Ipsum available, but
             the suffered alteration in some form, by injected humour suffered
             alteration in by injected humour majority
           </Typography>
-
           <div className={styles.buttonStyles}>
             <Button text="Read More" classAdd="btnInContent" />
             <Button text="Services" classAdd="btnInContent" />
           </div>
         </div>
         <div className={styles.txtStyle}>
-          <HeadingH1
-            text="We are Creative and"
-            color="white"
-            additionalText=" Digital Agency"
-          />
-          <Paragraph
-            text="There are many variations of passages of Lorem Ipsum available, but the
-        suffered alteration in some form, by injected humour suffered alteration
-        in by injected humour majority"
-            size={SizeType.MEDIUM}
-          />
-
+          <Typography tag="h1">We are Creative and</Typography>
+          <Typography tag="h1"> Digital Agency</Typography>
+          <Typography tag="p">
+            There are many variations of passages of Lorem Ipsum available, but
+            the suffered alteration in some form, by injected humour suffered
+            alteration in by injected humour majority
+          </Typography>
           <div className={styles.buttonStyles}>
             <Button text="Read More" classAdd="btnInContent" />
             <Button text="Services" classAdd="btnInContent" />
           </div>
         </div>
         <div className={styles.txtStyle}>
-          <HeadingH1
-            text="We are Creative and"
-            color="white"
-            additionalText=" Digital Agency"
-          />
-          <Paragraph
-            text="There are many variations of passages of Lorem Ipsum available, but the
-        suffered alteration in some form, by injected humour suffered alteration
-        in by injected humour majority"
-            size={SizeType.MEDIUM}
-          />
-
+          <Typography tag="h1">We are Creative and</Typography>
+          <Typography tag="h1"> Digital Agency</Typography>
+          <Typography tag="p">
+            There are many variations of passages of Lorem Ipsum available, but
+            the suffered alteration in some form, by injected humour suffered
+            alteration in by injected humour majority
+          </Typography>
           <div className={styles.buttonStyles}>
             <Button text="Read More" classAdd="btnInContent" />
             <Button text="Services" classAdd="btnInContent" />
           </div>
         </div>
-        {/* </div> */}
-        {/* <div className={styles.element}> */}
-        {/* <HeadingH1
-          text="We are Creative and"
-          color="white"
-          additionalText=" Digital Agency"
-        />
-        <Paragraph
-          text="There are many variations of passages of Lorem Ipsum available, but the
-          suffered alteration in some form, by injected humour suffered alteration
-          in by injected humour majority"
-          size={SizeType.MEDIUM}
-        />
-  
-        <div className={styles.buttonStyles}>
-          <Button text="Read More" classAdd="btnInContent" />
-          <Button text="Services" classAdd="btnInContent" />
-        </div> */}
       </Slider>
     </div>
   );

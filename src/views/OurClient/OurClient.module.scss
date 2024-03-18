@@ -5,181 +5,157 @@
   background-image: url(../../assets/images/background-for-divs.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  // width: 100%;
-}
-.element {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding-top: 105px;
-  padding-bottom: 105px;
-  position: relative;
 
-  @include media("xl") {
-    grid-template-columns: 0.5fr 1fr;
-  }
+  .element {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 105px;
+    padding-bottom: 105px;
+    position: relative;
 
-  .elementDiv {
-    // width: 468px;
-    // margin-right: 33px;
-    margin: 0 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    h2 {
-      font-family: "Roboto";
-      font-size: 55px;
-      line-height: 64.45px;
-      font-weight: 700;
-    }
-    p:nth-child(1) {
-      font-family: Poppins;
-      color: #ff4815;
+    @include media("xl") {
+      grid-template-columns: 0.5fr 1fr;
     }
 
-    p {
-      color: var(--font-color-p);
-      opacity: 0.81;
+    .elementDiv {
+      // margin: 0 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
+      h3 {
+        font-family: "Roboto", sans-serif;
+        line-height: 23.44px;
+      }
+      h2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 55px;
+        line-height: 64.45px;
+        font-weight: 700;
+        margin: 15px 0 20px 0;
+      }
+
+      p {
+        color: var(--color-client-p);
+        opacity: 0.81;
+        text-align: center;
+        @include media("xl") {
+          text-align: left;
+        }
+      }
+      @include media("md") {
+        margin: 0 100px;
+      }
       @include media("xl") {
+        margin: 0 33px 0 0;
+        width: 468px;
         text-align: left;
       }
     }
-    @include media("md") {
-      margin: 0 100px;
-    }
-    @include media("xl") {
-      margin: 0 33px 0 0;
-      // margin: 0 238px;
-      // margin-left: 135px;
-      width: 468px;
-      // width: 39%;
-      // padding: 1%;
-      text-align: left;
-    }
-  }
 
-  :global(.react-multi-carousel-list) {
-    position: static;
-  }
-  :global(.react-multiple-carousel__arrow) {
-    min-width: 25px;
-    min-height: 25px;
-    background: transparent;
-    border: 1.5px solid black;
-  }
-  :global(.react-multiple-carousel__arrow)::before {
-    color: black;
-    font-weight: 600;
-    padding: 1px;
-    width: 7.14px;
-    height: 12.5px;
-    display: inline-block;
-  }
-  :global(.react-multiple-carousel__arrow--right) {
-    right: 0;
-    top: 55px;
-    @include media("xl") {
+    :global(.react-multi-carousel-list) {
+      position: static;
+    }
+    :global(.react-multiple-carousel__arrow) {
+      min-width: 25px;
+      min-height: 25px;
+      background: transparent;
+      // border: 1.5px solid black;
+      border: 1.5px solid var(--color-slider);
+    }
+    :global(.react-multiple-carousel__arrow)::before {
+      // color: black;
+      color: var(--color-slider);
+      font-weight: 600;
+      padding: 1px;
+      width: 7.14px;
+      height: 12.5px;
+      display: inline-block;
+    }
+    :global(.react-multiple-carousel__arrow--right) {
       right: 0;
-    }
-  }
-  :global(.react-multiple-carousel__arrow--left) {
-    left: 0;
-    top: 55px;
-    @include media("xl") {
-      left: 501px;
-    }
-  }
-
-  // @include media("sm") {
-  //   height: 900px;
-  // }
-  // @include media("lg") {
-  //   height: 650px;
-  // }
-  // @include media("xl") {
-  //   flex-direction: row;
-  //   justify-content: space-between;
-
-  //   height: 507px;
-  // }
-}
-
-.styleSlider {
-  width: 100%;
-}
-
-.icons {
-  position: relative;
-  display: grid;
-  // grid-gap: 30px;
-  // row-gap: 37px;
-
-  flex-wrap: wrap;
-
-  justify-items: center;
-  align-items: center;
-  height: 900px;
-
-  svg {
-    border: 1px solid #ff4815;
-    width: 203px;
-    height: 130px;
-    padding: 3%;
-    box-sizing: border-box;
-    // margin-bottom: 37px;
-    &:nth-child(4) {
-      path {
-        fill: #ff4815;
+      top: 55px;
+      @include media("xl") {
+        right: 0;
       }
     }
-    &:hover {
-      background-color: #ff4815;
-      path {
-        fill: white;
+    :global(.react-multiple-carousel__arrow--left) {
+      left: 0;
+      top: 55px;
+      @include media("xl") {
+        left: 501px;
       }
     }
   }
 
-  .arrow {
-    position: absolute;
-    // width: 644px;
-    top: -35px;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
+  .styleSlider {
     width: 100%;
   }
-  .arrow svg {
-    box-sizing: border-box;
-    padding: 4px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #14212b;
-    border-radius: 50%;
-    path {
-      fill: #14212b;
+
+  .icons {
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    height: 900px;
+    background-color: var(--background-color-icons);
+
+    svg {
+      border: 1px solid #ff4815;
+      width: 203px;
+      height: 130px;
+      padding: 3%;
+      box-sizing: border-box;
+      cursor: pointer;
+      &:nth-child(4) {
+        path {
+          fill: #ff4815;
+        }
+      }
+      &:hover {
+        background-color: #ff4815;
+        path {
+          fill: white;
+        }
+      }
     }
-  }
 
-  .arrow svg:nth-child(2) {
-    transform: rotate(180deg);
-  }
+    .arrow {
+      position: absolute;
+      top: -35px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .arrow svg {
+      box-sizing: border-box;
+      padding: 4px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #14212b;
+      border-radius: 50%;
+      path {
+        fill: #14212b;
+      }
+    }
 
-  @include media("sm") {
-    grid-template-columns: 1fr 1fr;
-    height: 550px;
-    // height: auto;
-    // height: 900px;
-  }
+    .arrow svg:nth-child(2) {
+      transform: rotate(180deg);
+    }
 
-  @include media("lg") {
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 400px;
-    // height: initial;
-    // width: 80%;
-  }
-  @include media("xl") {
-    height: 300px;
+    @include media("sm") {
+      grid-template-columns: 1fr 1fr;
+      height: 550px;
+    }
+
+    @include media("lg") {
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 400px;
+    }
+    @include media("xl") {
+      height: 300px;
+    }
   }
 }

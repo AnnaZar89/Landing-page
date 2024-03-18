@@ -3,52 +3,40 @@
 
 .element {
   position: relative;
-  background: url("../../assets/images/background-header.jpg");
+  background-color: var(--background-color-wrapper);
   background-position: center;
   background-repeat: no-repeat;
-  // background-size: contain;
   background-size: cover;
-  height: 100%;
+  height: 120vh;
+
+  @include media("xs") {
+    height: 100%;
+  }
 
   .container {
-    // padding: 10% 0;
-    position: absolute;
-    // height: 43px;
     width: 100%;
-    // top: 6.5%;
     display: flex;
-    align-items: center;
-    // justify-content: space-around;
     display: flex;
     flex-direction: column;
     z-index: 111;
-    padding-top: 45px;
-    @include media("xs") {
-      padding-top: 25px;
-    }
+    padding: 25px;
+
     @include media("md") {
       flex-direction: row;
-      padding-top: 45px;
       justify-content: space-around;
+    }
+    @include media("lg") {
+      padding: 50px 0 0 0;
     }
   }
 
   .container img {
-    // margin-right: 0;
     width: 148px;
     height: 28px;
     order: inherit;
-    margin-top: 45px;
-    @include media("sm") {
-      order: 3;
-      margin-top: 130px;
-    }
-    @include media("md") {
+    margin-top: 0px;
+    @include media("xl") {
       order: inherit;
-      margin-top: inherit;
     }
   }
-  // @include media("xl") {
-  //   margin-right: 322px;
-  // }
 }

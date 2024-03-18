@@ -1,15 +1,29 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles//mixins/media.scss";
+
 .element {
   width: 24px;
   height: 24px;
   border: 1px solid #ffffff;
   border-radius: 50%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 11px;
+
   line-height: 16px;
   transition: 0.5s;
+  @include media("md") {
+    display: flex;
+  }
+
+  p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Poppins", sans-serif;
+    line-height: 16.5px;
+    transition: 0.5s;
+  }
 
   &:hover,
   &:hover svg path {
@@ -17,5 +31,8 @@
     border: 1px solid rgba(255, 72, 21, 1);
     color: rgba(255, 72, 21, 1);
     fill: rgba(255, 72, 21, 1);
+    p {
+      color: rgba(255, 72, 21, 1);
+    }
   }
 }

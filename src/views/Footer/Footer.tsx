@@ -1,8 +1,5 @@
 import ExpertifyFooter from "../../components/ExpertifyFooter/ExpertifyFooter";
 import LinkInFooter from "../../components/LinkInFooter/LinkInFooter";
-import ListBox from "../../components/ListBox/ListBox";
-import List from "../../components/List/List";
-import Heading from "../../typography/HeadingH2/HeadingH2";
 import styles from "./Footer.module.scss";
 
 import {
@@ -19,7 +16,6 @@ const Footer = () => {
     <div className={styles.wrapper}>
       <Container className={styles.container}>
         <div className={styles.element}>
-          {/* <div className={styles.element}> */}
           <ExpertifyFooter />
           <LinkInFooter
             title="Quick Link"

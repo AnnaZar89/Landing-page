@@ -5,6 +5,7 @@ import { FC } from "react";
 import cn from "classnames";
 import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
 import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
+import Typography from "../../typography/Typography";
 
 interface IPricingPlanBox {
   title: string;
@@ -32,13 +33,13 @@ const PricingPlanBox: FC<IPricingPlanBox> = ({
   return (
     <div className={cn(styles.element, styles[`hasClass-${classAdd}`])}>
       <div className={cn(styles.ellipse)}>
-        <Heading text={title} color="black" />
+        <Typography tag="h2">{title}</Typography>
         <div className={cn(styles.price)}>
-          <Heading text="$" color="black" additionalText={sum} />
+          <Typography tag="h2">$</Typography>
+          <Typography tag="h2">{sum}</Typography>
         </div>
       </div>
       <ListBoxContainer listData={listData} icon={<Check />} />
-      {/* <Button text="Buy Now" className={styles.pricingPlanButton} /> */}
       <Button text="Buy Now" classAdd="pricingPlanButton" />
     </div>
   );
