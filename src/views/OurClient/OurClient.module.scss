@@ -2,7 +2,7 @@
 @import "../../assets/styles//mixins/media.scss";
 
 .wrapper {
-  background-image: url(../../assets/images/background-for-divs.svg);
+  background-image: var(--bg-our-client);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -12,21 +12,21 @@
     padding-top: 105px;
     padding-bottom: 105px;
     position: relative;
-
     @include media("xl") {
       grid-template-columns: 0.5fr 1fr;
     }
 
     .elementDiv {
-      // margin: 0 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
+
       h3 {
         font-family: "Roboto", sans-serif;
         line-height: 23.44px;
       }
+
       h2 {
         font-family: "Roboto", sans-serif;
         font-size: 55px;
@@ -60,11 +60,9 @@
       min-width: 25px;
       min-height: 25px;
       background: transparent;
-      // border: 1.5px solid black;
       border: 1.5px solid var(--color-slider);
     }
     :global(.react-multiple-carousel__arrow)::before {
-      // color: black;
       color: var(--color-slider);
       font-weight: 600;
       padding: 1px;
@@ -129,6 +127,7 @@
       justify-content: space-between;
       width: 100%;
     }
+
     .arrow svg {
       box-sizing: border-box;
       padding: 4px;
@@ -136,6 +135,7 @@
       height: 25px;
       border: 1px solid #14212b;
       border-radius: 50%;
+
       path {
         fill: #14212b;
       }
@@ -144,12 +144,10 @@
     .arrow svg:nth-child(2) {
       transform: rotate(180deg);
     }
-
     @include media("sm") {
       grid-template-columns: 1fr 1fr;
       height: 550px;
     }
-
     @include media("lg") {
       grid-template-columns: 1fr 1fr 1fr;
       height: 400px;

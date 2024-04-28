@@ -1,0 +1,38 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element h2 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  margin-bottom: 19px;
+  color: rgb(255, 72, 21);
+}
+.element li {
+  list-style-type: none;
+  font-family: "Poppins";
+  margin: 0;
+  margin: 0 20px 0 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.element .contactBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+.element .contactBox img {
+  margin-left: -10px;
+}/*# sourceMappingURL=ContactBox.module.css.map */

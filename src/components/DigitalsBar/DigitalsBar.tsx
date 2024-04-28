@@ -1,9 +1,7 @@
 import { ReactNode, useState } from "react";
 import styles from "../DigitalsBar/DigitalsBar.module.scss";
-import Heading from "../../typography/HeadingH2/HeadingH2";
 import OurPortfolioSquareElement from "../../components/OurPortfolioSquareElement/OurPortfolioSquareElement";
 import Typography from "../../typography/Typography";
-// import Paragraph from "../../typography/Paragraph/Paragraph";
 
 enum DigitalValueType {
   ALL = "All",

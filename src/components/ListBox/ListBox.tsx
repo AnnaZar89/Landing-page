@@ -1,6 +1,5 @@
 import { FC, ReactNode } from "react";
 import cn from "classnames";
-// import { ReactComponent as Check } from "../../assets/icons/check-list.svg";
 import styles from "./ListBox.module.scss";
 
 interface IListBox {

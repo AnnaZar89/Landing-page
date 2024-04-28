@@ -1,0 +1,9 @@
+.element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.element div {
+  background-color: rgb(255, 72, 21);
+  border-radius: 50%;
+}/*# sourceMappingURL=CircleRow.module.css.map */

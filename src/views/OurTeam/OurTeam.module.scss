@@ -1,5 +1,6 @@
 @import "../../assets/styles/mixing.scss";
 @import "../../assets/styles//mixins/media.scss";
+
 .element {
   display: flex;
   flex-direction: column;
@@ -13,8 +14,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    // margin: 0 60px;
-
     @include media("md") {
       margin: 0 100px;
     }
@@ -22,11 +21,13 @@
     @include media("xl") {
       margin: 0 238px;
     }
+
     h2 {
       line-height: 46.69px;
       font-weight: 700;
       margin: 7px 0 5px 0;
     }
+
     p {
       color: var(--color-font-p);
     }
@@ -38,7 +39,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
     width: 100%;
-
     :global(.react-multi-carousel-dot-list) {
       top: 467px;
     }
@@ -46,7 +46,6 @@
       align-items: center;
       margin-bottom: 85px;
     }
-
     :global(.react-multi-carousel-dot button) {
       width: 15px;
       height: 15px;
@@ -54,7 +53,6 @@
       border: none;
       position: relative;
     }
-
     :global(.react-multi-carousel-dot--active button) {
       background-color: #ff4815;
 
@@ -80,6 +78,7 @@
     position: relative;
     width: 270px;
     margin: 0 auto;
+
     .icons {
       width: 100%;
       position: absolute;
@@ -87,6 +86,7 @@
       display: flex;
       justify-content: center;
     }
+
     div:nth-child(3) {
       box-sizing: border-box;
       background: #ffffff;
@@ -100,6 +100,7 @@
         line-height: 30px;
         font-weight: 700;
       }
+
       p {
         font-family: "Rosario";
         font-weight: 700;

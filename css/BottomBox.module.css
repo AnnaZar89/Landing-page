@@ -1,0 +1,25 @@
+.element {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.14);
+  border-radius: 0px 0px 70px 0px;
+  padding: 15px 20px;
+  height: 82px;
+}
+.element h2 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: black;
+}
+.element p {
+  font-family: "Noto Sans";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ff4815;
+  opacity: 0.8;
+  margin: 1px 0 0 0;
+}/*# sourceMappingURL=BottomBox.module.css.map */

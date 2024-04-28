@@ -1,57 +1,109 @@
+@import "../../assets/styles/mixing.scss";
+@import "../../assets/styles/mixins/media.scss";
 .element {
-  background: url(../../assets/images/testimonial-box-background.jpg);
-  // margin-left: 35px;
-  width: 368px;
-  height: 229px;
-  position: relative;
-  padding-top: 25px;
-  margin: 0 auto;
+  background: var(--testimonial-box);
+  margin: 0 auto 58px auto;
+  background-size: 168px 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 168px;
+  border: var(--testimonial-box-border);
+  border-radius: 40px;
+  @include media("xs") {
+    background-size: 250px 180px;
+    width: 250px;
+  }
+  @include media("sm") {
+    background-size: 368px 229px;
+    width: 368px;
+  }
+
+  svg {
+    width: 20px;
+    height: 15px;
+    @include media("sm") {
+      width: 30px;
+      height: 25px;
+    }
+  }
 
   svg:nth-child(1) {
-    position: absolute;
-    top: 34px;
-    left: 22px;
+    transform: translate(22px, 34px);
   }
+
   .text {
-    width: 58px;
-    height: 58px;
+    width: 34px;
+    height: 34px;
     background-color: rgba(196, 196, 196, 1);
     border-radius: 50%;
     margin: 0 auto;
+    @include media("xs") {
+      width: 48px;
+      height: 48px;
+    }
+    @include media("sm") {
+      width: 58px;
+      height: 58px;
+    }
   }
+
   p {
     text-align: center;
   }
-  // p {
+
   p:nth-child(3) {
     color: rgba(255, 255, 255, 1);
-    width: 305px;
-    margin: 7px auto;
+    margin: 0px 5px;
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 18.33px;
+    @include media("sm") {
+      font-size: 12px;
+      margin: 7px 10px;
+    }
+    @include media("md") {
+      font-size: 14px;
+      margin: 7px 31px;
+    }
   }
+
   p:nth-child(4) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 22.63px;
     color: #ff4815;
     margin: 0 auto;
+    @include media("sm") {
+      font-size: 16px;
+    }
+    @include media("md") {
+      font-size: 18px;
+    }
   }
+
   p:nth-child(5) {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 10px;
     line-height: 20px;
     color: rgba(255, 255, 255, 1);
     margin: 2px auto;
+    @include media("xs") {
+      font-size: 13px;
+    }
+    @include media("md") {
+      font-size: 15px;
+    }
   }
 
   svg:nth-child(6) {
-    position: absolute;
-    top: 180px;
-    left: 310px;
-    transform: rotate(180deg);
+    transform: translate(135px, -28px);
+    @include media("xs") {
+      transform: translate(208px, -28px);
+    }
+    @include media("sm") {
+      transform: translate(308px, -34px);
+    }
   }
 }

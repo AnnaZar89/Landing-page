@@ -1,0 +1,87 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element p {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  letter-spacing: 0.05em;
+  font-family: "Poppins", sans-serif;
+}
+.element img {
+  width: 148px;
+  height: 28px;
+}
+.element p:nth-child(2) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  margin: 15px 0 25px 0;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .element p:nth-child(2) {
+    margin: 0;
+    padding: 15px 0 25px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element p:nth-child(2) {
+    margin: 0;
+  }
+}
+.element p:nth-child(3) {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.element p:nth-child(4) {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+.element p:nth-child(5) {
+  font-weight: 700;
+}
+.element p:nth-child(5),
+.element p:nth-child(6) {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  margin-top: 14px;
+  display: inline;
+}
+.element p:nth-child(6) {
+  color: #ff4815;
+  display: inline;
+  font-weight: 500;
+}
+@media screen and (min-width: 375px) {
+  .element {
+    min-width: 380px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .element {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}/*# sourceMappingURL=ExpertifyFooter.module.css.map */

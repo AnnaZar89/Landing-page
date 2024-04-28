@@ -1,0 +1,38 @@
+.element {
+  color: var(--font-color-p);
+  font-family: "Noto Sans";
+  text-align: center;
+}
+.element.hasSize-small {
+  font-size: 14px;
+  line-height: 18px;
+}
+.element.hasSize-medium {
+  font-size: 15px;
+  line-height: 23.5px;
+}
+.element.hasSize-standard {
+  font-size: 16px;
+  line-height: 24px;
+}
+.element.hasSize-large {
+  font-size: 18px;
+  line-height: 27px;
+}
+.element.hasSize-large {
+  font-size: 20px;
+  line-height: 30px;
+}
+.element.hasSize-extraExtraLarge {
+  font-size: 22px;
+  line-height: 33px;
+}
+.element.hasVariant-regular {
+  font-weight: 400;
+}
+.element.hasVariant-semiBold {
+  font-weight: 500;
+}
+.element.hasVariant-bold {
+  font-weight: 500;
+}/*# sourceMappingURL=Paragraph.module.css.map */

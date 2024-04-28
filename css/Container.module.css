@@ -1,0 +1,32 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
+  margin-top: 0px;
+}
+@media screen and (min-width: 375px) {
+  .element {
+    margin-top: 90px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element {
+    margin-top: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element {
+    width: 1170px;
+    margin: 120px auto 0 auto;
+    padding: initial;
+  }
+}/*# sourceMappingURL=Container.module.css.map */

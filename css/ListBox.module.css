@@ -1,0 +1,17 @@
+.element {
+  list-style: none;
+  padding: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  color: var(--font-color-li);
+}
+.element.hasClass-popularPlan {
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+.element.hasClass-popularPlan li {
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--font-color-li);
+}/*# sourceMappingURL=ListBox.module.css.map */

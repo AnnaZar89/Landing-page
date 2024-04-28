@@ -3,6 +3,7 @@
     &-popularPlan {
       margin-top: 60px;
       margin-bottom: 70px;
+
       li {
         font-size: 18px;
         line-height: 27px;
@@ -10,11 +11,11 @@
       }
     }
   }
+
   list-style: none;
   padding: 0;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  // color: #1a2c42;
   color: var(--font-color-li);
 }

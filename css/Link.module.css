@@ -1,0 +1,9 @@
+.element {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.element:hover {
+  color: rgb(255, 72, 21);
+}/*# sourceMappingURL=Link.module.css.map */

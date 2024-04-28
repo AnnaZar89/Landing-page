@@ -10,7 +10,7 @@ interface IListBoxData {
 
 const ListBoxContainer: FC<IListBoxData> = ({ listData, className, icon }) => {
   return (
-    <ListBox className="className">
+    <ListBox>
       {listData.map((list, index) => (
         <List title={list} icon={icon} key={index} />
       ))}

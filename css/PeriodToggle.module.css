@@ -1,0 +1,21 @@
+.element {
+  cursor: pointer;
+}
+.element p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+}
+.element.on {
+  background-color: var(--background-color-toggle);
+}
+.element.on p {
+  color: white;
+}
+.element.off {
+  background-color: white;
+}
+.element.off p {
+  color: #ff4815;
+}/*# sourceMappingURL=PeriodToggle.module.css.map */

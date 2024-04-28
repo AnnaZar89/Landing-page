@@ -1,16 +1,8 @@
 import styles from "./OurTeam.module.scss";
-import Heading from "../../typography/HeadingH2/HeadingH2";
-import Paragraph from "../../typography/Paragraph/Paragraph";
 import SquareElement from "../../components/SquareElement/SquareElement";
 import BottomBox from "../../components/BottomBox/BottomBox";
-import CircleRow from "../../components/CircleRow/CircleRow";
-import { ReactComponent as Instagram } from "../../assets/icons/insta-our-team.svg";
-import { ReactComponent as Facebook } from "../../assets/icons/facebook-our-team.svg";
-import { ReactComponent as Twitter } from "../../assets/icons/twitter-our-team.svg";
-import { ReactComponent as Whatsapp } from "../../assets/icons/whatsapp-our-team.svg";
 import Container from "../../components/Container/Container";
 import Slider from "../../components/Slider/Slider";
-import IconBox from "../../components/IconBox/IconBox";
 import Typography from "../../typography/Typography";
 
 const OurTeam = () => {
@@ -47,7 +39,6 @@ const OurTeam = () => {
     <Container className={styles.sliderStyle}>
       <div className={styles.element}>
         <div className={styles.textContainer}>
-          {/* <Paragraph text="Our Team" size="large" variant="semiBold" /> */}
           <Typography tag="h3">Our Team</Typography>
           <Typography tag="h2">Meet Our Best Creative Team</Typography>
           <Typography tag="p">
@@ -56,7 +47,6 @@ const OurTeam = () => {
             humour, or randomised words which don't
           </Typography>
         </div>
-
         <div className={styles.boxContainer}>
           <Slider
             className={styles.sliderStyle}

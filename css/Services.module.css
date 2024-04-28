@@ -1,0 +1,50 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  text-align: center;
+}
+.element p {
+  color: var(--color-font-p);
+}
+.element h3 + h2 {
+  margin: 7px 0 5px 0;
+}
+.element h2 + p {
+  margin: 0 30px;
+}
+@media screen and (min-width: 576px) {
+  .element h2 + p {
+    margin: 0 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .element h2 + p {
+    margin: 0 100px;
+  }
+}
+.element .containerOfDiv {
+  display: grid;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 50px auto;
+  justify-items: center;
+}
+@media screen and (min-width: 910px) {
+  .element .containerOfDiv {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element .containerOfDiv {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}/*# sourceMappingURL=Services.module.css.map */

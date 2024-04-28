@@ -1,0 +1,46 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.wrapper {
+  background-color: var(--background-color-wrapper);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.element {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  opacity: 0.85;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1000px;
+}
+@media screen and (min-width: 375px) {
+  .element {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .element {
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+    padding: 0 10%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 370px;
+    padding: 0;
+  }
+}/*# sourceMappingURL=Feature.module.css.map */

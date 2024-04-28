@@ -1,0 +1,95 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.container {
+  margin-top: 120px;
+}
+
+.element {
+  text-align: center;
+}
+.element h3 + h2 {
+  line-height: 48px;
+  margin-top: 10px;
+}
+.element .blogArticleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 375px) {
+  .element .blogArticleContainer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 576px) {
+  .element .blogArticleContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .element .blogArticleContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element .blogArticleContainer {
+    height: initial;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.element .blogArticleContainer > div {
+  margin-top: 47px;
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .element .blogArticleContainer > div {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element .blogArticleContainer > div {
+    width: initial;
+  }
+}
+.element .blogArticleContainer > div:nth-last-child(1) {
+  justify-self: center;
+}
+
+.element h2:nth-child(1) {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}/*# sourceMappingURL=Blog.module.css.map */

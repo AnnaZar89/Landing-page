@@ -1,5 +1,4 @@
 import Select, { GroupBase, Props } from "react-select";
-import styles from "./Select.module.scss";
 
 function SelectInput<
   Option,
@@ -11,49 +10,13 @@ function SelectInput<
     className?: string;
   }
 ) {
-  // const style = {
-  //   control: (base: any) => ({
-  //     ...base,
-  //     border: 0,
-  //     backgroundColor: "#14212",
-  //     color: "white",
-  //     boxShadow: "none",
-  //     "&:hover": {
-  //       color: "#ff4815",
-  //       cursor: "pointer",
-  //     },
-  //   }),
-  //   dropdownIndicator: (base: any) => ({
-  //     ...base,
-  //     color: "inherit",
-  //     padding: 0,
-  //     "&:hover": {
-  //       color: "#ff4815",
-  //       cursor: "pointer",
-  //     },
-  //   }),
-  //   singleValue: (base: any) => ({
-  //     ...base,
-  //     color: "inherit",
-  //   }),
-  //   valueContainer: (base: any) => ({
-  //     ...base,
-  //     padding: 0,
-  //   }),
-  // };
   return (
-    // <Select
-    //   {...props}
-    //   theme={(theme) => ({ ...theme, borderRadius: 0 })}
-    //   styles={style}
-    // />
     <Select
       {...props}
       theme={(theme) => ({ ...theme, borderRadius: 0 })}
       components={{
         IndicatorSeparator: () => null,
       }}
-      className={styles.element}
       styles={{
         control: (base) => ({
           ...base,
@@ -62,41 +25,58 @@ function SelectInput<
           color: "white",
           boxShadow: "none",
           display: "flex",
+          fontFamily: "Poppins",
+          margin: "0 35px 0 0",
+          minHeight: "25px",
+          height: "25px",
           "&:hover": {
             color: "#ff4815",
             cursor: "pointer",
           },
         }),
+        menuPortal: (styles) => ({ ...styles, zIndex: 999 }),
         dropdownIndicator: (base) => ({
           ...base,
           color: "inherit",
-
-          padding: "5px 0",
+          padding: "3px 5px",
           "&:hover": {
             color: "#ff4815",
             cursor: "pointer",
           },
+        }),
+        indicatorsContainer: (base) => ({
+          height: "25px",
         }),
         singleValue: (base) => ({
           ...base,
           color: "inherit",
+          padding: 0,
+          margin: 0,
         }),
         valueContainer: (base) => ({
           ...base,
           padding: 0,
+          height: "25px",
         }),
-
-        option: (base, { data, isDisabled, isFocused, isSelected }) => ({
+        input: (provided) => ({
+          ...provided,
+          margin: "0px",
+          padding: "0px",
+        }),
+        option: (base, { isSelected }) => ({
           ...base,
-          backgroundColor: isFocused
-            ? "#999999"
-            : "" || isSelected
-            ? "#ff4815"
-            : "",
-          color: isSelected ? "white" : "#333333",
-          fontSize: "13px",
+          cursor: "pointer",
+          padding: "12px 5px",
+          fontSize: "15px",
+          backgroundColor: isSelected ? "#ff4815" : "",
+          color: isSelected ? "white" : "black",
+          "&:hover": {
+            backgroundColor: "rgba(255, 72, 21, 0.3)",
+            color: "black",
+          },
         }),
       }}
+      menuPortalTarget={document.body}
     />
   );
 }

@@ -1,0 +1,74 @@
+:root {
+  --background-color: white;
+  --background-color-font: rgba(20, 33, 43, 1);
+  --toggle-background-color: rgba(255, 255, 255, 1);
+  --background-color-wrapper: #14212b;
+  --color-font-p: #717171;
+  --border-services: none;
+  --color-client-p: rgba(26, 44, 66, 1);
+  --color-slider: black;
+  --background-color-icons: transparent;
+  --background-color-toggle: #14212b;
+  --border-toggle: 1px solid #14212b;
+  --background-color-pricing-plan: rgba(255, 72, 21, 0.1);
+  --color-font-li: #646567;
+  --background-pricing-plan-ellipse: #f8eaea;
+  --color-popular-plan: #1a2c42;
+  --background-color-square-grey: rgba(196, 196, 196, 1);
+  --background-color-square-orange: rgba(255, 72, 21, 1);
+  --bg-our-client: url(../../assets/images/background-for-divs.svg);
+  --bg-testimonial: url("../../assets/images/background-testimonial.jpg");
+  --color-h2-testimonial: black;
+  --testimonial-box: url(../../assets/images/testimonial-box-background.jpg);
+  --testimonial-box-border: none;
+  --background-color-footer: rgba(20, 33, 43, 1);
+  --background-img-footer: url("../../assets/images/background-footer.jpg");
+}
+:root[dark-mode=true] {
+  --background-color: black;
+  --background-color-font: white;
+  --toggle-background-color: red;
+  --background-color-digital: black;
+  --font-color-li: white;
+  --font-color-p: #b6b6b4;
+  --border-services: 1px solid #ff4815;
+  --background-color-wrapper: black;
+  --color-portfolio: #ff4815;
+  --color-font-p: rgb(182, 179, 179);
+  --color-client-p: white;
+  --color-slider: #b6b6b4;
+  --background-color-icons: black;
+  --background-color-toggle: #ff4815;
+  --border-toggle: none;
+  --background-color-pricing-plan: transpaarent;
+  --color-font-li: #b6b6b4;
+  --background-pricing-plan-ellipse: transparent;
+  --color-popular-plan: white;
+  --bg-our-client: url(../../assets/images/black-background.jpg);
+  --bg-testimonial: url("../../assets/images/black-background.jpg");
+  --color-h2-testimonial: white;
+  --testimonial-box: url(../../assets/images/black-background.jpg);
+  --testimonial-box-border: 1px solid grey;
+  --background-color-footer: black;
+  --background-img-footer: url("../../assets/images/black-background.jpg");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-weight: 500;
+  background-color: var(--background-color);
+  color: var(--background-color-font);
+}/*# sourceMappingURL=global.css.map */

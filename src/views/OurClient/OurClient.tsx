@@ -1,3 +1,4 @@
+import { FC } from "react";
 import styles from "../OurClient/OurClient.module.scss";
 import Heading from "../../typography/HeadingH2/HeadingH2";
 import Paragraph from "../../typography/Paragraph/Paragraph";

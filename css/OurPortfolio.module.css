@@ -1,0 +1,44 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  margin-top: 60px;
+}
+.element .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  .element .textContainer {
+    margin: 0 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element .textContainer {
+    margin: 0 238px;
+  }
+}
+.element .textContainer h2 {
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+  margin: 7px 0 6px 0;
+}
+.element .textContainer p {
+  color: var(--color-font-p);
+}/*# sourceMappingURL=OurPortfolio.module.css.map */

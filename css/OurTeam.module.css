@@ -1,0 +1,148 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+}
+.element .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .element .textContainer {
+    margin: 0 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element .textContainer {
+    margin: 0 238px;
+  }
+}
+.element .textContainer h2 {
+  line-height: 46.69px;
+  font-weight: 700;
+  margin: 7px 0 5px 0;
+}
+.element .textContainer p {
+  color: var(--color-font-p);
+}
+.element .boxContainer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 81px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  width: 100%;
+}
+.element .boxContainer :global(.react-multi-carousel-dot-list) {
+  top: 467px;
+}
+.element .boxContainer :global(.react-multi-carousel-track) {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 85px;
+}
+.element .boxContainer :global(.react-multi-carousel-dot button) {
+  width: 15px;
+  height: 15px;
+  background-color: #ff4815;
+  border: none;
+  position: relative;
+}
+.element .boxContainer :global(.react-multi-carousel-dot--active button) {
+  background-color: #ff4815;
+}
+.element .boxContainer :global(.react-multi-carousel-dot--active button)::before {
+  position: relative;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ff4815;
+  border-radius: 50%;
+  left: -3px;
+  top: -3px;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .element .boxContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+}
+.element .box {
+  position: relative;
+  width: 270px;
+  margin: 0 auto;
+}
+.element .box .icons {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.element .box div:nth-child(3) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.14);
+  border-radius: 0px 0px 70px 0px;
+  padding: 15px 20px;
+  height: 82px;
+}
+.element .box div:nth-child(3) h2 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.element .box div:nth-child(3) p {
+  font-family: "Rosario";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ff4815;
+  opacity: 0.8;
+  margin: 1px 0 0 0;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}/*# sourceMappingURL=OurTeam.module.css.map */

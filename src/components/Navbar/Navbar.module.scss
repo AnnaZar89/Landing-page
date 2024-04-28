@@ -8,39 +8,28 @@
   justify-content: space-between;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  width: 90px;
-  div:nth-child(4) {
-    width: 67px;
-  }
+  font-size: 14px;
+  width: 130px;
   @include media("md") {
-    width: 436px;
+    width: inherit;
   }
 
   a {
-    height: 30px;
-    line-height: 30px;
-    font-size: 14px;
-    @include media("lg") {
-      font-size: 16px;
-    }
+    height: 25px;
+    line-height: 25px;
+    margin-right: 36px;
   }
-  div {
-    height: 30px;
-    line-height: 20px;
-    font-size: 14px;
-    @include media("md") {
-      height: inherit;
-    }
-    @include media("lg") {
-      font-size: 16px;
-    }
-  }
+
   @include media("md") {
     flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    margin-right: inherit;
+  }
+
+  @include media("lg") {
     margin-right: 100px;
     margin-top: inherit;
-  }
-  @include media("md") {
-    align-items: center;
   }
 }

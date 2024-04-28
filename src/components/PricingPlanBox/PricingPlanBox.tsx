@@ -1,6 +1,5 @@
 import styles from "./PricingPlanBox.module.scss";
 import Button from "../Button/Button";
-import Heading from "../../typography/HeadingH2/HeadingH2";
 import { FC } from "react";
 import cn from "classnames";
 import ListBoxContainer from "../ListBoxContainer/ListBoxContainer";
@@ -10,7 +9,6 @@ import Typography from "../../typography/Typography";
 interface IPricingPlanBox {
   title: string;
   sum: number;
-  // sum: string;
   className?: string;
   classAdd?: string;
 }

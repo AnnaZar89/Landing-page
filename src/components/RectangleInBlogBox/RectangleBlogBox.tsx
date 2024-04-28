@@ -1,5 +1,4 @@
 import { FC, ReactNode } from "react";
-import Heading from "../../typography/HeadingH2/HeadingH2";
 import styles from "./RectangleBlogBox.module.scss";
 import Typography from "../../typography/Typography";
 

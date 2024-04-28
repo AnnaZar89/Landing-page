@@ -1,0 +1,127 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  margin: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 910px) {
+  .element {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.element .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 910px) {
+  .element .boxes {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+}
+.element .boxes .square {
+  width: 150px;
+  border-radius: 10px;
+  aspect-ratio: 1;
+}
+@media screen and (min-width: 768px) {
+  .element .boxes .square {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element .boxes .square {
+    width: 310px;
+  }
+}
+.element .boxes .square.right {
+  background-color: var(--background-color-square-grey);
+  -webkit-transform: translateX(25%);
+          transform: translateX(25%);
+}
+.element .boxes .square.left {
+  background-color: var(--background-color-square-orange);
+  -webkit-transform: translate(-25%, 50%);
+          transform: translate(-25%, 50%);
+}
+.element .aboutUsData {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  margin-top: 100px;
+}
+@media screen and (min-width: 768px) {
+  .element .aboutUsData {
+    margin-top: 150px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element .aboutUsData {
+    margin-top: 0px;
+  }
+}
+.element .aboutUsData h2 {
+  display: inline;
+}
+.element .aboutUsData h2:nth-child(3) {
+  color: rgb(255, 72, 21);
+}
+.element .aboutUsData p {
+  color: var(--color-font-p);
+  margin-top: 20px;
+}
+.element .aboutUsData ul {
+  margin: 29px 0 49px 0;
+  font-size: 15px;
+  line-height: 22px;
+}
+.element .aboutUsData ul li {
+  margin-bottom: 18px;
+}
+.element .aboutUsData ul li svg {
+  margin-right: 10px;
+  background-color: #ff4815;
+  border-radius: 50%;
+}
+.element .aboutUsData ul li svg path {
+  fill: white;
+}
+.element .aboutUsData button {
+  color: #ff4815;
+}
+.element .aboutUsData button:hover {
+  color: white;
+}
+@media screen and (min-width: 910px) {
+  .element .aboutUsData {
+    text-align: left;
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=AboutUs.module.css.map */

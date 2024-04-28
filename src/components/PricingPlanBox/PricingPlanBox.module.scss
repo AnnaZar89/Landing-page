@@ -40,7 +40,6 @@
         color: white;
         &:hover {
           background-color: "none";
-          // color: #ff4815;
         }
       }
     }
@@ -62,10 +61,8 @@
   }
 
   .ellipse {
-    // width: 280px;
     width: 218px;
     height: 164px;
-    // background: #f8eaea;
     background: var(--background-pricing-plan-ellipse);
     border: 1px solid #ff4815;
     margin: 0 auto 20px auto;
@@ -103,7 +100,6 @@
   }
 
   ul li {
-    // color: #646567;
     color: var(--color-font-li);
     margin-bottom: 14px;
     font-size: 16px;

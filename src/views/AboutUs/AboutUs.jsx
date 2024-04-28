@@ -1,7 +1,4 @@
 import styles from "../AboutUs/AboutUs.module.scss";
-import rectangle from "../../assets/images/rectangle-about-us.png";
-import playAboutUs from "../../assets/images/play-about-us.png";
-import Image from "../../components/Image/Image";
 import Container from "../../components/Container/Container";
 import Typography from "../../typography/Typography";
 import ListBoxContainer from "../../components/ListBoxContainer/ListBoxContainer";

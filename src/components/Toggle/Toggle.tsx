@@ -19,7 +19,6 @@ const Toggle: FC<IToggle> = ({ onChange, checked }) => {
       />
       <Typography
         tag="span"
-        // color="pink"
         className={cn(styles.toggle, checked && styles.isChecked)}
       />
     </label>

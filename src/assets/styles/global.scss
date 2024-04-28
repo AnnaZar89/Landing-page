@@ -18,6 +18,14 @@
   --color-popular-plan: #1a2c42;
   --background-color-square-grey: rgba(196, 196, 196, 1);
   --background-color-square-orange: rgba(255, 72, 21, 1);
+  --bg-our-client: url(../../assets/images/background-for-divs.svg);
+  --bg-testimonial: url("../../assets/images/background-testimonial.jpg");
+  --color-h2-testimonial: black;
+  --testimonial-box: url(../../assets/images/testimonial-box-background.jpg);
+  --testimonial-box-border: none;
+  --background-color-footer: rgba(20, 33, 43, 1);
+  --background-img-footer: url("../../assets/images/background-footer.jpg");
+
   &[dark-mode="true"] {
     --background-color: black;
     --background-color-font: white;
@@ -35,10 +43,16 @@
     --background-color-toggle: #ff4815;
     --border-toggle: none;
     --background-color-pricing-plan: transpaarent;
-
     --color-font-li: #b6b6b4;
     --background-pricing-plan-ellipse: transparent;
     --color-popular-plan: white;
+    --bg-our-client: url(../../assets/images/black-background.jpg);
+    --bg-testimonial: url("../../assets/images/black-background.jpg");
+    --color-h2-testimonial: white;
+    --testimonial-box: url(../../assets/images/black-background.jpg);
+    --testimonial-box-border: 1px solid grey;
+    --background-color-footer: black;
+    --background-img-footer: url("../../assets/images/black-background.jpg");
   }
 }
 

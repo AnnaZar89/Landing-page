@@ -1,0 +1,16 @@
+.element {
+  margin: 0;
+  font-family: "Poppins";
+}
+.element.hasColor-white {
+  color: #ffffff;
+}
+.element.hasColor-orange {
+  color: #ff4815;
+}
+.element.hasColor-black {
+  color: var(--background-color-font);
+}
+.element.additionalText {
+  color: #ff4815;
+}/*# sourceMappingURL=HeadingH2.module.css.map */

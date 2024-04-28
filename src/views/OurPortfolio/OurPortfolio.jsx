@@ -1,7 +1,5 @@
 import Container from "../../components/Container/Container";
 import DigitalsBar from "../../components/DigitalsBar/DigitalsBar";
-import Heading from "../../typography/HeadingH2/HeadingH2";
-import Paragraph from "../../typography/Paragraph/Paragraph";
 import Typography from "../../typography/Typography";
 import styles from "../OurPortfolio/OurPortfolio.module.scss";
 

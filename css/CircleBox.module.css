@@ -1,0 +1,50 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  line-height: 16px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (min-width: 768px) {
+  .element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.element p {
+  font-size: 11px;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  line-height: 16.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.element:hover, .element:hover svg path {
+  cursor: pointer;
+  border: 1px solid rgb(255, 72, 21);
+  color: rgb(255, 72, 21);
+  fill: rgb(255, 72, 21);
+}
+.element:hover p, .element:hover svg path p {
+  color: rgb(255, 72, 21);
+}/*# sourceMappingURL=CircleBox.module.css.map */

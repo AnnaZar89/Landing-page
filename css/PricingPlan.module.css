@@ -1,0 +1,103 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.container {
+  margin: 120px auto 120px auto;
+}
+.container .textContainer {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .container .textContainer {
+    margin: 0 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .textContainer {
+    margin: 0 238px;
+  }
+}
+.container .textContainer h2 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 7px 0 5px 0;
+}
+.container .textContainer p {
+  color: var(--color-font-p);
+}
+.container .toggleElement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px auto 70px auto;
+}
+.container .toggleElement div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 140px;
+  height: 40px;
+  border: 1px solid #14212b;
+  border: var(--border-toggle);
+  border-radius: 0px 0px 0px 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .toggleElement div h2 {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Poppins";
+}
+.container .toggleElement div:nth-child(2) {
+  border-radius: 0px 0px 23px 0px;
+}
+.container .pricingPlanBoxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1900px;
+}
+@media screen and (min-width: 1200px) {
+  .container .pricingPlanBoxContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: auto;
+  }
+}
+
+.popularPlan h2:nth-child(2) {
+  color: white;
+  font-size: 55px;
+  line-height: 82.5px;
+}/*# sourceMappingURL=PricingPlan.module.css.map */

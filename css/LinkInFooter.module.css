@@ -1,0 +1,90 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element ul,
+.element div {
+  list-style-type: none;
+  font-family: "Poppins";
+  margin: 0;
+  margin: 0 20px 0 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.element ul li,
+.element div li {
+  margin-bottom: 12px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.element ul li::before,
+.element div li::before {
+  content: "-";
+  color: #ff4815;
+  min-width: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.element ul li:hover,
+.element div li:hover {
+  cursor: pointer;
+  color: #ff4815;
+}
+.element ul li:hover::before,
+.element div li:hover::before {
+  content: "+";
+  color: #ff4815;
+}
+.element h2 {
+  color: rgb(255, 72, 21);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  margin-bottom: 19px;
+  font-family: "Poppins", sans-serif;
+}
+.element .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-right: 0;
+}
+@media screen and (min-width: 375px) {
+  .element .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+.element .contactBoxContainer .contactBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+.element .contactBoxContainer .contactBox img {
+  margin-left: -10px;
+}/*# sourceMappingURL=LinkInFooter.module.css.map */

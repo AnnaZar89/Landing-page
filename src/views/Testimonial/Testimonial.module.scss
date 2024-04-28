@@ -2,9 +2,7 @@
 @import "../../assets/styles//mixins/media.scss";
 
 .wrapper {
-  background: url("../../assets/images/background-testimonial.jpg");
-  display: flex;
-  align-items: center;
+  background: var(--bg-testimonial);
 
   .container {
     display: grid;
@@ -14,19 +12,8 @@
       grid-template-columns: 0.5fr 1fr;
     }
 
-    :global(.react-multi-carousel-track) {
-      margin-top: 25px;
-      margin-bottom: 146px;
-      @include media("xl") {
-        margin-top: 125px;
-      }
-    }
-
     :global(.react-multi-carousel-dot-list) {
-      // top: 412px;
-      top: 310px;
       @include media("xl") {
-        top: 390px;
       }
     }
 
@@ -35,7 +22,6 @@
       height: 15px;
       background-color: #ff4815;
       border: none;
-      position: relative;
     }
     :global(.react-multi-carousel-dot--active button) {
       background-color: #ff4815;
@@ -88,7 +74,7 @@
         }
 
         h2 {
-          color: black;
+          color: var(--color-h2-testimonial);
         }
 
         h2:nth-child(2) {

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styles from "./Link.module.scss";
+
 interface ILink {
   href: string;
   text: string;

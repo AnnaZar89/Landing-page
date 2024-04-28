@@ -1,0 +1,160 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  width: 250px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: var(--border-services);
+}
+@media screen and (min-width: 576px) {
+  .element {
+    width: 370px;
+  }
+}
+.element:hover {
+  cursor: pointer;
+  background-color: #ff4815;
+}
+.element:hover h2 {
+  color: white;
+}
+.element:hover p {
+  color: white;
+}
+.element:hover .ellipse {
+  background-color: #ffffff;
+}
+.element:hover .number {
+  color: #ff4815;
+}
+.element:hover .txt p:nth-child(3) {
+  color: white;
+}
+.element:hover .rectangleAndTxt div:nth-child(1) {
+  background-color: #ffffff;
+}
+.element .ellipse {
+  position: absolute;
+  width: 59px;
+  height: 52px;
+  border-bottom-right-radius: 100%;
+  border-top-left-radius: 10px;
+  background: #ff4815;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.element .number {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 37.5px;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.element .rectangleAndTxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-radius: 10px;
+}
+.element .rectangleAndTxt div:nth-child(1) {
+  margin: 10px;
+  width: 75px;
+  background: rgba(255, 72, 21, 0.3);
+  border-radius: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (min-width: 576px) {
+  .element .rectangleAndTxt div:nth-child(1) {
+    margin: inherit;
+    margin-left: 24px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element .rectangleAndTxt div:nth-child(1) {
+    height: 75px;
+  }
+}
+.element .rectangleAndTxt svg {
+  width: 70px;
+}
+.element .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px 2px 10px 0px;
+}
+@media screen and (min-width: 576px) {
+  .element .txt {
+    margin: 30px 0 30px 24px;
+  }
+}
+.element .txt h2 {
+  font-weight: 600;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+}
+.element .txt p {
+  line-height: 22.63px;
+  text-align: left;
+  margin: 10px 0 7px 0;
+}
+.element .txt p:nth-child(3) {
+  font-weight: 600;
+  color: #ff4815;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}/*# sourceMappingURL=ServiceComponent.module.css.map */

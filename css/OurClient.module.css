@@ -1,0 +1,185 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.wrapper {
+  background-image: var(--bg-our-client);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .element {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 105px;
+  padding-bottom: 105px;
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .element {
+    grid-template-columns: 0.5fr 1fr;
+  }
+}
+.wrapper .element .elementDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.wrapper .element .elementDiv h3 {
+  font-family: "Roboto", sans-serif;
+  line-height: 23.44px;
+}
+.wrapper .element .elementDiv h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 55px;
+  line-height: 64.45px;
+  font-weight: 700;
+  margin: 15px 0 20px 0;
+}
+.wrapper .element .elementDiv p {
+  color: var(--color-client-p);
+  opacity: 0.81;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .element .elementDiv p {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper .element .elementDiv {
+    margin: 0 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .element .elementDiv {
+    margin: 0 33px 0 0;
+    width: 468px;
+    text-align: left;
+  }
+}
+.wrapper .element :global(.react-multi-carousel-list) {
+  position: static;
+}
+.wrapper .element :global(.react-multiple-carousel__arrow) {
+  min-width: 25px;
+  min-height: 25px;
+  background: transparent;
+  border: 1.5px solid var(--color-slider);
+}
+.wrapper .element :global(.react-multiple-carousel__arrow)::before {
+  color: var(--color-slider);
+  font-weight: 600;
+  padding: 1px;
+  width: 7.14px;
+  height: 12.5px;
+  display: inline-block;
+}
+.wrapper .element :global(.react-multiple-carousel__arrow--right) {
+  right: 0;
+  top: 55px;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .element :global(.react-multiple-carousel__arrow--right) {
+    right: 0;
+  }
+}
+.wrapper .element :global(.react-multiple-carousel__arrow--left) {
+  left: 0;
+  top: 55px;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .element :global(.react-multiple-carousel__arrow--left) {
+    left: 501px;
+  }
+}
+.wrapper .styleSlider {
+  width: 100%;
+}
+.wrapper .icons {
+  position: relative;
+  display: grid;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 900px;
+  background-color: var(--background-color-icons);
+}
+.wrapper .icons svg {
+  border: 1px solid #ff4815;
+  width: 203px;
+  height: 130px;
+  padding: 3%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+.wrapper .icons svg:nth-child(4) path {
+  fill: #ff4815;
+}
+.wrapper .icons svg:hover {
+  background-color: #ff4815;
+}
+.wrapper .icons svg:hover path {
+  fill: white;
+}
+.wrapper .icons .arrow {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.wrapper .icons .arrow svg {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #14212b;
+  border-radius: 50%;
+}
+.wrapper .icons .arrow svg path {
+  fill: #14212b;
+}
+.wrapper .icons .arrow svg:nth-child(2) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+@media screen and (min-width: 576px) {
+  .wrapper .icons {
+    grid-template-columns: 1fr 1fr;
+    height: 550px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .wrapper .icons {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .icons {
+    height: 300px;
+  }
+}/*# sourceMappingURL=OurClient.module.css.map */

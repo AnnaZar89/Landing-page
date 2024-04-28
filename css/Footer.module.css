@@ -1,0 +1,67 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background-color-footer);
+  padding: 20px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 910px) {
+  .wrapper {
+    height: 900px;
+    background: var(--background-img-footer);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    height: 518px;
+  }
+}
+.wrapper .container {
+  margin: 40px 0;
+}
+@media screen and (min-width: 910px) {
+  .wrapper .container {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .container {
+    margin: auto;
+  }
+}
+.wrapper .container .element {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .wrapper .container .element {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .container .element {
+    grid-template-columns: 1.3fr 1fr 0.6fr 1fr;
+  }
+}/*# sourceMappingURL=Footer.module.css.map */

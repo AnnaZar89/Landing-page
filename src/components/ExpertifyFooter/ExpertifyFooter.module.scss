@@ -1,5 +1,6 @@
 @import "../../assets/styles/mixing.scss";
 @import "../../assets/styles//mixins/media.scss";
+
 .element {
   p {
     color: rgba(255, 255, 255, 1);
@@ -9,6 +10,7 @@
     @include media("md") {
     }
   }
+
   img {
     width: 148px;
     height: 28px;
@@ -21,6 +23,7 @@
     letter-spacing: 0.05em;
     margin: 15px 0 25px 0;
     text-align: left;
+
     @include media("md") {
       margin: 0;
       padding: 15px 0 25px 0;
@@ -30,6 +33,7 @@
       margin: 0;
     }
   }
+
   p:nth-child(3) {
     font-weight: 700;
     font-size: 22px;
@@ -56,24 +60,22 @@
     margin-top: 14px;
     display: inline;
   }
+
   p:nth-child(6) {
     color: #ff4815;
     display: inline;
     font-weight: 500;
   }
+
   @include media("xs") {
     min-width: 380px;
   }
+
   @include media("md") {
     align-items: flex-start;
   }
+
   @include media("xl") {
     align-items: flex-start;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .element p {
-    // text-align: center;
   }
 }

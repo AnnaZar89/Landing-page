@@ -3,13 +3,12 @@
 
 .container {
   margin: 120px auto 120px auto;
+
   .textContainer {
     text-align: center;
-    // margin: 30px 60px;
     @include media("md") {
       margin: 0 100px;
     }
-
     @include media("xl") {
       margin: 0 238px;
     }
@@ -20,16 +19,19 @@
       font-weight: 700;
       margin: 7px 0 5px 0;
     }
+
     p {
       color: var(--color-font-p);
     }
   }
+
   .toggleElement {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px auto 70px auto;
   }
+
   .toggleElement div {
     box-sizing: border-box;
     width: 140px;
@@ -47,17 +49,17 @@
       font-family: "Poppins";
     }
   }
+
   .toggleElement div:nth-child(2) {
     border-radius: 0px 0px 23px 0px;
   }
+
   .pricingPlanBoxContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 1900px;
-    // background-color: magenta;
-
     @include media("xl") {
       flex-direction: row;
       height: auto;
@@ -71,8 +73,4 @@
     font-size: 55px;
     line-height: 82.5px;
   }
-}
-
-.active {
-  background: magenta;
 }

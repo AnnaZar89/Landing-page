@@ -1,5 +1,3 @@
-import Heading from "../../typography/HeadingH2/HeadingH2";
-import Paragraph, { SizeType } from "../../typography/Paragraph/Paragraph";
 import BlogArticle from "../../components/BlogArticle/BlogArticle";
 import styles from "./Blog.module.scss";
 import Container from "../../components/Container/Container";
@@ -15,15 +13,8 @@ const Blog = () => {
   return (
     <Container className={styles.container}>
       <div className={styles.element}>
-        {/* <Paragraph
-          text="Latest Blog"
-          size={SizeType.LARGE}
-          variant="semiBold"
-        /> */}
         <Typography tag="h3">Latest Blog</Typography>
         <Typography tag="h2">See Our Latest & New Blog</Typography>
-        {/* <Heading text="See Our Latest & New Blog" color="black" /> */}
-
         <div className={styles.blogArticleContainer}>
           {headerText.map((element, index) => (
             <BlogArticle headerTxt={element} key={index} />

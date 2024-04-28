@@ -1,6 +1,4 @@
 import { FC } from "react";
-import Heading from "../../typography/HeadingH2/HeadingH2";
-import Paragraph from "../../typography/Paragraph/Paragraph";
 import styles from "./BottomBox.module.scss";
 import Typography from "../../typography/Typography";
 

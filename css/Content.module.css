@@ -1,0 +1,181 @@
+:export {
+  xs: 375;
+  sm: 576;
+  md: 768;
+  lg: 910;
+  xl: 1200;
+  xxl: 1440;
+}
+
+.element {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+.element .txtStyle {
+  height: auto;
+  padding: 240px 25px 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 375px) {
+  .element .txtStyle {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 576px) {
+  .element .txtStyle {
+    padding: 240px 55px 0 55px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .element .txtStyle {
+    padding: 0 100px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element .txtStyle {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 205px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .element .txtStyle {
+    padding: 0 310px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .element .txtStyle {
+    padding: 0 535px;
+  }
+}
+.element .txtStyle h1 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  display: inline;
+  color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 375px) {
+  .element .txtStyle h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .element .txtStyle h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element .txtStyle h1 {
+    font-size: 50px;
+    line-height: 75.57px;
+  }
+}
+.element .txtStyle h1:nth-child(2) {
+  color: rgb(255, 72, 21);
+}
+.element .txtStyle p {
+  margin: 20px 0;
+  color: rgb(255, 255, 255);
+  line-height: 23.54px;
+}
+@media screen and (min-width: 768px) {
+  .element .txtStyle p {
+    margin: 20px 0 44px 0;
+  }
+}
+.element .txtStyle .buttonStyles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  gap: 10px;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 375px) {
+  .element .txtStyle .buttonStyles {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 295px;
+    gap: inherit;
+  }
+}
+@media screen and (min-width: 375px) {
+  .element .txtStyle .buttonStyles {
+    padding-bottom: 70px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .element .txtStyle .buttonStyles {
+    padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element .txtStyle .buttonStyles {
+    padding-bottom: inherit;
+  }
+}
+.element :global(.react-multiple-carousel__arrow) {
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  min-width: 28px;
+  min-height: 28px;
+  bottom: 10px;
+}
+@media screen and (min-width: 576px) {
+  .element :global(.react-multiple-carousel__arrow) {
+    bottom: 31px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .element :global(.react-multiple-carousel__arrow) {
+    bottom: 31px;
+  }
+}
+.element :global(.react-multiple-carousel__arrow)::before {
+  width: 8px;
+  height: 14px;
+  display: inline;
+}
+@media screen and (min-width: 768px) {
+  .element :global(.react-multiple-carousel__arrow--left) {
+    left: inherit;
+    right: 107px;
+  }
+}
+.element :global(.react-multiple-carousel__arrow--right) {
+  right: 31px;
+}
+.element .carouselContainer button {
+  background: black;
+}/*# sourceMappingURL=Content.module.css.map */
