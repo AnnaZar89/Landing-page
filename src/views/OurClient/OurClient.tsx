@@ -1,14 +1,10 @@
-import { FC } from "react";
 import styles from "../OurClient/OurClient.module.scss";
-import Heading from "../../typography/HeadingH2/HeadingH2";
-import Paragraph from "../../typography/Paragraph/Paragraph";
 import { ReactComponent as CampingArea } from "../../assets/icons/camping-area-our-clients.svg";
 import { ReactComponent as Camping } from "../../assets/icons/camping-our-clients.svg";
 import { ReactComponent as Climbing } from "../../assets/icons/climbing-our-clients.svg";
 import { ReactComponent as Compass } from "../../assets/icons/compass-our-clients.svg";
 import { ReactComponent as Mountain } from "../../assets/icons/mountain-our-clients.svg";
 import { ReactComponent as Shoes } from "../../assets/icons/shoes-our-clients.svg";
-import { ReactComponent as Arrow } from "../../assets/icons/arrow-left.svg";
 import Container from "../../components/Container/Container";
 import Slider from "../../components/Slider/Slider";
 import Typography from "../../typography/Typography";
