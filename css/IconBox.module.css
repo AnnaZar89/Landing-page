@@ -8,7 +8,7 @@
   height: 100%;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   padding-bottom: 16.53px;
   gap: 16.38px;
 }
