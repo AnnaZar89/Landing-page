@@ -10,7 +10,7 @@ Simple website application created with React.js, TypeScript, and CSS Modules. T
 
 ## General Info
 
-This project can be used for marketing purposes such as company promotion, showing potential customers the company's offer in order to encourage them to buy products
+This project can be used for marketing purposes such as company promotion by showing to the potential customers the company's offer in order to encourage them to buy theirs products.
 
 ## Installation
 
